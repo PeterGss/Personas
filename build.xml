@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project name="samerelation" default="pack">
+
+	<property name="src.dir" value="src" />
+	<property name="conf.dir" value="conf" />
+	<property name="classes.dir" value="classes" />
+	<property name="lib.dir" value="lib" />
+	<property name="dist.dir" value="dist" />
+	<property name="extlib.dir" value="extlib" />
+	<property name="cascading.dir" value="extlib/cascadingjar" />
+	<path id="classpath">
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
+		<fileset dir="${extlib.dir}" includes="**/*.jar" />
+		<fileset dir="${cascading.dir}" includes="**/*.jar" />
+	</path>
+
+	<target name="clean">
+		<delete dir="${dist.dir}" />
+		<delete dir="${classes.dir}" />
+	</target>
+
+	<target name="init" depends="clean" description="create dir">
+		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+
+	<target name="compile" depends="init" description="compile the sourse files">
+		<javac encoding="UTF-8" srcdir="${src.dir}" destdir="${classes.dir}" includeantruntime="false" debug="yes">
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	<target name="pack" depends="compile">
+		<jar destfile="${dist.dir}/samerelation.jar">
+			<fileset dir="${classes.dir}">
+				<include name="**/*.class" />
+			</fileset>
+			<zipfileset includes="**/*.class" src="${lib.dir}/analyser.jar" />
+			<zipfileset includes="**/*.class" src="${cascading.dir}/cascading-core-3.2.1.jar" />
+			<zipfileset includes="**/*.class" src="${cascading.dir}/cascading-expression-3.2.1.jar" />
+			<zipfileset includes="**/*.class" src="${cascading.dir}/cascading-hadoop2-io-3.2.1.jar" />
+			<zipfileset includes="**/*.class" src="${cascading.dir}/cascading-hadoop2-mr1-3.2.1.jar" />
+			<zipfileset includes="**/*.class" src="${cascading.dir}/cascading-xml-3.2.1.jar" />
+			<zipfileset includes="**/*.class" src="${cascading.dir}/jgrapht-core-0.9.2.jar" />
+		</jar>
+	</target>
+
+</project>

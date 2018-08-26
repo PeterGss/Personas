@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+	<!-- **********************************公共配置项**************************** -->
+	<property>
+		<name>jobname</name>
+		<value>personas</value>
+		<description>需要分析的job名称:同家庭,一般情况下无需修改，请不要胡乱设置</description>
+	</property>
+	<property>
+		<name>inputdir</name>
+		<value>/analysis/input/personas</value>
+		<description>输入数据目录：若需修改请严格遵守上述路径格式</description>
+	</property>
+
+
+
+
+	<property>
+		<name>outrootdir</name>
+		<value>/analysis/output/personas/</value>
+		<description>输出根目录,完整目录示例：/analysis/output/personas/20150828/，勿动
+		</description>
+	</property>
+
+	<property>
+		<name>starttime</name>
+		<value></value>
+		<description>开始时间，分析这之后的数据,eg:20151010,一般情况无需填值，若需修改请严格遵守样例格式
+		</description>
+	</property>
+	<property>
+		<name>endtime</name>
+		<value></value>
+		<description>结束时间，分析这之前的数据，分析这之前的数据,eg:20151010,一般情况无需填值，若需修改请严格遵守样例格式
+		</description>
+	</property>
+	<property>
+		<name>data.keepdays</name>
+		<value>7</value>
+		<description>hdfs上结果数据保存天数(>0)，不填则表示永久保存，填几天保留几天</description>
+	</property>
+	<property>
+		<name>delay.days</name>
+		<value>0</value>
+		<description>延时天数,0表示没有延迟,eg:1,一般情况无需填值，若需修改请严格遵守样例格式</description>
+	</property>
+	<property>
+		<name>idtype</name>
+		<value>02C0005</value>
+		<description>证件类型默认值,勿动</description>
+	</property>
+
+
+	<property>
+		<name>output.file.line.max</name>
+		<value>100000</value>
+		<description>输出文件行数限制,勿动</description>
+	</property>
+
+	<!-- 一个reduce处理的文件大小，作用程序里为了计算出需要几个reduce来工作，name为自己定义 -->
+	<property>
+		<name>reducer.handle.mb</name>
+		<value>1024</value>
+		<description>每个reduce task处理的记录数，单位M,勿动</description>
+	</property>
+
+	<!-- mapper分片大小，mapreduce根据name识别value, name为框架定义，所以name不能动 -->
+	<property>
+		<name>mapreduce.input.fileinputformat.split.maxsize</name>
+		<value>67108864</value>
+		<description>map分片大小,勿动</description>
+	</property>
+
+
+	<!-- ****************************业务私有配置项******************************** -->
+
+	<property>
+		<name>detailmr.filter</name>
+		<!-- <value>17:取消</value> -->
+		<value></value>
+		<description>过滤数据使用，格式为 列顺序1:过滤值1,过滤值2;列顺序2:过滤值1,过滤值2
+			列下标从0开始，多组直接分号分隔，单组值可为多个，逗号分隔
+		</description>
+	</property>
+	<!-- 婚姻登记信息 start -->
+	<property>
+		<name>detailmr.table.length</name>
+		<value>176</value>
+		<description>婚姻登记信息表长度</description><!--每一条数据的字段数 start -->
+	</property>
+	<property>
+		<name>detailmr.index.zjhm</name>
+		<value>143</value>
+		<description>婚姻登记信息表标准证件号码的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.zjhm2</name>
+		<value>152</value>
+		<description>婚姻登记信息表对方标准证件号码的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.registerType</name>
+		<value>104</value>
+		<description>婚姻登记信息表登记类型的索引位置</description><!-- 类型造数据的时候 ，直接造离婚或结婚，（代码中包含离字的算离婚0，其余是结婚1）-->
+	</property>
+	<property>
+		<name>detailmr.index.registerDate</name>
+		<value>164</value>
+		<description>婚姻登记信息表登记时间的索引位置</description><!-- 日期造数据的时候 ， Long.parseLong(registerDate)会做个转换，造数据的时候注意-->
+	</property>
+	<property>
+		<name>detailmr.index.name</name>
+		<value>5</value>
+		<description>婚姻登记信息表姓名的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.dfname</name>
+		<value>55</value>
+		<description>婚姻登记信息表对方姓名的索引位置</description>
+	</property>
+	
+	<!-- 婚姻登记信息 end -->
+	<!-- 人口户籍信息 start -->
+	<property>
+		<name>detailmr.hjtable.length</name>
+		<value>236</value>
+		<description>人口户籍信息长度</description><!--每一条数据的字段数 start -->
+	</property>
+	<property>
+		<name>detailmr.index.hzname</name>
+		<value>3</value>
+		<description>人口户籍信息表姓名的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.sfzhm</name>
+		<value>200</value>
+		<description>人口户籍信息表身份证号码的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.fqname</name>
+		<value>175</value>
+		<description>人口户籍信息表父亲姓名的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.fqsfzhm</name>
+		<value>222</value>
+		<description>人口户籍信息表父亲身份证号码的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.mqname</name>
+		<value>178</value>
+		<description>人口户籍信息表母亲姓名的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.mqsfzhm</name>
+		<value>223</value>
+		<description>人口户籍信息表母亲身份证号码的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.sjfssj</name>
+		<value>230</value>
+		<description>人口户籍信息表数据发生时间的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.hyzk</name>
+		<value>21</value>
+		<description>人口户籍信息表婚姻状况的索引位置</description><!-- 这里不知道是用HYZK 婚姻状况 还是HYZKDM 婚姻状况代码 -->
+	</property>
+	<property>
+		<name>detailmr.index.posfzhm</name>
+		<value>224</value>
+		<description>人口户籍信息表配偶身份证号码的索引位置</description>
+	</property>
+	<property>
+		<name>detailmr.index.poxm</name>
+		<value>111</value>
+		<description>人口户籍信息表配偶姓名的索引位置</description>
+	</property>
+
+	<!-- 人口户籍信息 end -->
+
+	<property>
+		<name>statmr.id1.index</name>
+		<value>6</value>
+		<description>身份证1的索引位置，内部逻辑使用，勿动</description>
+	</property>
+	<property>
+		<name>statmr.id2.index</name>
+		<value>10</value>
+		<description>身份证2的索引位置，内部逻辑使用，勿动</description>
+	</property>
+
+
+
+</configuration>
