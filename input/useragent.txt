@@ -1,0 +1,1000 @@
+Mozilla/4.0 (compatib1e; MSIE 6.1; Windows NT)
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; Web2.0-Spider )
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.52 Safari/537.17
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.65 Safari/534.24
+Python-urllib/2.7
+Microsoft-Delivery-Optimization/10.0
+Mozilla/4.0 (compatible; MSIE 7.0;)
+MicroMessenger Client
+Microsoft-Symbol-Server/6.6.0007.5
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.3485.400 QQBrowser/9.6.12190.400
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+python-requests/2.3.0 CPython/2.7.6 Linux/3.14.25
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+Apache-HttpClient/4.3.1 (java 1.5)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; InfoPath.2; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; Media Center PC 6.0; InfoPath.3; MS-RTC LM 8; Zune 4.7)
+Mozilla/5.0 (Windows; U; MSIE 9.0; Windows NT 9.0; en-US)
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; WOW64; Trident/6.0)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C)
+Mozilla/1.22 (compatible; MSIE 10.0; Windows 3.1)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Zune 4.0; InfoPath.3; MS-RTC LM 8; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)
+Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 5.1; Trident/5.0)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; FDM; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E; Tablet PC 2.0)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 7.1; Trident/5.0)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0) chromeframe/10.0.648.205
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET CLR 2.0.50727; Media Center PC 6.0)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; AskTB5.5)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; Media Center PC 6.0; InfoPath.3; MS-RTC LM 8; Zune 4.7
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; chromeframe/11.0.696.57)
+Mozilla/5.0 ( ; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 7.1; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Zune 4.0; Tablet PC 2.0; InfoPath.3; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.0; Trident/5.0; chromeframe/11.0.696.57)
+Mozilla/4.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/5.0)
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/5.0)
+Mozilla/4.0
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0
+python-requests/2.3.0 CPython/2.7.6 Linux/3.0.4
+Microsoft BITS/7.5
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+ HCDNLivenet6/6.0.15.13(win)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.1.7) Gecko/20091221 Firefox/3.5.7 (.NET CLR 3.5.30729)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; Media Center PC 6.0; .NET CLR 1.1.4322)
+sqlmap/1.1.1.4#dev (http://sqlmap.org)
+Go-http-client/1.1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0;  )
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D/10143848 CFNetwork/901.1 Darwin/17.6.0
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+WinHttpClient
+Wget/1.14 (linux-gnu)
+Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36 TheWorld 7
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1 Safari/605.1.15
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; Media Center PC 6.0)
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0)
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0
+SogouPSI
+Mozilla/5.0
+Microsoft BITS/7.8
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 SE 2.X MetaSr 1.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729)
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 9.0; Windows NT 6.1; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299
+sogou_ime
+PPStream-heartStat/1.0
+Microsoft-ATL-Native/8.00
+SogouRDM
+HttpClient
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0
+python-requests/2.18.4
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.1.4322)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE
+netdisk;5.7.3.1;PC;PC-Windows;10.0.16299;WindowsBaiduYunGuanJia
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0
+Mozilla/4.0 (compatible; MSIE 5.00; Windows 98)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36 
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi 4A MIUI/V9.5.3.0.MCCCNFA)
+Post
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+SogouIMEMiniSetup_imepopup
+Mozilla/5.0 (Macintosh; Intel Mac OS X ) AppleWebKit/537.32 (KHTML, like Gecko) Chrome/46.0.2420.83 Safari/533.36.121
+MultiCurlHttpStatV1.2
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; .NET CLR 2.0.50727)
+Ubuntu APT-HTTP/1.3 (0.7.25.3ubuntu7)
+Youdao Desktop Dict (Windows NT 6.1)
+Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36
+Microsoft-WNS/10.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1) QQBrowser/6.0
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.4549.400 QQBrowser/9.7.12900.400
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE
+Microsoft-CryptoAPI/10.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE
+SOGOU_UPDATER
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.7
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36 SE 2.X MetaSr 1.0
+Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko
+Microsoft-CryptoAPI/6.1
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36
+Valve/Steam HTTP Client 1.0
+QQ/33080 CFNetwork/897.15 Darwin/17.5.0 (x86_64)
+MICROSOFT_DEVICE_METADATA_RETRIEVAL_CLIENT
+Windows-Update-Agent
+Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G9208 Build/NRD90M)
+okhttp/3.10.0
+Apache-HttpClient/UNAVAILABLE (java 1.4)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1;Miser Report)
+Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)
+SogouComponentAgent
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MHA-AL00 Build/HUAWEIMHA-AL00)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 7.1.2; vivo X9 Build/N2G47H)
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Maxthon/4.4.8.2000 Chrome/30.0.1599.101 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)
+sgCTM
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; .NET CLR 3.0.04506.648; .NET CLR 3.5.21022)
+WeChat/6.6.6.32 CFNetwork/897.15 Darwin/17.5.0
+netdisk;6.1.0.10;PC;PC-Windows;6.1.7601;WindowsBaiduYunGuanJia
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+OfficeClickToRun
+QQClient
+netdisk;P2SP;2.1.11.13
+Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; rv:11.0) like Gecko
+Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.215 Safari/534.10
+HCDNClient_ONECLOUD;libcurl/7.50.1.8-DEV-VS2015 OpenSSL/1.0.2l;QK/10.9.2.52;NetType/
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; ALP-AL00 Build/HUAWEIALP-AL00)
+Dalvik/2.1.0 (Linux; U; Android 7.1.1; MI MAX 2 MIUI/V9.5.5.0.NDDCNFA)
+libtorrent/1.2.0.0
+1.2.15.209
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MI 6 MIUI/V9.6.2.0.OCACNFD)
+Debian APT-HTTP/1.3 (1.0.1ubuntu2)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+LogStatistic
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:60.0) Gecko/20100101 Firefox/60.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0
+Qiyi List Client PC 6.2.57.5300
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3)
+QQLive/1.12.25.10010
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+SogouIme
+Update.WPS
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0
+Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 cef3.2623 IKU/7.5.9.7051;IKUCID/IKU;
+MomoChat/8.8.2.4 CFNetwork/758.4.3 Darwin/15.5.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Java/1.8.0_152
+netdisk;6.1.0.10;PC;PC-Windows;10.0.17134;WindowsBaiduYunGuanJia
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/605.1.15 (KHTML, like Gecko)
+Microsoft NCSI
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 6.0; Redmi Note 4 MIUI/V9.5.3.0.MBFCNFA)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.691.400 QQBrowser/9.0.2524.400
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.157 Safari/537.36
+Youdao Desktop Dict (Windows NT 10.0)
+WeChat/6.7.0.33 CFNetwork/901.1 Darwin/17.6.0
+Dalvik/2.1.0 (Linux; U; Android 7.0; FRD-AL10 Build/HUAWEIFRD-AL10)
+SOGOU_POPUP
+Mozilla/5.0 (Linux; U; Android 7.0; zh-cn; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) AppleWebKit/533.1 (KHTML, like Gecko) Mobile Safari/533.1
+Apache-HttpClient/4.5.2 (Java/1.8.0_152)
+Dalvik/2.1.0 (Linux; U; Android 7.1.2; vivo X9s Build/N2G47H)
+Dalvik/2.1.0 (Linux; U; Android 6.0; HUAWEI MLA-AL10 Build/HUAWEIMLA-AL10)
+okhttp/3.4.1
+Java/1.8.0_144
+Windows-Update-Agent/7.9.9600.18838 Client-Protocol/1.21
+HCDNClient_ONECLOUD;libcurl/7.50.1.8-DEV-VS2015 OpenSSL/1.0.2l;QK/10.9.2.40;NetType/
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/6.0; .NET4.0E; .NET4.0C; InfoPath.3)
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; SE 2.X MetaSr 1.0)
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:61.0) Gecko/20100101 Firefox/61.0
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; SM-G9200 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/12.0.0.980 Mobile Safari/537.36
+netdisk;6.0.2.7;PC;PC-Windows;6.1.7601;WindowsBaiduYunGuanJia
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 BIDUBrowser/8.7 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 7.1.1; OPPO R11s Build/NMF26X)
+Ydrive client
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.9 Safari/537.36
+Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+libcurl/7.49.1 OpenSSL/1.0.2h
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; BKL-AL20 Build/HUAWEIBKL-AL20)
+AnZhi
+Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; FRD-AL10 Build/HUAWEIFRD-AL10) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.9.7.977 Mobile Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; BLA-AL00 Build/HUAWEIBLA-AL00)
+Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0; BIDUBrowser 8.7) like Gecko
+Python-urllib/1.17
+Dalvik/2.1.0 (Linux; U; Android 8.1.0; ONEPLUS A5010 Build/OPM1.171019.011)
+PCU
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; Win64; x64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; Tablet PC 2.0; HCTE; McAfee)
+live4iphone/21348 CFNetwork/893.14.2 Darwin/17.3.0
+okhttp/3.7.0.6
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0
+netdisk;p2sp;
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi 4 MIUI/V9.5.2.0.MBECNFA)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi 4A MIUI/V9.5.3.0.MCCCNFA) VideoArticle/6.2.5 okhttp/3.7.0.2
+Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 SE 2.X MetaSr 1.0
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MI 6 MIUI/V9.5.7.0.OCACNFA)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36
+Bittorrent
+LotusLib
+ting_6.3.99(Nokia+7+plus,Android27)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.4620.400 QQBrowser/9.7.13014.400
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+okhttp/3.8.1
+IKU/3.0
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.59 QQ/8.9.3.21169 Safari/537.36
+WeChat/6.6.1.32 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.3; WOW64; Trident/7.0; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; InfoPath.3)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MI 6 MIUI/V9.6.2.0.OCACNFD) NewsArticle/6.8.0 cronet/58.0.2991.0@59592eaa
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; Trident/4.0; .NET CLR 2.0.50727; Media Center PC 5.0; .NET CLR 3.0.04506; .NET CLR 3.5.21022)
+Java/1.7.0_80
+contype
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.79 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Mozilla/5.0 (Linux; Android 8.0.0; BLA-AL00 Build/HUAWEIBLA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36 kanqiu/7.1.20.14515/7224 isp/-1 network/-1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:59.0) Gecko/20100101 Firefox/59.0
+okhttp/3.4.2
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; rv:53.0) Gecko/20100101 Firefox/53.0
+Download From HTTP
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36 MicroMessenger/6.5.2.501 NetType/WIFI WindowsWechat QBCore/3.43.884.400 QQBrowser/9.0.2524.400
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36
+WeChat/6.3.31.49 CFNetwork/711.0.6 Darwin/14.0.0
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36
+KUGOU2012-8204-CLOUD
+Mozilla/5.0 (winnt 10.0.16299) id/50:7B:9D:7C:3B:9A ver/1.9.5 appName/WeTool
+FileDownloader/1.7.2
+Dalvik/2.1.0 (Linux; U; Android 7.0; DUK-AL20 Build/HUAWEIDUK-AL20)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MI 6 MIUI/V9.6.2.0.OCACNFD) NewsArticle/6.7.6 cronet/58.0.2991.0@59592eaa
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3418.2 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360EE
+%E6%89%8B%E6%9C%BA%E6%B7%98%E5%AE%9D/10143848 CFNetwork/893.14.2 Darwin/17.3.0
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 8.1.0; EML-AL00 Build/HUAWEIEML-AL00)
+Dalvik/2.1.0 (Linux; U; Android 7.0; EVA-AL10 Build/HUAWEIEVA-AL10)
+alipay
+Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+ting_6.3.93(vivo+X9s,Android25)
+Java/1.7.0_07
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; G8342 Build/47.1.A.12.179)
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.221 Safari/537.36 SE 2.X MetaSr 1.0
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36 QIHU 360EE
+AnQuanWeiShi/11.0(Windows)
+Microsoft-WNS/6.3
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+game=ShadowTrackerExtra, engine=UE4, version=4.18.1-0+++UE4+Release-4.18, platform=Android, osver=4.4.2
+SimpleHttpFetch
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.3)
+Aweme/18210 CFNetwork/758.4.3 Darwin/15.5.0
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36
+Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko)
+MomoChat/8.8.2 ios/1068 (iPhone 6S Plus; iPhone OS 9.3.2; zh_CN; iPhone8,2; S1)
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:59.0) Gecko/20100101 Firefox/59.0
+Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; DUK-AL20 Build/HUAWEIDUK-AL20)
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MI 6 MIUI/V9.5.7.0.OCACNFA) NewsArticle/6.7.3 okhttp/3.10.0.1
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E)
+Dalvik/2.1.0 (Linux; U; Android 7.1.2; MI 5X MIUI/V9.5.3.0.NDBCNFA)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MI 6 MIUI/V9.5.7.0.OCACNFA) NewsArticle/6.7.2 cronet/58.0.2991.0@59592eaa
+Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.00; MP222)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.874.400 QQBrowser/9.0.2524.400
+Dalvik/2.1.0 (Linux; U; Android 5.1; OPPO R9m Build/LMY47I)
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.157 Safari/537.36
+Mozilla/3.0 (compatible; Indy Library)
+Mozilla/4.0 (compatible; MSIE 5.00; Windows 98; Rising)
+Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 KWebUI/6.0
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15F79 MicroMessenger/6.7.0 NetType/WIFI Language/zh_CN
+Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G9200 Build/NRD90M)
+Mozilla/5.0 (Linux; Android 8.0.0; MHA-AL00 Build/HUAWEIMHA-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060637) NetType/WIFI Language/zh_CN
+Dalvik/2.1.0 (Linux; U; Android 7.0; MHA-AL00 Build/HUAWEIMHA-AL00)
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 7.1.1; vivo X20A Build/NMF26X)
+Mozilla/5.0 (Windows NT 6.1; rv:56.0) Gecko/20100101 Firefox/56.0
+Youdao Desktop Dict (Windows NT 6.2)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+discover/5162001 CFNetwork/887 Darwin/17.0.0
+Dalvik/2.1.0 (Linux; U; Android 5.1.1; YQ603 Build/LMY47V)
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/605.1.15 (KHTML, like Gecko)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+minipbk
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; OPPO R9s Build/MMB29M)
+IBM Installation Manager/1.8.1(1.8.1000.20141126_2002)
+LotusDll
+okhttp/3.6.0
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
+%E8%85%BE%E8%AE%AF%E6%96%B0%E9%97%BB/5.5.81.1140 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)
+SogouIMEMiniSetup_RandSkin
+okhttp/3.9.1
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E302 MicroMessenger/6.6.6 NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.93 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 SE 2.X MetaSr 1.0
+Windows-Update-Agent/10.0.10011.16384 Client-Protocol/1.70
+QQLive/1.2.100.340
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0
+Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0
+MobileMap
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:59.0) Gecko/20100101 Firefox/59.0
+Dalvik/2.1.0 (Linux; U; Android 7.0; Redmi Note 4X MIUI/V9.5.2.0.NCFCNFA)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)
+WeiboFun/2.6.2 iOS/11.3.1
+p2/1.1.300.v20161004-0244 (Java 1.8.0_152-b16 Oracle Corporation; Windows10 10.0.0 x86-64; zh_CN) org.eclipse.epp.package.jee.product/4.7.1.M20171009-0410 (org.eclipse.ui.ide.workbench)
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:59.0) Gecko/20100101 Firefox/59.0
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.157 Safari/537.36
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36 TBC/1.1.0.16 Thunder/9.1.49.1060
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.59 QQ/8.9.3.21169 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; rv:59.0) Gecko/20100101 Firefox/59.0
+Mozilla/5.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Mozilla/5.0 (Linux; Android 6.0; Redmi Note 4 Build/MRA58K; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 Mobile Safari/537.36 _jfAndroid
+Battle.net/1.11.3.10047
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:60.0) Gecko/20100101 Firefox/60.0
+Dalvik/2.1.0 (Linux; U; Android 7.1.1; OPPO R11s Plus Build/NMF26X)
+sqlmap/1.1.8.3#dev (http://sqlmap.org)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; Mi Note 2 MIUI/8.5.10)
+WeChat/6.6.1.32 CFNetwork/893.14.2 Darwin/17.3.0
+qqlive4iphone
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+SogouIME_newspopup
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; Le X528 Build/IJXCNCM5902802011S)
+meipai-android-7500;Lavf/56.15.102/Media Center PC
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 Kjj/1.2.0.4006
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+live4iphone/21710 CFNetwork/901.1 Darwin/17.6.0
+Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; LCTE; rv:11.0) like Gecko
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) QQ/9.0.1.23161 Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.815.400 QQBrowser/9.0.2524.400
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; InfoPath.3)
+okhttp/3.9.0
+qzone
+Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+kwai-android
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.87 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/66.0.3359.170 Safari/537.36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36
+netdisk;P2SP;2.1.12.8
+AMAP Location SDK Android 1.3.3
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E302
+MI 6_8.0.0_weibo_8.5.0_android_wifi
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 7.0; EVA-AL00 Build/HUAWEIEVA-AL00)
+QQ/33080 CFNetwork/901.1 Darwin/17.6.0 (x86_64)
+Dalvik/2.1.0 (Linux; U; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) NewsArticle/6.3.3 cronet/58.0.2991.0
+QQ/7.5.8.422 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 8.1.0; ONEPLUS A5000 Build/OPM1.171019.011)
+HttpRequest
+Mozilla/4.0 (compatible; MSIE 9.11; Windows NT 6.2; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.3; MANMJS; .TDCH 3.0;)
+Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; Touch; rv:11.0) like Gecko
+Microsoft BITS/7.7
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 1.1.4322; .NET4.0C; .NET4.0E)
+Android_Ant_Client
+@AUVI@1.3;AntiVir-NGUpd/15.0.36.164 (PERS; WKS; EN; AVE 8.3.50.38; VDF 8.14.56.190; Windows 7 Professional; ; People's Republic of China; 442b5d623e0c46b108ce779e48ba420c434f4f2b; 0000149996-AVHOE-0000001; CN; BUILD 15.0.36.163; 0; 1; 1; google chrome; 1;
+Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+MI 6_8.0.0_weibo_8.5.0_android
+Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.13 (KHTML, like Gecko) Chrome/9.0.597.98 Safari/534.13
+5A77B210612007AD0A8F1C6BDA6FD88D_75_1.3.430655.134_32
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+WeChat/6.6.6.32 CFNetwork/887 Darwin/17.0.0
+android Mozilla/5.0 (Linux; Android 7.1.1; MI MAX 2 Build/NMF26F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36  phh_android_version/4.4.0 phh_android_build/228842 phh_android_channel/xm
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.26 Safari/537.36 Core/1.63.5514.400 QQBrowser/10.1.1681.400
+Dalvik%2F2.1.0+%28Linux%3B+U%3B+Android+7.1.1%3B+MI+MAX+2+MIUI%2FV9.5.5.0.NDDCNFA%29
+live4iphone/21692 CFNetwork/897.15 Darwin/17.5.0
+News 6.7.8 rv:6.7.8.16 (iPhone; iOS 11.2; zh_CN) Cronet
+Qiyi List Client PC 6.1.51.4886
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/6.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; CMDTDF; InfoPath.2)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
+discover/5162001 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0; SE 2.X MetaSr 1.0) like Gecko
+Dalvik/2.1.0 (Linux; U; Android 8.1.0; COL-AL10 Build/HUAWEICOL-AL10)
+MXUpdateDownloader
+A
+AMAP_Location_SDK_Android 3.5.0
+WeChat/6.6.7.32 CFNetwork/897.15 Darwin/17.5.0
+Dalvik/1.6.0 (Linux; U; Android 5.1; T805s Build/KOT49H)
+Dalvik/2.1.0 (Linux; U; Android 5.1.1; vivo X7 Build/LMY47V)
+Lavf/57.71.100 vpwp/
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.2)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0
+Jakarta Commons-HttpClient/3.1
+netdisk;5.7.3.1;PC;PC-Windows;5.1.2600;WindowsBaiduYunGuanJia
+QQNews/5.5.81 (iPhone; iOS 11.1.2; Scale/3.00)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) QQ/9.0.1.23161 Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.815.400 QQBrowser/9.0.2524.400
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0; SE 2.X MetaSr 1.0) like Gecko
+User-Agent
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360EE
+Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; SM-G9200 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.9.7.977 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.26 Safari/537.36 Core/1.63.5514.400 QQBrowser/10.1.1620.400
+Dalvik/2.1.0 (Linux; U; Android 7.1.1; vivo X9s Build/NMF26F)
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+discover/5191001 CFNetwork/901.1 Darwin/17.6.0
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36 QIHU 360SE
+YNote
+Microsoft-Symbol-Server/10.1710.0.0
+Mozilla/5.0 (Linux; Android 7.1.1; MI MAX 2 Build/NMF26F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060637) NetType/WIFI Language/zh_CN
+Apache-HttpClient/4.3.6 (java 1.5)
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.82 Safari/537.36
+Debian APT-HTTP/1.3 (1.2.26)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; wbx 1.0.0)
+QQBrowser
+ttplayer(version name:2.8.1.170,version code:281170,ttplayer release was built by tiger at 2018-03-16 20:40:53 on origin/r_2.8.1.10 branch, commit 1db82c8ac6b4d7b3be80b4e1adf04cb9473d1b99)
+Dalvik/2.1.0 (Linux; U; Android 6.0; PLK-AL10 Build/HONORPLK-AL10)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36 QIHU 360SE
+Mozilla/5.0 (Linux; U; Android 8.0.0; zh-cn; BKL-AL20 Build/HUAWEIBKL-AL20) AppleWebKit/533.1 (KHTML, like Gecko) Mobile Safari/533.1
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36
+Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:60.0) Gecko/20100101 Firefox/60.0
+netdisk;P2SP;2.1.12.4
+BW-C-2.0
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) QQ/8.9.5.22062 Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.716.400 QQBrowser/9.0.2524.400
+Dalvik/2.1.0 (Linux; U; Android 7.1.1; 1801-A01 Build/NMF26X)
+urlgrabber/3.10 yum/3.4.3
+xmlset_roodkcableoj28840ybtide
+%E8%85%BE%E8%AE%AF%E6%96%B0%E9%97%BB/5.6.0.1153 CFNetwork/897.15 Darwin/17.5.0
+KuGou2012-8204-singer_name_protocol
+CustomAgent
+Dalvik/2.1.0 (Linux; U; Android 7.0; TRT-AL00A Build/HUAWEITRT-AL00A)
+Debian APT-HTTP/1.3 (1.3~rc2)
+KuGou2012-8204-music_climax_match
+QQ Data Report
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; G8342 Build/47.1.A.12.235)
+Dalvik/1.6.0 (Linux; U; Android 4.4.2; Lenovo A320t Build/KOT49H)
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 KWebUI/6.0
+ting_6.3.93(HUAWEI+NXT-DL00,Android24)
+HCDNClient_ONECLOUD;libcurl/7.50.1.8-DEV-VS2015 OpenSSL/1.0.2l;QK/10.9.2.50;NetType/
+AMAP_Location_SDK_Android 3.4.1
+Dalvik/2.1.0 (Linux; U; Android 5.1; OPPO R9tm Build/LMY47I)
+Dalvik/2.1.0 (Linux; U; Android 5.1; Coolpad 7722 Build/LMY47D)
+Opera/9.62 (X11; Linux i686; U; zh-cn) Presto/2.1.1
+sogou_ime/8.9.0.2180
+Mozilla/5.0 (Windows NT 6.1; WOW64)                                      AppleWebKit/537.17 (KHTML, like Gecko                                    ) Chrome/24.0.1312.52 Safari/537.17
+Mozilla/5.0 (Linux; U; Android 8.0.0; zh-cn; Mi Note 2 Build/OPR1.170623.032) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.128 Mobile Safari/537.36 XiaoMi/MiuiBrowser/9.6.1
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; .NET CLR 2.0.50727)
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) QQ/9.0.2.23490 Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.843.400 QQBrowser/9.0.2524.400
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; vivo X9 Build/MMB29M)
+OSSProxy 1.3.337.412 (Build 337.412 Win32 en-us)(Jan 11 2018 14:07:40)
+Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_5 like Mac OS X) AppleWebKit/534.24 (KHTML, like Gecko) Version/9.0 Mobile/12H143 Safari/534.24
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0
+QQ/7.6.3.466 CFNetwork/901.1 Darwin/17.6.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.157 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 cef3.2623 IKU/7.5.8.6281;IKUCID/IKU;
+Tencent QQBrowser X5
+XLServicePlatform
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36
+Dalvik/2.1.0 (Linux; U; Android 8.1.0; Nokia 7 plus Build/OPR1.170623.026)
+libcurl
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044109 Mobile Safari/537.36 MicroMessenger/6.6.7.1321(0x26060739) NetType/WIFI Language/zh_CN
+sogou_ime/8.9.0.2130
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Mozilla/4.0 (compatible; Rising)
+android Mozilla/5.0 (Linux; Android 7.1.1; MI MAX 2 Build/NMF26F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36  phh_android_version/4.4.0 phh_android_build/228842 phh_android_channel/xm
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3)
+Yodao Desktop Dict (Windows 6.1.7601)
+Dalvik/2.1.0 (Linux; U; Android 7.0; HUAWEI NXT-AL10 Build/HUAWEINXT-AL10)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MI 6 MIUI/V9.5.7.0.OCACNFA) NewsArticle/6.7.3 cronet/58.0.2991.0@59592eaa
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0
+WeChat/6.6.6.32 CFNetwork/811.5.4 Darwin/16.7.0
+Dalvik/2.1.0 (Linux; U; Android 6.0; FRD-AL00 Build/HUAWEIFRD-AL00)
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.3 Safari/534.53.10
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36 LBBROWSER
+ting_6.5.3(HUAWEI+NXT-DL00,Android24)
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360EE
+sogou_ime/8.5.0.1322
+Mozilla/5.0 (MSIE 9.0; qdesk 2.4.1266.203; Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+netdisk;6.1.0.10;PC;PC-Windows;6.3.9600;WindowsBaiduYunGuanJia
+1.2.11.276
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+WeChat/6.6.7.32 CFNetwork/901.1 Darwin/17.6.0
+iFLYCloud
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36
+WeChat/6.7.0.33 CFNetwork/897.15 Darwin/17.5.0
+live4iphone/21726 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044103 Mobile Safari/537.36 MicroMessenger/6.6.7.1321(0x26060737) NetType/WIFI Language/zh_CN
+WeChat/6.6.7.32 CFNetwork/893.14.2 Darwin/17.3.0
+Dalvik/2.1.0 (Linux; U; Android 7.1.1; OS105 Build/NMF26X)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Win64; x64; Trident/5.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E)
+Dalvik/1.6.0 (Linux; U; Android 4.4.4; MuMu Build/V417IR)
+qqlive
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
+WeChat/6.6.6.32 CFNetwork/901.1 Darwin/17.6.0
+Mozilla/5.0  (Linux; Android 4.1.1; Nexus 7 Build/JRO03S) AppleWebKit/535.19 (KHTML,  like Gecko) Chrome/18.0.1025.166 Safari/535.19
+KuGou2012-8204-fanxing_hot_song_protocol
+Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:52.0) Gecko/20100101 Firefox/52.0
+Apache-HttpClient/4.5.2 (Java/1.8.0_131)
+HCDNClient_WINPC;15.0.1.596;NetType/unknown
+Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko Core/1.53.4549.400 QQBrowser/9.7.12900.400
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko)  QQLive/10081849/50180327 Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.769.400 QQBrowser/9.0.2524.400
+Mi Note 2; MIUI/8.5.10
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E302 _JFiOS
+okhttp/3.2.0
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+VutcWebServicePlugdata
+1.2.12.209
+JuMei/4.800010 CFNetwork/758.2.8 Darwin/15.0.0
+okhttp/2.7.5
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)
+Mozilla/5.0 (Linux; U; Android 4.0.3; zh-CN; SM-G9200 Build/NRD90M) AppleWebKit/537.36 (KHTML,like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.9.7.977 Mobile Safari/537.36
+AMAP_Location_SDK_Android 3.6.1
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.79 Safari/537.36
+qqlive/5306 CFNetwork/711.3.18 Darwin/14.0.0
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.146 Safari/537.36
+HiSpace_8.0.4.301_HONOR
+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/622 CFNetwork/897.15 Darwin/17.5.0 (x86_64)
+AMAP_Location_SDK_Android 3.3.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729;  TheWorld 7)
+WizQT_2.5.5
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; BKL-AL00 Build/HUAWEIBKL-AL00)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.3; LCTE)
+Mozilla/5.0 (Linux; U; Android 4.4.4; zh-cn; A31c Build/JSS15Q) AppleWebKit/534.24 (KHTML, like Gecko) Version/4.0 Chrome/48.0.2564.116 Mobile Safari/534.24
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X; zh-CN) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/15F79 UCBrowser/12.0.4.1081 Mobile  AliApp(TUnionSDK/0.1.20.3)
+bdtb for Android 9.5.8.0
+stagefright/1.2 (Linux;Android 8.0.0)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E)
+okhttp/${project.version}
+qqlive/4788 CFNetwork/897.15 Darwin/17.5.0
+AssistantDownloader
+Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; FRD-AL10 Build/HUAWEIFRD-AL10;) AppleWebKit/537.36 (KHTML,like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.9.7.977 Mobile Safari/537.36 AliApp(UC/11.9.7.977)
+Mozilla/5.0(Android)
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36
+Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko
+QIYIVideo/9.6.5 (iOS;com.qiyi.iphone;iOS11.3.1;iPhone10,3) Corejar
+QQNews/5.5.81 (iPhone; iOS 11.3.1; Scale/3.00)
+SogouIMEMiniSetup_skinrecommend
+AlipayClient
+Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 ===  iOS/9.2.1 Model/iPhone7,2 BundleID/com.xunmeng.pinduoduo AppVersion/3.54.0 AppBuild/1801100121 cURL/7.47.0
+Dalvik/2.1.0 (Linux; U; Android 6.0; HUAWEI MLA-AL10 Build/HUAWEIMLA-AL10) NewsArticle/6.7.2 cronet/58.0.2991.0@59592eaa
+Dalvik/2.1.0 (Linux; U; Android 6.0; HUAWEI MT7-TL10 Build/HuaweiMT7-TL10)
+Dalvik/2.1.0 (Linux; U; Android 6.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00)
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
+CaptiveNetworkSupport-355.50.1 wispr
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3)
+curl/7.29.0
+Dalvik/2.1.0 (Linux; U; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) NewsArticle/6.4.0 cronet/58.0.2991.0
+agent/2.14.1.6160
+python-requests/2.7.0 CPython/2.7.6 Linux/3.14.25
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; QQPinyinSetup 614; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+WeChat/6.6.6.32 CFNetwork/889.9 Darwin/17.2.0
+Dalvik/1.6.0 (Linux; U; Android 4.4.4; SM-T560 Build/KTU84P)
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1
+Aweme/18210 CFNetwork/758.2.8 Darwin/15.0.0
+Dalvik/2.1.0 (Linux; U; Android 7.0; SM-G9350 Build/NRD90M)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; STF-AL10 Build/HUAWEISTF-AL10)
+KuGou2012-8204-activate_stat_manager_impl
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; Nexus 5 Build/MOB30H)
+HiSpace_8.0.4.301_HUAWEI
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+QQ/7.6.3.466 CFNetwork/758.4.3 Darwin/15.5.0
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36
+bdtb for Android 9.4.8.6
+AppleCoreMedia/1.0.0.12A366 (iPhone; U; CPU OS 8_0 like Mac OS X; zh_cn)
+Mozilla/4.0 (compatible; MSIE 7.0; MSIE 6.0; Windows NT 5.0; .NET CLR 1.1.4322)
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
+netdisk;P2SP;2.1.11.12
+Dalvik/2.1.0 (Linux; U; Android 6.0; FRD-AL00 Build/HUAWEIFRD-AL00) NewsArticle/6.7.6 cronet/58.0.2991.0@59592eaa
+Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1
+Mozilla/5.0 (Windows NT 6.1.7601; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1621.0 Safari/537.36 IE/11.0.9600.19002 youdaodict/6.3 (windowspc)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Tablet PC 2.0)
+SogouServices (unknown version) CFNetwork/596.6.4 Darwin/12.6.0 (x86_64) (MacBookAir6%2C2)
+KuGou2012-8204-DataMining
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; Media Center PC 6.0; McAfee; InfoPath.3)
+Mozilla/5.0 (Linux; U; Android 6.0.1; zh-CN; OPPO R9s Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.9.7.977 Mobile Safari/537.36
+Mozilla/5.0 (Linux; U; Android 6.0.1; zh-cn; OPPO R9 Plustm A Build/JSS15Q) AppleWebKit/534.24 (KHTML, like Gecko) Version/4.0 Chrome/40.0.2214.89 Mobile Safari/534.24
+Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/8.0 Mobile/12B411 Safari/537.51.1
+Asynchronous WinHTTP/1.0
+BigFootUI
+Huorong/4.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0E; InfoPath.3; .NET4.0C)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.2)
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; Qisu)
+YDrive Client Windows
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.2)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; 360SoftMgr)
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/59.0.3071.125 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.3)
+Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 Mobile Safari/537.36 JsSdk/2 NewsArticle/6.0.9 NetType/wifi
+WeChat/6.7.0.33 CFNetwork/893.14.2 Darwin/17.3.0
+%E4%BA%91%E9%9B%86%E5%BE%AE%E5%BA%97/101397 CFNetwork/893.14.2 Darwin/17.3.0
+Dalvik/2.1.0 (Linux; U; Android 7.0; HUAWEI CAZ-AL10 Build/HUAWEICAZ-AL10)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36 SE 2.X MetaSr 1.0
+Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; QQPCMgr7.0)
+Apache-HttpClient/4.5.2 (Java/1.8.0_144)
+News/6.7.5.05 CFNetwork/897.15 Darwin/17.5.0
+discover/5162001 CFNetwork/758.2.8 Darwin/15.0.0
+Dalvik/2.1.0 (Linux; U; Android 7.0; DUK-AL20 Build/HUAWEIDUK-AL20) NewsArticle/6.7.2 cronet/58.0.2991.0@59592eaa
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/6.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; InfoPath.3)
+Mozilla/5.0 (Linux; Android 8.0.0; DUK-AL20 Build/HUAWEIDUK-AL20; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36; unicom{version:android@5.72,desmobile:13121817653};devicetype{deviceBrand:HUAWEI,deviceModel:DUK-AL20}
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 SE 2.X MetaSr 1.0
+ClamAV/0.99 (OS: linux-gnu, ARCH: x86_64, CPU: x86_64)
+Mozilla/5.0 (Android; U; zh-CN) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/29.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/600.4.8 (KHTML, like Gecko) Version/8.0.3 Safari/600.4.8
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.202 Safari/535.1 .TDCH 3.0;
+mini
+netdisk;6.1.0.10;PC;PC-Windows;6.1.7600;WindowsBaiduYunGuanJia
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0)
+HUAWEI NXT-DL00_7.0_weibo_8.7.0_android
+Java/1.8.0_161
+Mozilla/5.0 (Linux; Android 6.0.1; AOSP on Shamu Build/MOB30D; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/44.0.2403.119 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 cef3.2623 IKU/7.5.3.4192;IKUCID/IKU;
+QQ%E9%9F%B3%E4%B9%90/54409 CFNetwork/897.15 Darwin/17.5.0 (x86_64)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.3; Tablet PC 2.0)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) QQ/8.9.5.22062 Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.716.400 QQBrowser/9.0.2524.400
+%E5%A4%A9%E5%A4%A9%E5%BF%AB%E6%8A%A54710(android)
+HCDNClient
+youku-tudou IKUACC/play/win/8.2.0.5170
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; Nexus 6P Build/MMB29M)
+Dalvik/2.1.0 (Linux; U; Android 6.0; FRD-AL00 Build/HUAWEIFRD-AL00) NewsArticle/6.7.2 cronet/58.0.2991.0@59592eaa
+WeChat/6.6.7.32 CFNetwork/889.9 Darwin/17.2.0
+android Mozilla/5.0 (Linux; Android 7.1.1; MI MAX 2 Build/NMF26F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36  phh_android_version/4.12.1 phh_android_build/228842 phh_android_channel/xm
+HiSpace_8.0.5.300_HUAWEI
+IPhone-8800-UserAction
+Mozilla/5.0 (Linux; Android 7.0; EVA-AL10 Build/HUAWEIEVA-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36;360appstore
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3452.0 Safari/537.36
+AndroidDownloadManager/7.1.1 (Linux; U; Android 7.1.1; MI MAX 2 Build/NMF26F)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; BKL-AL20 Build/HUAWEIBKL-AL20) NewsArticle/6.7.2 cronet/58.0.2991.0@59592eaa
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; InfoPath.2)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; GWX:DOWNLOADED; Creative AutoUpdate v1.41.09)
+Mozilla/5.0 (iPhone; CPU iPhone OS 9_3_5 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/9.0 Mobile/12H143 Safari/537.51.1
+Mozilla/5.0 BSGameSDK
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.2)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; {D9D54F49-E51C-445e-92F2-1EE3C2313240})
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36
+Mozilla/5.0 (Windows; U; zh-CN) AppleWebKit/533.19.4 (KHTML, like Gecko) AdobeAIR/30.0
+Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0
+%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/622 CFNetwork/901.1 Darwin/17.6.0 (x86_64)
+1.2.12.207
+Mozilla/4.0 (compatible; MSIE 11.0; Windows NT 6.2; Rising)
+Mozilla/5.0 (Linux; Android 8.0.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36/samandroid
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Mozilla/5.0 (Linux; Android 5.1; OPPO R9tm Build/LMY47I) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36
+Windows-Update-Agent/10.0.10011.16384 Client-Protocol/1.81
+@AUVI@1.3;AntiVir-NGUpd/15.0.36.207 (PERS; WKS; EN; AVE 8.3.52.16; VDF 8.14.61.16; Windows 7 Professional; Service Pack 1; People's Republic of China; 09072d9c5cb9081d336d63610e1139da66a51482; --; CN; BUILD 15.0.36.200; 0; 1; 1; firefox; 1; e79e8f2e223a4b
+AMAP_Location_SDK_Android 2.6.0
+MHA-AL00; 8.0.0; MHA-AL00 8.0.0.342(C00); zh-cn
+Mozilla/5.0 (Linux; Android 8.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060637) NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko Core/1.63.4793.400 QQBrowser/10.0.743.400
+QIYIVideo/9.5.5 (iOS;com.qiyi.iphone;iOS11.0.2;iPhone9,2) Corejar
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; AOSP on Shamu Build/MOB30D)
+Dalvik/2.1.0 (Linux; U; Android 7.0; Mi Note 2 MIUI/V9.5.1.0.NADCNFA)
+MI 6_8.0.0_weibo_8.7.0_android
+Microsoft-CryptoAPI/6.3
+Mozilla/4.0 (compatible; MSIE 10.0; Windows NT 6.1; Rising)
+WinHTTP Example/1.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7
+Dalvik/2.1.0 (Linux; U; Android 5.0.1; HUAWEI GRA-UL10 Build/HUAWEIGRA-UL10)
+KUGOU2012-8224-CLOUD
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0E; InfoPath.3; .NET4.0C)
+KuGou2012-8224-fanxing_hot_song_protocol
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; MALC; .NET4.0C; InfoPath.3; .NET4.0E; Tablet PC 2.0)
+Mozilla/5.0 (Linux; Android 8.0.0; Mi Note 2 Build/OPR1.170623.032; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.128 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.820.400 QQBrowser/9.0.2524.400
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36 QIHU 360SE
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/7.0)
+CIS_10.0.2.6420_5A77B210612007AD0A8F1C6BDA6FD88D
+Mozilla / 5.0 (Windows NT 6.2; WOW64) AppleWebKit / 537.36 (KHTML, like Gecko) Chrome / 57.0.2987.133 Safari / 537.36 TBC / 1.1.0.12 Thunder / 9.1.47.1020
+Mozilla/5.0 (Linux; Android 8.0; DUK-AL20 Build/HUAWEIDUK-AL20; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060637) NetType/WIFI Language/zh_CN
+XLWFP
+qqlive/4788 CFNetwork/901.1 Darwin/17.6.0
+test connect
+1.50E+217
+Mozilla/5.0 (Linux; Android 8.0.0; ALP-AL00 Build/HUAWEIALP-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Mobile Safari/537.36
+Mozilla/5.0 (Linux; U; Android 7.0; zh-cn; TRT-AL00A Build/HUAWEITRT-AL00A) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/8.3 Mobile Safari/537.36
+netdisk;p2sp;2.0.0.15
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; MI 4LTE MIUI/V9.2.2.0.MXDCNEK)
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3; Tablet PC 2.0)
+Mozilla/4.0 (compatible; MSIE 9.11; Windows NT 6.1; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E; Media Center PC 6.0; InfoPath.3)
+Mozilla/5.0 (Windows NT 10.0; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+netdisk;P2SP;2.1.12.3
+Dalvik/1.6.0 (Linux; U; Android 4.4.2; H60-L01 Build/HDH60-L01)
+WeChat/6.6.6.32 CFNetwork/758.5.3 Darwin/15.6.0
+okhttp/2.6.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)
+Mozilla/5.0 (Linux; Android 6.0; PLK-AL10 Build/HONORPLK-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36
+News/6.7.6.18 CFNetwork/897.15 Darwin/17.5.0
+1.50E+303
+AHNetworkingFramework 925.1.5 rv:1 (iPhone; iOS 11.4; zh_CN)
+Dalvik/2.1.0 (Linux; U; Android 5.0; SM-N9006 Build/LRX21V)
+Lavf/57.56.100
+1.2.67.216
+TouchPalv5 (G8342 47.1.A.12.179)
+WinInetGet/0.1
+Dalvik/2.1.0 (Linux; U; Android 6.0; HUAWEI GRA-UL10 Build/HUAWEIGRA-UL10)
+Dalvik/2.1.0 (Linux; U; Android 6.0; PLK-AL10 Build/HONORPLK-AL10) NewsArticle/6.7.2 cronet/58.0.2991.0@59592eaa
+netdisk;p2sp;2.0.0.14
+trustd (unknown version) CFNetwork/897.15 Darwin/17.5.0
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Mozilla/5.0 (Linux; Android 8.0; ALP-AL00 Build/HUAWEIALP-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044112 Mobile Safari/537.36 MicroMessenger/6.6.7.1321(0x26060739) NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:61.0) Gecko/20100101 Firefox/61.0
+QQ/7.5.8.422 CFNetwork/758.4.3 Darwin/15.5.0
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Mozilla/4.0 (compatible; MSIE 9.11; Windows NT 6.2; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; MDDCJS; .TDCH 5.0;)
+Mozilla/5.0 (Linux; U; Android 8.0.0; zh-CN; MHA-AL00 Build/HUAWEIMHA-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.8.8.968 UWS/2.13.1.32 Mobile Safari/537.36 UCBS/2.13.1.32_180603205557 NebulaSDK/1.8.100112 Nebula AlipayDefined(nt:WIFI,ws:360|0|2.0) AliApp(AP/10.1.25.752) AlipayClient/10.1.25.752 Language/zh-Hans useStatusBar/true isConcaveScreen/false
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36 QQBrowser/9.3
+Mozilla/5.0 (iPhone; CPU iPhone OS 10_1_1 like Mac OS X) AppleWebKit/534.30 (KHTML, like Gecko) Version/10.0 Mobile/14B100 Safari/534.30
+AMAP_Location_SDK_Android 3.8.0
+Bilibili Freedoooooom/MarkII
+Emon-Account
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+Mozilla/5.0 (Windows NT 10.0; WOW64; rv:60.0) Gecko/20100101 Firefox/60.0
+OS105_7.1.1_weibo_8.6.0_android
+Dalvik%2F2.1.0+%28Linux%3B+U%3B+Android+5.1.1%3B+vivo+X7+Build%2FLMY47V%29
+Mozilla/5.0 (Linux; Android 7.1.1; OPPO R11s Plus Build/NMF26X; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+WeiboFun/2060202 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/4.0 (compatible; MSIE 11.0; Windows NT 6.1; Rising)
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36
+KuGou2012-8204-singer_avatar_protocol
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 1.1.4322)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 BIDUBrowser/7.5 Safari/537.36
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; Tablet PC 2.0; .NET CLR 1.1.4322)
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:58.0) Gecko/20100101 Firefox/58.0
+TouchPalv5 (msm8916_32_603 LMY47V)
+ZhuiShuShenQi/5.10 (Android 6.0.1; Xiaomi Rolex / Xiaomi Redmi 4A; ????)[preload=false;locale=zh_CN;clientidbase=android-xiaomi]
+pinduoduo/1801100121 CFNetwork/758.2.8 Darwin/15.0.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; 360SoftMgr)
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.7 (KHTML, like Gecko)
+QQ/7.6.3.466 CFNetwork/897.15 Darwin/17.5.0
+1.2.12.210
+AndroidDownloadManager/6.0.1 (Linux; U; Android 6.0.1; Redmi 4 Build/MMB29M)
+Java/1.6.0_17
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/534.34 (KHTML, like Gecko) wkhtmltopdf Safari/534.34
+Weibo/27222 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Mozilla/5.0 (iPhone; CPU iPhone OS 9_2_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13D15 ===  iOS/9.2.1 Model/iPhone7,2 BundleID/com.xunmeng.pinduoduo AppVersion/3.54.0 AppBuild/1801100121
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4 Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060637) NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Linux; Android 8.0.0; BKL-AL20 Build/HUAWEIBKL-AL20; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36
+Mozilla/5.0 (Linux; Android) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E302 MicroMessenger/6.6.7 NetType/WIFI Language/zh_CN
+%E8%85%BE%E8%AE%AF%E6%96%B0%E9%97%BB/5.5.81.1140 CFNetwork/811.5.4 Darwin/16.7.0
+CaptiveNetworkSupport-355.60.1 wispr
+Java/1.8.0_31
+Mozilla/5.0 (Linux; Android 8.0.0; MI 6 Build/OPR1.170623.027; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36 JsSdk/2 NewsArticle/6.7.3 NetType/wifi
+Mozilla/5.0 (Linux; U; Android 7.0; zh-CN; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00;) AppleWebKit/537.36 (KHTML,like Gecko) Version/4.0 Chrome/40.0.2214.89 UCBrowser/11.8.4.964 Mobile Safari/537.36 AliApp(UC/11.8.4.964)
+Windows-Update-Agent/10.0.10011.16384 Client-Protocol/1.32
+android Mozilla/5.0 (Linux; Android 8.0.0; ANE-AL00 Build/HUAWEIANE-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/64.0.3282.137 Mobile Safari/537.36  phh_android_version/4.7.0 phh_android_build/228842 phh_android_channel/hw
+HeAnimal
+LightPole/3.2.5/android1.5
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E; Tablet PC 2.0)
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E) Foxit Browser ( Foxit Reader/8.3.3.26761, zh-CN; ContentSyndication/1.0.10.328 )
+Mozilla/5.0 (Linux; U; Android 2.3.4; en-us; T-Mobile myTouch 3G Slide Build/GRI40) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+Dalvik/2.1.0 (Linux; U; Android 8.1.0; PAAM00 Build/OPM1.171019.011)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.3; GTB7.5; .NET4.0E; .NET4.0C; .NET CLR 3.5.30729; .NET CLR 2.0.50727; .NET CLR 3.0.30729; InfoPath.3)
+Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
+Mozilla/5.0 (Linux; U; Android 5.1.2; zh-cn; Le X620 Build/LMY48W) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/4.0 Chrome/53.0.2785.146 Mobile Safari/537.51.1
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.32 Safari/537.36
+Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Mobile/14G60 MicroMessenger/6.6.6 NetType/WIFI Language/zh_CN
+python-requests/2.12.4
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; ALP-AL00 Build/HUAWEIALP-AL00) mojia/1007040402
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MHA-AL00 Build/HUAWEIMHA-AL00) amap/8.50.0.2169
+Dalvik/2.1.0 (Linux; U; Android 8.1.0; ONEPLUS A5000 Build/OPM1.171019.011) NewsArticle/6.7.2 cronet/58.0.2991.0@59592eaa
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; Tablet PC 2.0; InfoPath.2)
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Tencent AppMarket/4.4 GameCenter Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.858.400 QQBrowser/9.0.2524.400
+live4iphone/21726 CFNetwork/893.14.2 Darwin/17.3.0
+netdisk;6.0.2.7;PC;PC-Windows;10.0.16299;WindowsBaiduYunGuanJia
+%E4%B8%8B%E5%8E%A8%E6%88%BF/6.5.6 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/4.0 (compatible; )
+AppleCoreMedia/1.0.0.15E302 (iPhone; U; CPU OS 11_3_1 like Mac OS X; zh_cn)
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.62 Safari/537.36
+SM-G9200_7.0_weibo_8.5.0_android
+trustd (unknown version) CFNetwork/897.15 Darwin/17.5.0 (x86_64)
+1.2.11.222
+Dalvik/2.1.0 (Linux; U; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) TencentVideo_AndroidPhone 5.8.1.13049
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Tencent AppMarket/4.5 GameCenter Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.900.400 QQBrowser/9.0.2524.400
+SM-G9200_7.0_weibo_8.6.0_android
+androidsdk
+okhttp/3.3.0
+Dalvik/2.1.0 (Linux; U; Android 8.1.0; COL-AL10 Build/HUAWEICOL-AL10) NewsArticle/6.8.0 cronet/58.0.2991.0@59592eaa
+Mozilla/5.0 (Linux; Android 8.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060637) NetType/4G Language/zh_CN
+Mozilla/5.0 (Linux; U; Android 7.1.2; zh-CN; MI 5X Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.9.5.975 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/24.0.1312.57
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36 Falcon/5.0.7.1
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; Moto X Pro Build/MOB30R)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; HPDTDF; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (Linux; U; Android 7.1.1; zh-cn; MI MAX 2 Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.128 Mobile Safari/537.36 XiaoMi/MiuiBrowser/9.6.1
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 MicroMessenger/6.6.6 NetType/WIFI Language/zh_CN
+android Mozilla/5.0 (Linux; Android 5.1.1; vivo X7 Build/LMY47V; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044112 Mobile Safari/537.36  phh_android_version/4.7.0 phh_android_build/228842 phh_android_channel/wxactivity_lite_6m_l app_type/lite
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/62.0.3202.84 Mobile Safari/537.36 MicroMessenger/6.6.7.1321(0x26060737) NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Windows; U; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727; BIDUBrowser 8.7)
+qqpy_win_ime/5.7.4417.400
+AMAP_Location_SDK_Android 3.4.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0) QQBrowser/9.0
+Mozilla/5.0 (Linux; Android 6.0.1; Redmi 4A Build/MMB29M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 Mobile Safari/537.36 JsSdk/2 VideoArticle/6.2.5 NetType/wifi
+Mozilla/5.0 (Linux; Android 8.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044034 Mobile Safari/537.36 MicroMessenger/6.6.7.1321(0x26060737) NetType/WIFI Language/zh_CN
+WeChat/6.6.1.32 CFNetwork/901.1 Darwin/17.6.0
+WeChat/6.7.0.33 CFNetwork/758.4.3 Darwin/15.5.0
+5DYWBWGPJ5.com.dianping.dpscope
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3423.2 Safari/537.36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+Weibo/28742 CFNetwork/901.1 Darwin/17.6.0
+YunQi/4.1.2.2 CFNetwork/897.15 Darwin/17.5.0
+Dalvik/2.1.0 (Linux; U; Android 6.0; HUAWEI CRR-UL00 Build/HUAWEICRR-UL00)
+MNGRApp
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+Mozilla/5.0 (Linux; Android 7.1.1; MI MAX 2 Build/NMF26F; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 com.meitu.mtmv/7500(android7.1.1)/lang:zh-Hans MeituWebViewSupportOpenAppLogin
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.109 Safari/537.36
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_2_1 like Mac OS X) AppleWebKit/604.4.7 (KHTML, like Gecko) Mobile/15C153 MicroMessenger/6.6.1 NetType/WIFI Language/zh_CN
+@K4jJ2N-yTRT0861e-X9_
+@ls91btyurfVyq4pY1LLn
+AMAP_Location_SDK_Android Alipay.3.6.0
+Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi Note 5A MIUI/V9.2.1.0.NDKCNEK)
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; ANE-AL00 Build/HUAWEIANE-AL00)
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; 360SoftMgr)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36 cef3.2623 IKU/7.5.5.5170;IKUCID/IKU;
+Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko Core/1.63.5514.400 QQBrowser/10.1.1681.400
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3_1 like Mac OS X; zh-CN) AppleWebKit/537.51.1 (KHTML, like Gecko) Mobile/15E302 UCBrowser/11.9.3.1064 Mobile  AliApp(TUnionSDK/0.1.20.2)
+QQ/33080 CFNetwork/760.1.2 Darwin/15.0.0 (x86_64)
+QYDownLoadProxy
+Mozilla/5.0 (Linux; Android 4.4.2; H60-L01 Build/HDH60-L01; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044109 Mobile Safari/537.36 MicroMessenger/6.6.7.1321(0x26060739) NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Linux; U; Android 6.0.1; vivo Y55L Build/KTU84P) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/4.0 OppoBrowser/5.2.30 Mobile Safari/537.51.1
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) QQLive/10071441/50180213 Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.769.400 QQBrowser/9.0.2524.400
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36
+SOGOU_POPUP_NEWS
+discover/5171001 CFNetwork/889.9 Darwin/17.2.0
+MSDN SurfBear
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko)
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1.7601; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1621.0 Safari/537.36 IE/11.0.9600.18860 youdaodict/6.3 (windowspc)
+Mozilla/5.0 (Windows NT 6.1; Win64; x64; Trident/7.0; rv:11.0) like Gecko
+QQNews/5.6.0 (iPhone; iOS 11.3.1; Scale/3.00)
+13121817653}
+Dalvik/2.1.0 (Linux; U; Android 6.0; HUAWEI MLA-AL10 Build/HUAWEIMLA-AL10) NewsArticle/6.8.0 cronet/58.0.2991.0@59592eaa
+IQooAppstore
+Mozilla/5.0 (Windows NT 6.2; WOW64; Trident/7.0; MANMJS; rv:11.0) like Gecko
+TBIOS/Native
+Dalvik/2.1.0 (Linux; U; Android 6.0; HUAWEI MLA-AL10 Build/HUAWEIMLA-AL10) NewsArticle/6.7.6 cronet/58.0.2991.0@59592eaa
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/48.0.2564.116 Mobile Safari/537.36 T7/10.6 baiduboxapp/10.6.5.10 (Baidu; P1 7.0)
+Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36
+Qiyi List Client PC 5.6.40.4071
+iPhone10,3_11.3_weibo_8.4.3_iPhone_wifi Lavf/57.41.100 WBFPlayer
+sogou_ime/8.6.0.1467
+AiMeiTuan /HUAWEI-7.0-HUAWEI NXT-DL00-1812x1080-480-8.8.2-582-868406023104094-huawei
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; MIX 2S MIUI/V9.5.15.0.ODGCNFA)
+KuGou2012-8224-CarrierPigeonProtocol
+Mozilla/5.0 (Linux; Android 8.0.0; MI 6 Build/OPR1.170623.027; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36 JsSdk/2 NewsArticle/6.8.0 NetType/wifi
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36
+meipai-android-7500;preload;Lavf/56.15.102/Media Center PC
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.3; 360SoftMgr)
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) QQ/8.9.6.22427 Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.769.400 QQBrowser/9.0.2524.400
+AndroidDownloadManager
+Get Flash Player version xml/1.0
+Microsoft-ATL-Native/10.00
+Redmi 4; 6.0.1; MMB29M; zh-cn
+bcz_app/android/6.2.14
+HCDNClient_ANDROID_MOBILE;libcurl/7.56.1.8 BoringSSL zlib/1.2.8 nghttp2/1.24.0;QK/10.1.2.55;NetType/wifi
+Mozilla/5.0 (Linux; U; Android 6.0.1; zh-cn; Redmi 4 Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/61.0.3163.128 Mobile Safari/537.36 XiaoMi/MiuiBrowser/9.6.1
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36
+okhttp/3.5.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.3; .NET4.0C; .NET4.0E; InfoPath.2)
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)
+Mozilla/4.0 (compatible; Win32; WinHttp.WinHttpRequest.5)
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.104 Safari/537.36 Core/1.53.4882.400 QQBrowser/9.7.13059.400
+Java/1.8.0_60
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; Tablet PC 2.0; .NET CLR 1.1.4322)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36
+QQ/7.5.8.422 CFNetwork/901.1 Darwin/17.6.0
+platform=gphone&version=G037.08.301.1.32
+Cupid/3.0;NetType/unknown
+LianJiaShell/8.5.4.1 CFNetwork/901.1 Darwin/17.6.0
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/6.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; InfoPath.2; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Tencent AppMarket/4.5 GameCenter Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.900.400 QQBrowser/9.0.2524.400
+curl/7.38.0
+%E5%A2%A8%E8%BF%B9%E5%A4%A9%E6%B0%94/5007040404 CFNetwork/887 Darwin/17.0.0
+KuGou2012-8224-singer_name_protocol
+Mozilla/5.0 (Linux; Android 7.0; SM-G9208 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044109 Mobile Safari/537.36 MicroMessenger/6.6.7.1321(0x26060739) NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Linux; Android 8.0; ALP-AL00 Build/HUAWEIALP-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060637) NetType/WIFI Language/zh_CN
+Youku;7.1.1;iOS;11.2.1;iPhone10,3 Ikumobile/play/ios/8.2.5.11160
+Dalvik/2.1.0 (Linux; U; Android 6.0.1; Redmi 4A MIUI/V8.5.4.0.MCCCNED)
+Dalvik/2.1.0 (Linux; U; Android 7.0; Mi Note 2 MIUI/V9.5.2.0.NADCNFA)
+RquestIwcData
+ttplayer(version name:2.8.1.177,version code:281177,ttplayer release was built by tiger at 2018-04-11 18:25:20 on origin/r_2.8.1.9 branch, commit 62fd5aa0440f851a48f5d9b34ec9b38e68070d78)
+@47hwc2i8Ly3GxQ6Rd9SX
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 10.0; WOW64; Trident/7.0)
+liebao
+@YPZwiizs7XaxEOSrBqBK
+HCDNClient_IOS;OFFLINE;libcurl/7.56.1.5 SecureTransport zlib/1.2.11;QK/10.10.8.42;NetType/wifi
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1) QQBrowser/9.0
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044034 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060638) NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.874.400 QQBrowser/9.0.2524.400
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Tencent AppMarket/4.5 GameCenter Chrome/43.0.2357.134 Safari/537.36 QBCore/3.43.801.400 QQBrowser/9.0.2524.400
+WeChat/6.6.6.32 CFNetwork/893.14.2 Darwin/17.3.0
+android Mozilla/5.0 (Linux; Android 8.0; ANE-AL00 Build/HUAWEIANE-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044034 Mobile Safari/537.36  phh_android_version/4.7.0 phh_android_build/228842 phh_android_channel/hw
+ocspd/1.0.3
+python-requests/2.7.0 CPython/2.7.6 Linux/3.0.4
+AMAP_Location_SDK_Android 3.6.0
+Cocoa/THTTPClient bcz_app_iphone/6021300
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.2; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; LCTE)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.846.134 Safari/537.36 QBCore/3.53.846.400 QQBrowser/9.0.2524.400 pcqqmusic/15.93.4551.0413 SkinId/10001|31c27c|0|1
+kd/1.0.0.0
+t¨®ng hu
+Dalvik/2.1.0 (Linux; U; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00) NewsArticle/6.4.6 cronet/58.0.2991.0
+MicroMessenger/WeChat/2.3.11 (Mac OS X ban ben 10.13.4(ban hao 17E199))
+Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET4.0C; .NET4.0E)
+Mozilla/5.0 (Linux; Android 6.0.1; Moto X Pro Build/MOB30R; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/51.0.2704.106 Mobile Safari/537.36
+Mozilla/5.0 (Linux; Android 7.0; HUAWEI NXT-DL00 Build/HUAWEINXT-DL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044029 Mobile Safari/537.36 V1_AND_SQ_7.6.0_832_YYB_D QQ/7.6.0.3525 NetType/WIFI WebP/0.3.0 Pixel/1080
+Mozilla/5.0 (Windows NT 6.1.7601; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.57 Safari/537.36  youdaodict/7.2 (jsbridge/1.0;windowspc)
+Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.75 Safari/537.36
+Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.2) Gecko/20100115 Firefox/3.6
+Mozilla/5.0 (iPhone; CPU iPhone OS 8_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12B410 Safari/600.1.4
+null
+BIZHI_PING_SWAPIN
+Dalvik/2.1.0 (Linux; U; Android 7.0; EVA-AL10 Build/HUAWEIEVA-AL10) NewsArticle/6.7.2 okhttp/3.10.0.1
+Dalvik/2.1.0 (Linux; U; Android 8.0.0; Mi Note 2 MIUI/8.5.24)
+Mozilla/5.0 (Linux; Android 8.0; BKL-AL20 Build/HUAWEIBKL-AL20; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/6.2 TBS/044030 Mobile Safari/537.36 MicroMessenger/6.6.6.1300(0x26060637) NetType/WIFI Language/zh_CN
+Mozilla/5.0 (Linux; U; Android 7.0; zh-cn; MHA-AL00 Build/HUAWEIMHA-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.132 MQQBrowser/8.6 Mobile Safari/537.36
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36 SE 2.X MetaSr 1.0
+Mozilla/5.0 (iPhone; CPU iPhone OS 11_3_1 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12A365 QQMusic/8.3.0 Mskin/white Mcolor/31c27cff Bcolor/00000000 skinid[0] NetType/WIFI WebView/UIWebView Released[1] zh-CN DeviceModel/iPhone10,3 pixel/1125 model/iPhone10,3
+Safari/11601.2.7.2 CFNetwork/760.1.2 Darwin/15.0.0 (x86_64)
+%E5%A2%A8%E8%BF%B9%E5%A4%A9%E6%B0%94/5007040702 CFNetwork/758.5.3 Darwin/15.6.0
+%E8%85%BE%E8%AE%AF%E6%96%B0%E9%97%BB/5.6.0.1153 CFNetwork/889.9 Darwin/17.2.0
+HUAWEI-HUAWEI NXT-DL00__sinanewslite__3.3.0__android__7.0
+MobileSafari/604.1 CFNetwork/897.15 Darwin/17.5.0
+Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/537.36(KHTML, like Gecko) Chrome/40.0.2214.89 Safari/537.36
+QQ/7.2.0.439 CFNetwork/758.2.8 Darwin/15.0.0
+beidian/3.6.11 (Android)
+HUAWEI NXT-DL00_7.0_weibo_8.5.0_android
+Mozilla/5.0 (Linux; Android 8.0.0; MHA-AL00 Build/HUAWEIMHA-AL00; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/63.0.3239.111 Mobile Safari/537.36 MicroMessenger/6.6.6.1300 NetType/WIFI Language/zh_CN MicroMessenger/6.6.6.1300(0x26060637) NetType/WIFI Language/zh_CN
+News/6.6.5.03 CFNetwork/893.14.2 Darwin/17.3.0

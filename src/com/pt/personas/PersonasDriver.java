@@ -15,6 +15,7 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -67,6 +68,36 @@ public class PersonasDriver {
         fs = FileSystem.get(conf);
         //加载分析业务对应的配置
         addResource();
+        jobName = conf.get("jobname").toLowerCase().trim();
+        inputDir = conf.get("inputdir").trim();
+        if (inputDir.isEmpty()) {
+            MLogger.error("no input path", jobName);
+            return false;
+        }
+        outRootDir = conf.get("outrootdir").trim();
+        if (outRootDir.isEmpty()) {
+            MLogger.error("no output path ", jobName);
+            return false;
+        }
+        if (outRootDir.lastIndexOf("/") != outRootDir.length() - 1) {
+            outRootDir = outRootDir + "/";
+        }
+        outRootDir = outRootDir + jobName + "/";
+        IncDetailOutDir = outRootDir + "incdetail/";
+        hisDetailOutDir = outRootDir + "history/;";
+
+        startTime = conf.get("starttime", "0").trim();
+
+        endTime = conf.get("endtime", dateFormat.format(new Date())).trim();
+
+        delayDays = conf.getInt("delaydays", 0);//延时天数，如果获取不到则为0
+        if (delayDays < 0) {
+            delayDays = 0;
+        }
+
+        maxLine = conf.getInt("maxline", 10000);//输出文件最大的行数
+        reduceHandleSize = conf.getInt("reduceHandleSize", 128);//reduce任务处理的数据大小
+
         //统计输出结果需要分析开始的时间
         return true;
     }
@@ -97,6 +128,7 @@ public class PersonasDriver {
         lastAnalysisTime = TogetherFun.loadInputPath(jobName, inputDir,
                 outRootDir, startTime, endTime, delayDays, pathList);
         MLogger.info("analysisJob() " + pathList.size());
+        pathList.add(new Path("F:\\BDB\\mr\\cpcenter\\Personas\\input\\text.json"));
         if (pathList.size() == 0) {
             MLogger.warn(jobName + "  job no input path");
             return false;

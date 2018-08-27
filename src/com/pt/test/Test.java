@@ -17,30 +17,66 @@ public class Test {
     public static void main(String[] args) {
         Gson gson = new Gson();
         Bean bean = new Bean();
-        String value ="{\"RecTime\":1526092689437,\"LogID\":36062315,\"LogType\":\"file_restore\",\"SrcIP\":\"172.16.33.64\",\"SrcPort\":41241,\"DstIP\":\"114.255.163.175\",\"DstPort\":80,\"sessionID\":\"19_1289418\",\"TransProto\":\"TCP\",\"AppProto\":\"HTTP\",\"TypeStr\":\"text/html\",\"Length\":389,\"Status\":\"REPEAT\",\"LocalUri\":\"/data/csmdp/data/var/http/19/235340\"}\n";
+        /*String value ="{\"RecTime\":1526092689437,\"LogID\":36062315,\"LogType\":\"file_restore\",\"SrcIP\":\"172.16.33.64\",\"SrcPort\":41241,\"DstIP\":\"114.255.163.175\",\"DstPort\":80,\"sessionID\":\"19_1289418\",\"TransProto\":\"TCP\",\"AppProto\":\"HTTP\",\"TypeStr\":\"text/html\",\"Length\":389,\"Status\":\"REPEAT\",\"LocalUri\":\"/data/csmdp/data/var/http/19/235340\"}\n";
         bean = gson.fromJson(value,Bean.class);
-        System.out.println(bean.toString());
+        System.out.println(bean.toString());*/
+        test0();
+
+
+
+    }
+    public static void test0(){
+        UserAgent userAgent = UserAgent.parseUserAgentString("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.21 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.21");
+        OperatingSystem os = userAgent.getOperatingSystem();
+        String osName = os.getName();
+        String deType = os.getDeviceType().getName();
+        String osManufacturer = os.getManufacturer().getName();
+
+        Browser bwr = userAgent.getBrowser();
+        String bwrType = bwr.getBrowserType().getName();
+        String bwrName = bwr.getName();
+        String bwrEngine = bwr.getRenderingEngine().name();
+        String bwrManufacturer = bwr.getManufacturer().getName();
+        Version version = userAgent.getBrowserVersion();
+        String bwrVersion = null;
+        String bwrmajorVersion = null;
+        String bwrminorVersion = null;
+        if (version != null) {
+            bwrVersion = version.getVersion();
+            bwrmajorVersion = version.getMajorVersion();
+            bwrminorVersion = version.getMinorVersion();
+        }
+
+        System.out.print("    osName : " + osName);
+        System.out.print(", osManufacturer : " + osManufacturer);
+        System.out.print(", deType : " + deType);
+        System.out.print(", bwrName : " + bwrName);
+        System.out.print(", bwrEngine : " + bwrEngine);
+        System.out.print(", bwrManufacturer : " + bwrManufacturer);
+        System.out.print(", bwrType : " + bwrType);
+        System.out.print(", bwrVersion : " + bwrVersion);
+        Application app = userAgent.getApplication();
+        String appName = app.getName();
+        String appType = app.getApplicationType().getName();
+        String appManufacturer = app.getManufacturer().getName();
+        System.out.print(", appName : " + appName);
+        System.out.print(", appType : " + appType);
+        System.out.print(", appManufacturer : " + appManufacturer);
+        System.out.println();
+
     }
     public static void test1() {
         List<String> userAgentList = null;
         PrintWriter pw = null;
         try {
-//			 userAgentList = FileUtils.readLines(new File("conf/useragent.txt"));
-//			 pw = new PrintWriter("output/out.txt");
-
-//			userAgentList = FileUtils.readLines(new File("conf/USERAGENT_ALL_001.txt"));
-//			pw = new PrintWriter("output/outAll-2.txt");
-
-            userAgentList = FileUtils.readLines(new File("conf/test.txt"));
+            userAgentList = FileUtils.readLines(new File("input/useragent.txt"));
             pw = new PrintWriter("output/outtest.txt");
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         for (String string : userAgentList) {
-
             string = getURLDecoderString(string);
-
             UserAgent userAgent = UserAgent.parseUserAgentString(string);
 
             OperatingSystem os = userAgent.getOperatingSystem();

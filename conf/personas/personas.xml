@@ -9,8 +9,8 @@
 	</property>
 	<property>
 		<name>inputdir</name>
-		<value>/analysis/input/personas</value>
-		<description>输入数据目录：若需修改请严格遵守上述路径格式</description>
+		<value>input</value>
+		<description>/analysis/input输入数据目录：若需修改请严格遵守上述路径格式</description>
 	</property>
 
 
@@ -18,8 +18,8 @@
 
 	<property>
 		<name>outrootdir</name>
-		<value>/analysis/output/personas/</value>
-		<description>输出根目录,完整目录示例：/analysis/output/personas/20150828/，勿动
+		<value>F:\BDB\mr\cpcenter\Personas\output</value>
+		<description>/analysis/output/personas/输出根目录,完整目录示例：/analysis/output/personas/20150828/，勿动
 		</description>
 	</property>
 

@@ -16,7 +16,7 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
 
     @Override
     protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-        super.reduce(key, values, context);
+        context.write(key,new Text());
     }
 
     @Override
