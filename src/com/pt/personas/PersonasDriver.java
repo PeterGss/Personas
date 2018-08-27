@@ -128,7 +128,7 @@ public class PersonasDriver {
         lastAnalysisTime = TogetherFun.loadInputPath(jobName, inputDir,
                 outRootDir, startTime, endTime, delayDays, pathList);
         MLogger.info("analysisJob() " + pathList.size());
-        pathList.add(new Path("F:\\BDB\\mr\\cpcenter\\Personas\\input\\text.json"));
+        pathList.add(new Path("F:\\BDB\\mr\\cpcenter\\Personas\\input\\CSMDP_REPORT_3_299.json"));
         if (pathList.size() == 0) {
             MLogger.warn(jobName + "  job no input path");
             return false;

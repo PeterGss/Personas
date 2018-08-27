@@ -7,6 +7,8 @@ package com.pt.personas;
 public class Bean {
     String AppProto = "";
     String SrcIP = "";
+    String DstIP = "";
+    String DstPort = "";
     String Host = "";
     String LocalUri = "";
     String RecTime = "";
@@ -19,13 +21,17 @@ public class Bean {
     String Method = "";
     String SetCookie = "";
     String ResCode = "";
+    String TTL = "";
+    String method = "";
 
     public Bean() {
     }
 
-    public Bean(String appProto, String srcIP, String host, String localUri, String recTime, String logType, String srcPort, String uri, String cookie, String sessionID, String userAgent, String method, String setCookie, String resCode) {
+    public Bean(String appProto, String srcIP, String dstIP, String dstPort, String host, String localUri, String recTime, String logType, String srcPort, String uri, String cookie, String sessionID, String userAgent, String method, String setCookie, String resCode, String TTL, String method1) {
         AppProto = appProto;
         SrcIP = srcIP;
+        DstIP = dstIP;
+        DstPort = dstPort;
         Host = host;
         LocalUri = localUri;
         RecTime = recTime;
@@ -38,6 +44,32 @@ public class Bean {
         Method = method;
         SetCookie = setCookie;
         ResCode = resCode;
+        this.TTL = TTL;
+        this.method = method1;
+    }
+
+    public String getDstIP() {
+        return DstIP;
+    }
+
+    public void setDstIP(String dstIP) {
+        DstIP = dstIP;
+    }
+
+    public String getDstPort() {
+        return DstPort;
+    }
+
+    public void setDstPort(String dstPort) {
+        DstPort = dstPort;
+    }
+
+    public String getTTL() {
+        return TTL;
+    }
+
+    public void setTTL(String TTL) {
+        this.TTL = TTL;
     }
 
     public String getAppProto() {
@@ -155,17 +187,21 @@ public class Bean {
     public String sepString(){
         return  AppProto + "\t" +
                 SrcIP + "\t" +
+                SrcPort + "\t" +
+                DstIP + "\t" +
+                DstPort + "\t" +
                 Host + "\t" +
                 LocalUri + "\t" +
                 RecTime + "\t" +
                 LogType + "\t" +
-                SrcPort + "\t" +
                 Uri + "\t" +
                 Cookie + "\t" +
                 sessionID + "\t" +
                 UserAgent + "\t" +
                 Method + "\t" +
                 SetCookie + "\t" +
+                TTL + "\t" +
+                method + "\t" +
                 ResCode;
     }
 

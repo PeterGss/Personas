@@ -16,7 +16,11 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
 
     @Override
     protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-        context.write(key,new Text());
+        //合并数据
+        for (Text value : values) {
+            context.write(key,value);
+        }
+
     }
 
     @Override
