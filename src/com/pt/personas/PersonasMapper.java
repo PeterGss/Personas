@@ -42,20 +42,25 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         String mac = ""; //终端
         String useragent = "";
         UserAgent userAgent = new UserAgent();
-        //识别 浏览器 工具 应用
+        //1.识别 浏览器 工具 应用   分别处理
         if (StringUtils.isNotEmpty(bean.getUserAgent())){
-
             useragent = bean.getUserAgent();
             userAgent = UserAgent.parseUserAgentString(useragent);
-            MLogger.info(userAgent.toString());
+           // MLogger.info(userAgent.toString());
         }
+        //2. 识别提取用户特征，这个要根据 xml配置 针对性提取
+
         //无mac 等终端信息的  操作系统 + 设备类型设备类型 +浏览器 +浏览器版本+应用+TTL
-        outputKey.set(uerAgentToString(useragent));
+        outputKey.set(uerAgentToString(useragent) + "\t" + bean.getTTL());
         bean.setUserAgent("");
         outputValue.set(bean.sepString());
-
         //终端融合 有mac的以mac为key，没mac 用终端融合,value :srcip 终端 应用（浏览器） 用户  行为 rectime
         context.write(outputKey,outputValue);
+
+        // 若存在 mac等 终端信息 mac 也输出
+        if(StringUtils.isNotEmpty(mac)){
+            context.write(new Text(mac),outputValue);
+        }
 
     }
 
