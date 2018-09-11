@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="QQ Browser" value="微信,全民K歌,应用宝"></property>
+	<property name="Internet Explorer" value="暴风影音,搜狐影音,爱奇艺,QQ,微信,虎牙直播,TIM,QQ音乐,电脑管家"></property>
+	<property name="Chrome" value="YY语音,酷狗音乐,网易云音乐,酷我音乐"></property>
+	<property name="Mozilla" value="91助手,猎豹免费WiFi"></property>
+</configuration>

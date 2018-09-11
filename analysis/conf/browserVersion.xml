@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- name：浏览器子版本 parent：浏览器对应父版本名字 -->
+	<property name="QQ Browser" parent="QQ Browser"></property>
+	<property name="Sougo Browser" parent="Sougo Browser"></property>
+	<property name="UC Browser" parent="UC Browser"></property>
+	<property name="2345Explorer Browser" parent="2345Explorer Browser"></property>
+	<property name="Maxthon Browser" parent="Maxthon Browser"></property>
+	<property name="LBBROWSER Browser" parent="LBBROWSER Browser"></property>
+	<property name="hao123 Browser" parent="hao123 Browser"></property>
+	<property name="360 Browser" parent="360 Browser"></property>
+	<!-- IE -->
+	<property name="IE Mobile 11" parent="Internet Explorer"></property>
+	<property name="IE Mobile 10" parent="Internet Explorer"></property>
+	<property name="IE Mobile 9" parent="Internet Explorer"></property>
+	<property name="IE Mobile 7" parent="Internet Explorer"></property>
+	<property name="IE Mobile 6" parent="Internet Explorer"></property>
+	<property name="Internet Explorer 11" parent="Internet Explorer"></property>
+	<property name="Internet Explorer 10" parent="Internet Explorer"></property>
+	<property name="Internet Explorer 9" parent="Internet Explorer"></property>
+	<property name="Internet Explorer 8" parent="Internet Explorer"></property>
+	<property name="Internet Explorer 7" parent="Internet Explorer"></property>
+	<property name="Internet Explorer 6" parent="Internet Explorer"></property>
+	<property name="Internet Explorer 5.5" parent="Internet Explorer"></property>
+	<property name="Internet Explorer 5" parent="Internet Explorer"></property>
+	<property name="Internet Explorer" parent="Internet Explorer"></property>
+	<!-- EDGE -->
+	<property name="Microsoft Edge Mobile (layout engine 15)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge Mobile (layout engine 14)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge Mobile (layout engine 13)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge Mobile (layout engine 12)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge Mobile" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge (layout engine 16)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge (layout engine 15)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge (layout engine 14)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge (layout engine 13)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge (layout engine 12)" parent="Microsoft Edge"></property>
+	<property name="Microsoft Edge" parent="Microsoft Edge"></property>
+	<!-- CHROME -->
+	<property name="Chrome Mobile" parent="Chrome"></property>
+	<property name="Chrome 65" parent="Chrome"></property>
+	<property name="Chrome 64" parent="Chrome"></property>
+	<property name="Chrome 63" parent="Chrome"></property>
+	<property name="Chrome 62" parent="Chrome"></property>
+	<property name="Chrome 61" parent="Chrome"></property>
+	<property name="Chrome 60" parent="Chrome"></property>
+	<property name="Chrome 59" parent="Chrome"></property>
+	<property name="Chrome 58" parent="Chrome"></property>
+	<property name="Chrome 57" parent="Chrome"></property>
+	<property name="Chrome 56" parent="Chrome"></property>
+	<property name="Chrome 55" parent="Chrome"></property>
+	<property name="Chrome 54" parent="Chrome"></property>
+	<property name="Chrome 53" parent="Chrome"></property>
+	<property name="Chrome 52" parent="Chrome"></property>
+	<property name="Chrome 51" parent="Chrome"></property>
+	<property name="Chrome 50" parent="Chrome"></property>
+	<property name="Chrome 49" parent="Chrome"></property>
+	<property name="Chrome 48" parent="Chrome"></property>
+	<property name="Chrome 47" parent="Chrome"></property>
+	<property name="Chrome 46" parent="Chrome"></property>
+	<property name="Chrome 45" parent="Chrome"></property>
+	<property name="Chrome 44" parent="Chrome"></property>
+	<property name="Chrome 43" parent="Chrome"></property>
+	<property name="Chrome 42" parent="Chrome"></property>
+	<property name="Chrome 41" parent="Chrome"></property>
+	<property name="Chrome 40" parent="Chrome"></property>
+	<property name="Chrome 39" parent="Chrome"></property>
+	<property name="Chrome 38" parent="Chrome"></property>
+	<property name="Chrome 37" parent="Chrome"></property>
+	<property name="Chrome 36" parent="Chrome"></property>
+	<property name="Chrome 35" parent="Chrome"></property>
+	<property name="Chrome 34" parent="Chrome"></property>
+	<property name="Chrome 33" parent="Chrome"></property>
+	<property name="Chrome 32" parent="Chrome"></property>
+	<property name="Chrome 31" parent="Chrome"></property>
+	<property name="Chrome 30" parent="Chrome"></property>
+	<property name="Chrome 29" parent="Chrome"></property>
+	<property name="Chrome 28" parent="Chrome"></property>
+	<property name="Chrome 27" parent="Chrome"></property>
+	<property name="Chrome 26" parent="Chrome"></property>
+	<property name="Chrome 25" parent="Chrome"></property>
+	<property name="Chrome 24" parent="Chrome"></property>
+	<property name="Chrome 23" parent="Chrome"></property>
+	<property name="Chrome 22" parent="Chrome"></property>
+	<property name="Chrome 21" parent="Chrome"></property>
+	<property name="Chrome 20" parent="Chrome"></property>
+	<property name="Chrome 19" parent="Chrome"></property>
+	<property name="Chrome 18" parent="Chrome"></property>
+	<property name="Chrome 17" parent="Chrome"></property>
+	<property name="Chrome 16" parent="Chrome"></property>
+	<property name="Chrome 15" parent="Chrome"></property>
+	<property name="Chrome 10" parent="Chrome"></property>
+	<property name="Chrome 5" parent="Chrome"></property>
+	<property name="Chrome" parent="Chrome"></property>
+	<!--  -->
+	<property name="Omniweb" parent="Omniweb"></property>
+	<!-- FIREFOX -->
+	<property name="Firefox 3 Mobile" parent="Firefox"></property>
+	<property name="Firefox Mobile 23" parent="Firefox"></property>
+	<property name="Firefox Mobile (iOS)" parent="Firefox"></property>
+	<property name="Firefox 59" parent="Firefox"></property>
+	<property name="Firefox 58" parent="Firefox"></property>
+	<property name="Firefox 57" parent="Firefox"></property>
+	<property name="Firefox 56" parent="Firefox"></property>
+	<property name="Firefox 55" parent="Firefox"></property>
+	<property name="Firefox 54" parent="Firefox"></property>
+	<property name="Firefox 53" parent="Firefox"></property>
+	<property name="Firefox 52" parent="Firefox"></property>
+	<property name="Firefox 51" parent="Firefox"></property>
+	<property name="Firefox 50" parent="Firefox"></property>
+	<property name="Firefox 49" parent="Firefox"></property>
+	<property name="Firefox 48" parent="Firefox"></property>
+	<property name="Firefox 47" parent="Firefox"></property>
+	<property name="Firefox 46" parent="Firefox"></property>
+	<property name="Firefox 45" parent="Firefox"></property>
+	<property name="Firefox 44" parent="Firefox"></property>
+	<property name="Firefox 43" parent="Firefox"></property>
+	<property name="Firefox 42" parent="Firefox"></property>
+	<property name="Firefox 41" parent="Firefox"></property>
+	<property name="Firefox 40" parent="Firefox"></property>
+	<property name="Firefox 39" parent="Firefox"></property>
+	<property name="Firefox 38" parent="Firefox"></property>
+	<property name="Firefox 37" parent="Firefox"></property>
+	<property name="Firefox 36" parent="Firefox"></property>
+	<property name="Firefox 35" parent="Firefox"></property>
+	<property name="Firefox 34" parent="Firefox"></property>
+	<property name="Firefox 33" parent="Firefox"></property>
+	<property name="Firefox 32" parent="Firefox"></property>
+	<property name="Firefox 31" parent="Firefox"></property>
+	<property name="Firefox 30" parent="Firefox"></property>
+	<property name="Firefox 29" parent="Firefox"></property>
+	<property name="Firefox 28" parent="Firefox"></property>
+	<property name="Firefox 27" parent="Firefox"></property>
+	<property name="Firefox 26" parent="Firefox"></property>
+	<property name="Firefox 25" parent="Firefox"></property>
+	<property name="Firefox 24" parent="Firefox"></property>
+	<property name="Firefox 23" parent="Firefox"></property>
+	<property name="Firefox 22" parent="Firefox"></property>
+	<property name="Firefox 21" parent="Firefox"></property>
+	<property name="Firefox 20" parent="Firefox"></property>
+	<property name="Firefox 19" parent="Firefox"></property>
+	<property name="Firefox 18" parent="Firefox"></property>
+	<property name="Firefox 17" parent="Firefox"></property>
+	<property name="Firefox 16" parent="Firefox"></property>
+	<property name="Firefox 15" parent="Firefox"></property>
+	<property name="Firefox 14" parent="Firefox"></property>
+	<property name="Firefox 13" parent="Firefox"></property>
+	<property name="Firefox 12" parent="Firefox"></property>
+	<property name="Firefox 11" parent="Firefox"></property>
+	<property name="Firefox 10" parent="Firefox"></property>
+	<property name="Firefox 9" parent="Firefox"></property>
+	<property name="Firefox 8" parent="Firefox"></property>
+	<property name="Firefox 7" parent="Firefox"></property>
+	<property name="Firefox 6" parent="Firefox"></property>
+	<property name="Firefox 5" parent="Firefox"></property>
+	<property name="Firefox 4" parent="Firefox"></property>
+	<property name="Firefox 3" parent="Firefox"></property>
+	<property name="Firefox 2" parent="Firefox"></property>
+	<property name="Firefox 1.5" parent="Firefox"></property>
+	<property name="Firefox" parent="Firefox"></property>
+	<!-- SAFARI -->
+	<property name="BlackBerry" parent="BlackBerry"></property>
+	<property name="Safari" parent="Safari"></property>
+	<property name="Safari 11" parent="Safari"></property>
+	<property name="Safari 10" parent="Safari"></property>
+	<property name="Safari 9" parent="Safari"></property>
+	<property name="Safari 8" parent="Safari"></property>
+	<property name="Safari 7" parent="Safari"></property>
+	<property name="Safari 6" parent="Safari"></property>
+	<property name="Safari 5" parent="Safari"></property>
+	<property name="Safari 4" parent="Safari"></property>
+	<property name="Safari" parent="Safari"></property>
+	<!-- COAST -->
+	<property name="Opera" parent="Opera"></property>
+	<!-- OPERA -->
+	<property name="Opera Mobile" parent="Opera"></property>
+	<property name="Opera Mini" parent="Opera"></property>
+	<property name="Opera 51" parent="Opera"></property>
+	<property name="Opera 50" parent="Opera"></property>
+	<property name="Opera 49" parent="Opera"></property>
+	<property name="Opera 48" parent="Opera"></property>
+	<property name="Opera 47" parent="Opera"></property>
+	<property name="Opera 46" parent="Opera"></property>
+	<property name="Opera 45" parent="Opera"></property>
+	<property name="Opera 44" parent="Opera"></property>
+	<property name="Opera 43" parent="Opera"></property>
+	<property name="Opera 42" parent="Opera"></property>
+	<property name="Opera 34" parent="Opera"></property>
+	<property name="Opera 33" parent="Opera"></property>
+	<property name="Opera 32" parent="Opera"></property>
+	<property name="Opera 31" parent="Opera"></property>
+	<property name="Opera 30" parent="Opera"></property>
+	<property name="Opera 29" parent="Opera"></property>
+	<property name="Opera 28" parent="Opera"></property>
+	<property name="Opera 27" parent="Opera"></property>
+	<property name="Opera 26" parent="Opera"></property>
+	<property name="Opera 25" parent="Opera"></property>
+	<property name="Opera 24" parent="Opera"></property>
+	<property name="Opera 23" parent="Opera"></property>
+	<property name="Opera 20" parent="Opera"></property>
+	<property name="Opera 19" parent="Opera"></property>
+	<property name="Opera 18" parent="Opera"></property>
+	<property name="Opera 17" parent="Opera"></property>
+	<property name="Opera 16" parent="Opera"></property>
+	<property name="Opera 15" parent="Opera"></property>
+	<property name="Opera" parent="Opera"></property>
+	<!-- KONQUEROR -->
+	<property name="Konqueror" parent="Konqueror"></property>
+	<!-- DOLFIN2 -->
+	<property name="Samsung Dolphin 2" parent="Samsung Dolphin 2"></property>
+	<!-- APPLE_WEB_KIT -->
+	<property name="Apple WebKit" parent="Apple WebKit"></property>
+	<!-- LOTUS_NOTES -->
+	<property name="Lotus Notes" parent="Lotus Notes"></property>
+	<!--  -->
+	<property name="Camino" parent="Camino"></property>
+	<property name="Flock" parent="Flock"></property>
+	<property name="Vivaldi" parent="Vivaldi"></property>
+	<property name="SeaMonkey" parent="SeaMonkey"></property>
+	<property name="Mozilla" parent="Mozilla"></property>
+</configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 
+	host： 一级域名关键词，只能一个值，必须存在
+	product： 产品名称，只能一个值，必须存在
+	mac: mac地址，格式（提取字段：特征key），存在多个时以逗号","分隔，可缺失
+	user： 用户特征 ，可缺失
+	user.type: 用户特征解析方式。
+		type="1"，特征key的值即为用户值。
+		type="2"，特征key的值中存在用户值，需要根据split分隔符和position位置截取用户值。
+	user.value： 用户特征的key，格式（提取字段：特征key），存在多个时以逗号","分隔
+	 -->
+	<browser host="qq.com" product="腾讯网">
+		<user type="1" value="Uri:qq,Uri:uin"></user>
+		<user type="2" value="Cookie:uin,Cookie:pt2
+		guin" split="o" position="1"></user>
+	</browser>
+</configuration>

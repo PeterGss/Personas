@@ -9,18 +9,128 @@
 	</property>
 	<property>
 		<name>inputdir</name>
-		<value>input</value>
+		<value>analysis/input/personas</value>
 		<description>/analysis/input输入数据目录：若需修改请严格遵守上述路径格式</description>
+	</property>
+	<property>
+		<name>outrootdir</name>
+		<value>analysis/output</value>
+		<description>/analysis/output/personas/输出根目录,完整目录示例：/analysis/output/personas/20150828/，勿动
+		</description>
+	</property>
+	<property>
+		<name>tool</name>
+		<value>analysis/conf/tool.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+	<property>
+		<name>app</name>
+		<value>analysis/conf/app.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+	<property>
+		<name>browser</name>
+		<value>analysis/conf/browser.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+	<property>
+		<name>os</name>
+		<value>analysis/conf/os.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+	<property>
+		<name>browserVersion</name>
+		<value>analysis/conf/browserVersion.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+	<property>
+		<name>browserApp</name>
+		<value>analysis/conf/browserApp.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+	<property>
+		<name>appFeature</name>
+		<value>analysis/conf/appFeature.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+	<property>
+		<name>browserFeature</name>
+		<value>analysis/conf/browserFeature.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+	<property>
+		<name>appproto</name>
+		<value>HTTP</value>
+		<description>要处理的协议，以逗号分隔</description>
+	</property>
+	<property >
+		<name>brower.sign</name>
+		<value>IE,CHROME</value>
+		<description>浏览器特征</description>
+	</property>
+	<property>
+		<name>terminal</name>
+		<value><![CDATA[Uri:&mac,Uri:&imei]]></value>
+		<description>要处理的协议，以逗号分隔</description>
+	</property>
+	<property>
+		<name>macRegex</name>
+		<value></value>
+		<description>mac正则，默认不用填</description>
+	</property>
+	<property>
+		<name>imeiRegex</name>
+		<value></value>
+		<description>imei正则，默认不用填</description>
+	</property>
+
+	<property>
+		<name>brower.hosts</name>
+		<value>www.sgsport.gov.cn,gm.163.com</value>
+		<description>浏览器HOST，","分隔</description>
+	</property>
+	<!-- 提取 用户特征，存在多种方式 -->
+	<property>
+		<name>www.sgsport.gov.cn.userCharacter</name>
+		<value>Cookie:PHPSESSID=,:;</value>
+		<description>
+			浏览器用户特征，"，"分隔 不同的特征字段,"." 来分隔  不同的字段处理方法。":" 来分隔 特征字段和 分隔符 （第二个: 用来标志用户信息索引位置，暂时未加）
+			字段说明Cookie:PHPSESSID=,split:;，cookie里面PHPSESSID 字段，对应的分隔符是“:”</description>
+	</property>
+	<property>
+		<name>apps</name>
+		<value>app</value>
+		<description>伪装成 浏览器的 应用类型，","分隔</description>
+	</property>
+	<property>
+		<name>app.useragent</name>
+		<value>Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)</value>
+		<description>伪装成浏览器的应用,","分隔</description>
+	</property>
+	<property>
+		<name>app.hosts</name>
+		<value>web.qun.qq.com,q.i.gdt.qq.com</value>
+		<description>伪装成浏览器的应用,","分隔</description>
+	</property>
+	<property>
+		<name>app.cookie.character</name>
+		<value>clientinfo=QQ</value>
+		<description>伪装成浏览器的应用,","分隔</description>
+	</property>
+	<property>
+		<name>app.uri.character</name>
+		<value>clientinfo=QQ</value>
+		<description>伪装成浏览器的应用,","分隔</description>
+	</property>
+	<property>
+		<name>app.referer</name>
+		<value>h5.qzone.qq.com</value>
+		<description>伪装成浏览器的应用,","分隔</description>
 	</property>
 
 
-
-
-	<property>
-		<name>outrootdir</name>
-		<value>F:\BDB\mr\cpcenter\Personas\output</value>
-		<description>/analysis/output/personas/输出根目录,完整目录示例：/analysis/output/personas/20150828/，勿动
-		</description>
+	<property name="Windows10" aliases="Windows NT 6.4,Windows NT 10" exclude="" versionRegex="">
+		<value>starttime</value>
 	</property>
 
 	<property>
@@ -61,7 +171,7 @@
 	<!-- 一个reduce处理的文件大小，作用程序里为了计算出需要几个reduce来工作，name为自己定义 -->
 	<property>
 		<name>reducer.handle.mb</name>
-		<value>1024</value>
+		<value>512</value>
 		<description>每个reduce task处理的记录数，单位M,勿动</description>
 	</property>
 

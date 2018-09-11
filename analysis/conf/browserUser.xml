@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<browser host="qq.com" product="腾讯网">
+        <user type="1" value="Cookie:adid" split="" position="" describe="type为1时，表示数据格式不需要截取"></user>
+		<user type="2" value="Cookie:uin" split="o" position="0" describe="type为2时，表示数据格式不需要通过指定split：要截取的字符，和position：位置来截取"></user>
+	</browser>
+</configuration>

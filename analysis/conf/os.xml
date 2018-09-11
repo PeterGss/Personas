@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- Windows -->
+	<property name="Windows 10" aliases="Windows NT 6.4,Windows NT 10" deviceType="Computer"></property>
+	<property name="Windows 8.1" aliases="Windows NT 6.3" deviceType="Computer"></property>
+	<property name="Windows 8" aliases="Windows NT 6.2" exclude="Xbox,Xbox One" deviceType="Computer"></property>
+	<property name="Windows 7" aliases="Windows NT 6.1" exclude="Xbox,Xbox One" deviceType="Computer"></property>
+	<property name="Windows Vista" aliases="Windows NT 6" exclude="Xbox,Xbox One" deviceType="Computer"></property>
+	<property name="Windows 2000" aliases="Windows NT 5.0" deviceType="Computer"></property>
+	<property name="Windows XP" aliases="Windows NT 5" exclude="ggpht.com" deviceType="Computer"></property>
+	<property name="Windows 10 Mobile" aliases="Windows Phone 10" deviceType="Mobile"></property>
+	<property name="Windows Phone 8.1" aliases="Windows Phone 8.1" deviceType="Mobile"></property>
+	<property name="Windows Phone 8" aliases="Windows Phone 8" deviceType="Mobile"></property>
+	<property name="Windows Phone 7" aliases="Windows Phone OS 7" deviceType="Mobile"></property>
+	<property name="Windows Mobile" aliases="Windows CE" deviceType="Mobile"></property>
+	<property name="Windows 98" aliases="Windows 98,Win98" exclude="Palm" deviceType="Computer"></property>
+	<property name="Xbox OS" aliases="xbox" deviceType="Game console"></property>
+	<property name="Windows" aliases="Windows" exclude="Palm,ggpht.com" deviceType="Computer"></property>
+	<!-- Android -->
+	<property name="Android 8.x Tablet" aliases="Android 8,Android-8" exclude="glass,mobile" deviceType="Tablet"></property>
+	<property name="Android 8.x" aliases="Android 8,Android-8" exclude="glass" deviceType="Mobile"></property>
+	<property name="Android 7.x Tablet" aliases="Android 7,Android-7" exclude="glass,mobile" deviceType="Tablet"></property>
+	<property name="Android 7.x" aliases="Android 7,Android-7" exclude="glass" deviceType="Mobile"></property>
+	<property name="Android 6.x Tablet" aliases="Android 6,Android-6" exclude="glass,mobile" deviceType="Tablet"></property>
+	<property name="Android 6.x" aliases="Android 6,Android-6" exclude="glass" deviceType="Mobile"></property>
+	<property name="Android 5.x Tablet" aliases="Android 5,Android-5" exclude="glass,mobile" deviceType="Tablet"></property>
+	<property name="Android 5.x" aliases="Android 5,Android-5" exclude="glass" deviceType="Mobile"></property>
+	<property name="Android 4.x Tablet" aliases="Android 4,Android-4" exclude="glass,mobile,ubuntu" deviceType="Tablet"></property>
+	<property name="Android 4.x" aliases="Android 4,Android-4" exclude="glass,ubuntu" deviceType="Mobile"></property>
+	<property name="Android 3.x Tablet" aliases="Android 3" deviceType="Tablet"></property>
+	<property name="Android 2.x" aliases="Android 2" deviceType="Mobile"></property>
+	<property name="Android 1.x" aliases="Android 1" deviceType="Mobile"></property>
+	<property name="Android" aliases="Android" exclude="Ubuntu" deviceType="Mobile"></property>
+	<!-- Chrome OS -->
+	<property name="Chrome OS" aliases="CrOS" deviceType="Computer"></property>
+	<!-- PalmOS -->
+	<!--  -->
+	<property name="WebOS" aliases="webOS" deviceType="Mobile"></property>
+	<property name="PalmOS" aliases="Palm" deviceType="Mobile"></property>
+	<property name="MeeGo" aliases="MeeGo" deviceType="Mobile"></property>
+	<!-- iOS -->
+	<property name="iOS 11 (iPhone)" aliases="iPhone OS 11" deviceType="Mobile"></property>
+	<property name="iOS 10 (iPhone)" aliases="iPhone OS 10" deviceType="Mobile"></property>
+	<property name="iOS 9 (iPhone)" aliases="iPhone OS 9" deviceType="Mobile"></property>
+	<property name="iOS 8.4 (iPhone)" aliases="iPhone OS 8_4" deviceType="Mobile"></property>
+	<property name="iOS 8.3 (iPhone)" aliases="iPhone OS 8_3" deviceType="Mobile"></property>
+	<property name="iOS 8.2 (iPhone)" aliases="iPhone OS 8_2" deviceType="Mobile"></property>
+	<property name="iOS 8.1 (iPhone)" aliases="iPhone OS 8_1" deviceType="Mobile"></property>
+	<property name="iOS 8 (iPhone)" aliases="iPhone OS 8" deviceType="Mobile"></property>
+	<property name="iOS 7 (iPhone)" aliases="iPhone OS 7" deviceType="Mobile"></property>
+	<property name="iOS 6 (iPhone)" aliases="iPhone OS 6" deviceType="Mobile"></property>
+	<property name="iOS 5 (iPhone)" aliases="iPhone OS 5" deviceType="Mobile"></property>
+	<property name="iOS 4 (iPhone)" aliases="iPhone OS 4" deviceType="Mobile"></property>
+	<property name="iOS 11 (iPad)" aliases="OS 11" deviceType="Tablet"></property>
+	<property name="iOS 10 (iPad)" aliases="OS 10" deviceType="Tablet"></property>
+	<property name="iOS 9 (iPad)" aliases="OS 9" deviceType="Tablet"></property>
+	<property name="iOS 8.4 (iPad)" aliases="OS 8_4" deviceType="Tablet"></property>
+	<property name="iOS 8.3 (iPad)" aliases="OS 8_3" deviceType="Tablet"></property>
+	<property name="iOS 8.2 (iPad)" aliases="OS 8_2" deviceType="Tablet"></property>
+	<property name="iOS 8.1 (iPad)" aliases="OS 8_1" deviceType="Tablet"></property>
+	<property name="iOS 8 (iPad)" aliases="OS 8_0" deviceType="Tablet"></property>
+	<property name="iOS 7 (iPad)" aliases="OS 7" deviceType="Tablet"></property>
+	<property name="iOS 6 (iPad)" aliases="OS 6" deviceType="Tablet"></property>
+	<property name="Mac OS X (iPad)" aliases="iPad" deviceType="Tablet"></property>
+	<property name="Mac OS X (iPhone)" aliases="iPhone" deviceType="Mobile"></property>
+	<property name="Mac OS X (iPod)" aliases="iPod" deviceType="Mobile"></property>
+	<property name="iOS" aliases="iPhone,like Mac OS X" deviceType="Mobile"></property>
+	<property name="Mac OS X" aliases="Mac OS X,CFNetwork" deviceType="Computer"></property>
+	<property name="Mac OS" aliases="Mac" deviceType="Computer"></property>
+	<!--  -->
+	<property name="Maemo" aliases="Maemo" deviceType="Mobile"></property>
+	<property name="Bada" aliases="Bada" deviceType="Mobile"></property>
+	<property name="Android (Google TV)" aliases="GoogleTV" deviceType="Digital media receiver"></property>
+	<!--  -->
+	<property name="Tizen" aliases="Tizen" deviceType="Unknown"></property>
+	<property name="Linux (Kindle)" aliases="Kindle" deviceType="Tablet"></property>
+	<property name="Ubuntu" aliases="ubuntu" deviceType="Computer"></property>
+	<property name="Linux" aliases="Linux,CamelHttpStream" deviceType="Computer"></property>
+	<!-- SYMBIAN -->
+	<property name="Symbian OS" aliases="Symbian,Series60" deviceType="Mobile"></property>
+	<!-- BLACKBERRY -->
+	<property name="BlackBerryOS" aliases="BlackBerry" deviceType="Mobile"></property>
+	<property name="BlackBerryOS" aliases="BlackBerry Tablet OS" deviceType="RIM Tablet OS"></property>
+	<!--  -->
+	<property name="Unknown mobile" aliases="Mobile" deviceType="Mobile"></property>
+	<property name="Unknown tablet" aliases="Tablet" deviceType="Tablet"></property>
+</configuration>

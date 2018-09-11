@@ -10,6 +10,7 @@ public class Bean {
     String DstIP = "";
     String DstPort = "";
     String Host = "";
+    String Referer = "";
     String LocalUri = "";
     String RecTime = "";
     String LogType = "";
@@ -27,12 +28,13 @@ public class Bean {
     public Bean() {
     }
 
-    public Bean(String appProto, String srcIP, String dstIP, String dstPort, String host, String localUri, String recTime, String logType, String srcPort, String uri, String cookie, String sessionID, String userAgent, String method, String setCookie, String resCode, String TTL, String method1) {
+    public Bean(String appProto, String srcIP, String dstIP, String dstPort, String host, String referer, String localUri, String recTime, String logType, String srcPort, String uri, String cookie, String sessionID, String userAgent, String method, String setCookie, String resCode, String TTL, String method1) {
         AppProto = appProto;
         SrcIP = srcIP;
         DstIP = dstIP;
         DstPort = dstPort;
         Host = host;
+        Referer = referer;
         LocalUri = localUri;
         RecTime = recTime;
         LogType = logType;
@@ -46,6 +48,14 @@ public class Bean {
         ResCode = resCode;
         this.TTL = TTL;
         this.method = method1;
+    }
+
+    public String getReferer() {
+        return Referer;
+    }
+
+    public void setReferer(String referer) {
+        Referer = referer;
     }
 
     public String getDstIP() {
@@ -185,24 +195,16 @@ public class Bean {
     }
 
     public String sepString(){
-        return  AppProto + "\t" +
+        return
                 SrcIP + "\t" +
-                SrcPort + "\t" +
-                DstIP + "\t" +
-                DstPort + "\t" +
+                //DstIP + "\t" +
+                AppProto + "\t" +
                 Host + "\t" +
-                LocalUri + "\t" +
                 RecTime + "\t" +
-                LogType + "\t" +
                 Uri + "\t" +
                 Cookie + "\t" +
-                sessionID + "\t" +
                 UserAgent + "\t" +
-                Method + "\t" +
-                SetCookie + "\t" +
-                TTL + "\t" +
-                method + "\t" +
-                ResCode;
+                TTL ;
     }
 
     @Override

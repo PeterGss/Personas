@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 国内浏览器 -->
+	<property name="QQ Browser" aliases="QQBrowser/" versionRegex="QQBrowser\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Sougo Browser" aliases=" MetaSr "></property>
+	<property name="UC Browser" aliases="UBrowser/" versionRegex="UBrowser\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="2345Explorer Browser" aliases="2345Explorer/" versionRegex="2345Explorer\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Maxthon Browser" aliases="Maxthon/" versionRegex="Maxthon\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="LBBROWSER Browser" aliases=" LBBROWSER"></property>
+	<property name="hao123 Browser" aliases="BIDUBrowser/" versionRegex="BIDUBrowser(([\d]+)\.([\w]+))"></property>
+	<property name="360 Browser" aliases=" 360SE"></property>
+	<!-- IE -->
+	<property name="IE Mobile 11" aliases="Trident&amp;IEMobile/11,IE &amp;IEMobile/11" versionRegex="(?:Trident\/7|IE)(?:\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\.?([0-9]+))"></property><!-- 特殊处理&amp; -->
+	<property name="IE Mobile 10" aliases="MSIE&amp;IEMobile/10" versionRegex="MSIE (([\d]+)\.([\w]+))"></property><!-- 特殊处理&amp; -->
+	<property name="IE Mobile 9" aliases="MSIE&amp;IEMobile/9" versionRegex="MSIE (([\d]+)\.([\w]+))"></property><!-- 特殊处理&amp; -->
+	<property name="IE Mobile 7" aliases="MSIE&amp;IEMobile 7" versionRegex="MSIE (([\d]+)\.([\w]+))"></property><!-- 特殊处理&amp; -->
+	<property name="IE Mobile 6" aliases="MSIE&amp;IEMobile 6" versionRegex="MSIE (([\d]+)\.([\w]+))"></property><!-- 特殊处理&amp; -->
+	<property name="Internet Explorer 11" aliases="Trident/7,IE 11." exclude="MSIE 7,BingPreview" versionRegex="(?:Trident\/7|IE)(?:\.[0-9]*;)?(?:.*rv:| )(([0-9]+)\.?([0-9]+))"></property>
+	<property name="Internet Explorer 10" aliases="MSIE 10" versionRegex="MSIE (([\d]+)\.([\w]+))"></property>
+	<property name="Internet Explorer 9" aliases="MSIE 9" versionRegex="MSIE (([\d]+)\.([\w]+))"></property>
+	<property name="Internet Explorer 8" aliases="MSIE 8" versionRegex="MSIE (([\d]+)\.([\w]+))"></property>
+	<property name="Internet Explorer 7" aliases="MSIE 7" versionRegex="MSIE (([\d]+)\.([\w]+))"></property>
+	<property name="Internet Explorer 6" aliases="MSIE 6" versionRegex="MSIE (([\d]+)\.([\w]+))"></property>
+	<property name="Internet Explorer 5.5" aliases="MSIE 5.5" versionRegex="MSIE (([\d]+)\.([\w]+))"></property>
+	<property name="Internet Explorer 5" aliases="MSIE 5" versionRegex="MSIE (([\d]+)\.([\w]+))"></property>
+	<property name="Internet Explorer" aliases="MSIE,Trident,IE " exclude="BingPreview,Xbox,Xbox One" versionRegex="MSIE (([\d]+)\.([\w]+))"></property>
+	<!-- EDGE -->
+	<property name="Microsoft Edge Mobile (layout engine 15)" aliases="Edge/15&amp;Mobile Safari" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property><!-- 特殊处理&amp; -->
+	<property name="Microsoft Edge Mobile (layout engine 14)" aliases="Edge/14&amp;Mobile Safari" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property><!-- 特殊处理&amp; -->
+	<property name="Microsoft Edge Mobile (layout engine 13)" aliases="Edge/13&amp;Mobile Safari" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property><!-- 特殊处理&amp; -->
+	<property name="Microsoft Edge Mobile (layout engine 12)" aliases="Edge/12&amp;Mobile Safari" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property><!-- 特殊处理&amp; -->
+	<property name="Microsoft Edge Mobile" aliases="Edge&amp;Mobile Safari" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property><!-- 特殊处理&amp; -->
+	<property name="Microsoft Edge (layout engine 16)" aliases="Edge/16" exclude="Mobile" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property>
+	<property name="Microsoft Edge (layout engine 15)" aliases="Edge/15" exclude="Mobile" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property>
+	<property name="Microsoft Edge (layout engine 14)" aliases="Edge/14" exclude="Mobile" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property>
+	<property name="Microsoft Edge (layout engine 13)" aliases="Edge/13" exclude="Mobile" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property>
+	<property name="Microsoft Edge (layout engine 12)" aliases="Edge/12" exclude="Mobile" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property>
+	<property name="Microsoft Edge" aliases="Edge" versionRegex="(?:Edge\/(([0-9]+)\.([0-9]*)))"></property>
+	<!-- CHROME -->
+	<property name="Chrome Mobile" aliases="Chrome&amp;Mobile Safari,CrMo,CriOS" exclude="OPR/" versionRegex="(?:CriOS|CrMo|Chrome)\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property><!-- 特殊处理&amp; -->
+	<property name="Chrome 65" aliases="Chrome/65" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 64" aliases="Chrome/64" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 63" aliases="Chrome/63" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 62" aliases="Chrome/62" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 61" aliases="Chrome/61" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 60" aliases="Chrome/60" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 59" aliases="Chrome/59" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 58" aliases="Chrome/58" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 57" aliases="Chrome/57" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 56" aliases="Chrome/56" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 55" aliases="Chrome/55" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 54" aliases="Chrome/54" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 53" aliases="Chrome/53" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 52" aliases="Chrome/52" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 51" aliases="Chrome/51" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 50" aliases="Chrome/50" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 49" aliases="Chrome/49" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 48" aliases="Chrome/48" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 47" aliases="Chrome/47" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 46" aliases="Chrome/46" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 45" aliases="Chrome/45" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 44" aliases="Chrome/44" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 43" aliases="Chrome/43" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 42" aliases="Chrome/42" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 41" aliases="Chrome/41" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 40" aliases="Chrome/40" exclude="OPR/,Web Preview,Vivaldi" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 39" aliases="Chrome/39" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 38" aliases="Chrome/38" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 37" aliases="Chrome/37" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 36" aliases="Chrome/36" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 35" aliases="Chrome/35" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 34" aliases="Chrome/34" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 33" aliases="Chrome/33" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 32" aliases="Chrome/32" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 31" aliases="Chrome/31" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 30" aliases="Chrome/30" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 29" aliases="Chrome/29" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 28" aliases="Chrome/28" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 27" aliases="Chrome/27" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 26" aliases="Chrome/26" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 25" aliases="Chrome/25" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 24" aliases="Chrome/24" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 23" aliases="Chrome/23" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 22" aliases="Chrome/22" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 21" aliases="Chrome/21" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 20" aliases="Chrome/20" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 19" aliases="Chrome/19" exclude="OPR/,Web Preview" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 18" aliases="Chrome/18" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 17" aliases="Chrome/17" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 16" aliases="Chrome/16" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 15" aliases="Chrome/15" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 10" aliases="Chrome/10" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome 5" aliases="Chrome/5" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Chrome" aliases="Chrome,CrMo,CriOS" exclude="OPR/,Web Preview,Vivaldi,Huajiao PC Client/" versionRegex="Chrome\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<!--  -->
+	<property name="Omniweb" aliases="OmniWeb"></property>
+	<!-- FIREFOX -->
+	<property name="Firefox 3 Mobile" aliases="Firefox/3.5 Maemo" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox Mobile 23" aliases="Mobile&amp;Firefox/23" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property><!-- 特殊处理&amp; -->
+	<property name="Firefox Mobile (iOS)" aliases="Mobile&amp;FxiOS" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property><!-- 特殊处理&amp; -->
+	<property name="Firefox 59" aliases="Firefox/59" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 58" aliases="Firefox/58" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 57" aliases="Firefox/57" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 56" aliases="Firefox/56" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 55" aliases="Firefox/55" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 54" aliases="Firefox/54" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 53" aliases="Firefox/53" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 52" aliases="Firefox/52" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 51" aliases="Firefox/51" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 50" aliases="Firefox/50" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 49" aliases="Firefox/49" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 48" aliases="Firefox/48" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 47" aliases="Firefox/47" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 46" aliases="Firefox/46" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 45" aliases="Firefox/45" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 44" aliases="Firefox/44" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 43" aliases="Firefox/43" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 42" aliases="Firefox/42" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 41" aliases="Firefox/41" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 40" aliases="Firefox/40" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 39" aliases="Firefox/39" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 38" aliases="Firefox/38" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 37" aliases="Firefox/37" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 36" aliases="Firefox/36" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 35" aliases="Firefox/35" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 34" aliases="Firefox/34" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 33" aliases="Firefox/33" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 32" aliases="Firefox/32" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 31" aliases="Firefox/31" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 30" aliases="Firefox/30" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 29" aliases="Firefox/29" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 28" aliases="Firefox/28" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 27" aliases="Firefox/27" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 26" aliases="Firefox/26" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 25" aliases="Firefox/25" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 24" aliases="Firefox/24" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 23" aliases="Firefox/23" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 22" aliases="Firefox/22" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 21" aliases="Firefox/21" exclude="WordPress.com mShots" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 20" aliases="Firefox/20" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 19" aliases="Firefox/19" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 18" aliases="Firefox/18" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 17" aliases="Firefox/17" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 16" aliases="Firefox/16" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 15" aliases="Firefox/15" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 14" aliases="Firefox/14" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 13" aliases="Firefox/13" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 12" aliases="Firefox/12" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 11" aliases="Firefox/11" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 10" aliases="Firefox/10" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 9" aliases="Firefox/9" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 8" aliases="Firefox/8" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 7" aliases="Firefox/7" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 6" aliases="Firefox/6" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 5" aliases="Firefox/5" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 4" aliases="Firefox/4" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 3" aliases="Firefox/3" exclude="Camino,Flock,ggpht.com" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 2" aliases="Firefox/2" exclude="Camino,WordPress.com mShots" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox 1.5" aliases="Firefox/1.5" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Firefox" aliases="Firefox,FxiOS" exclude="camino,flock,ggpht.com,WordPress.com mShots" versionRegex="Firefox\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<!-- SAFARI -->
+	<property name="BlackBerry" aliases="Safari&amp;BB10"></property><!-- 特殊处理&amp; -->
+	<property name="Safari" aliases="Mobile Safari,Safari&amp;Mobile/" exclude="bot,preview,OPR/,Coast/,Vivaldi,CFNetwork,FxiOS"></property>
+	<property name="Safari 11" aliases="Safari&amp;Version/11" exclude="bot"></property><!-- 特殊处理&amp; -->
+	<property name="Safari 10" aliases="Safari&amp;Version/10" exclude="bot"></property><!-- 特殊处理&amp; -->
+	<property name="Safari 9" aliases="Safari&amp;Version/9" exclude="bot"></property><!-- 特殊处理&amp; -->
+	<property name="Safari 8" aliases="Safari&amp;Version/8" exclude="bot"></property><!-- 特殊处理&amp; -->
+	<property name="Safari 7" aliases="Safari&amp;Version/7" exclude="bing"></property><!-- 特殊处理&amp; -->
+	<property name="Safari 6" aliases="Safari&amp;Version/6"></property><!-- 特殊处理&amp; -->
+	<property name="Safari 5" aliases="Safari&amp;Version/5,Safari&amp;AppleWebKit/533,Safari&amp;AppleWebKit/534" exclude="Google Web Preview"></property><!-- 特殊处理&amp; -->
+	<property name="Safari 4" aliases="Safari&amp;Version/4" exclude="Googlebot-Mobile"></property><!-- 特殊处理&amp; -->
+	<property name="Safari" aliases="Safari" exclude="bot,preview,OPR/,Coast/,Vivaldi,CFNetwork,Phantom"></property>
+	<!-- COAST -->
+	<property name="Opera" aliases=" Coast/" versionRegex="Coast\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<!-- OPERA -->
+	<property name="Opera Mobile" aliases="OPR/&amp;Mobile Safari" versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property><!-- 特殊处理&amp; -->
+	<property name="Opera Mini" aliases="Opera Mini" versionRegex="[o][p][e]?[r][a]?\/(([\d]+)\.([\w]+)(\.([\w]+))?(\.([\w]+))?)"></property>
+	<property name="Opera 51" aliases="OPR/51." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 50" aliases="OPR/50." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 49" aliases="OPR/49." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 48" aliases="OPR/48." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 47" aliases="OPR/47." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 46" aliases="OPR/46." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 45" aliases="OPR/45." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 44" aliases="OPR/44." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 43" aliases="OPR/43." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 42" aliases="OPR/42." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 34" aliases="OPR/34." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 33" aliases="OPR/33." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 32" aliases="OPR/32." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 31" aliases="OPR/31." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 30" aliases="OPR/30." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 29" aliases="OPR/29." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 28" aliases="OPR/28." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 27" aliases="OPR/27." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 26" aliases="OPR/26." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 25" aliases="OPR/25." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 24" aliases="OPR/24." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 23" aliases="OPR/23." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 20" aliases="OPR/20." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 19" aliases="OPR/19." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 18" aliases="OPR/18." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 17" aliases="OPR/17." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 16" aliases="OPR/16." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera 15" aliases="OPR/15." versionRegex="OPR\/(([\d]+)\.([\w]+)?(\.[\w]+)?(\.[\w]+)?)"></property>
+	<property name="Opera" aliases="OPR/,Opera" versionRegex="[o][p][e]?[r][a]?\/(([\d]+)\.([\w]+)(\.([\w]+))?(\.([\w]+))?)"></property>
+	<!-- KONQUEROR -->
+	<property name="Konqueror" aliases="Konqueror" exclude="Exabot" versionRegex="Konqueror\/(([0-9]+)\.?([\w]+)?(-[\w]+)?)"></property>
+	<!-- DOLFIN2 -->
+	<property name="Samsung Dolphin 2" aliases="Dolfin/2"></property>
+	<!-- APPLE_WEB_KIT -->
+	<property name="Apple WebKit" aliases="AppleWebKit" exclude="bot,preview,OPR/,Coast/,Vivaldi,Phantom"></property>
+	<!-- LOTUS_NOTES -->
+	<property name="Lotus Notes" aliases="Lotus-Notes" versionRegex="Lotus-Notes\/(([\d]+)\.([\w]+))"></property>
+	<!--  -->
+	<property name="Camino" aliases="Camino" versionRegex="Camino\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?)"></property>
+	<property name="Flock" aliases="Flock" versionRegex="Flock\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?)"></property>
+	<property name="Vivaldi" aliases="Vivaldi" versionRegex="Vivaldi/(([\d]+).([\d]+).([\d]+).([\d]+))"></property>
+	<property name="SeaMonkey" aliases="SeaMonkey" versionRegex="SeaMonkey\/(([0-9]+)\.?([\w]+)?(\.[\w]+)?)"></property>
+	<property name="Mozilla" aliases="Mozilla,Moozilla" exclude="ggpht.com"></property>
+</configuration>

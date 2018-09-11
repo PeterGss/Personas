@@ -1,11 +1,14 @@
-package com.pt.personas;
+package com.pt.test;
 
+import com.pt.personas.PersonasMapper;
+import com.pt.personas.PersonasReducer;
 import com.pt.util.MLogger;
 import com.pt.util.TogetherFun;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
@@ -23,7 +26,7 @@ import java.util.List;
  * Created by Shaon on 2018/8/24.
  *
  */
-public class PersonasDriver {
+public class CleanDriver {
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
     protected Configuration conf = new Configuration();
     protected FileSystem fs;
@@ -142,18 +145,18 @@ public class PersonasDriver {
             return false;
         }
         Job job = Job.getInstance(conf, jobName  + today);
-        job.setMapperClass(PersonasMapper.class);
-        job.setJarByClass(PersonasDriver.class);
+        job.setMapperClass(CleanMapper.class);
+        job.setJarByClass(CleanDriver.class);
         job.setReducerClass(PersonasReducer.class);
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(Text.class);
+        job.setOutputValueClass(NullWritable.class);
         LazyOutputFormat.setOutputFormatClass(job,TextOutputFormat.class);
-        job.setNumReduceTasks(getReducerNum(pathList, reduceHandleSize));
-        //job.setNumReduceTasks(0);
+        //job.setNumReduceTasks(getReducerNum(pathList, reduceHandleSize));
+        job.setNumReduceTasks(0);
         for (Path path : pathList) {
             FileInputFormat.addInputPath(job, path);
         }
-        job.setOutputFormatClass(TextOutputFormat.class);
+        //job.setOutputFormatClass(TextOutputFormat.class);
 
         Path outputDir = new Path(IncDetailOutDir);
         if (fs.exists(outputDir)) {
@@ -217,7 +220,7 @@ public class PersonasDriver {
      *
      */
     public static void main(String[] args) {
-        PersonasDriver driver = new PersonasDriver();
+        CleanDriver driver = new CleanDriver();
         MLogger.info("PersonasDriver begin");
         try {
             driver.run();

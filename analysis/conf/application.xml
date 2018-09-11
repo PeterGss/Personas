@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 
+	name为应用名称 ，不能为空
+	host为一级域名     存在多个时需以“；”分隔
+	mac为mac地址    格式为  关键字：特征属性    eg：COOKIE:hnsear_pcid   存在多个时需以“；”分隔
+	version为应用版本号    格式为  关键字：特征属性    eg:URI:version    存在多个时需以“；”分隔
+	os为系统版本    格式为  关键字：特征属性    eg:URI:os    存在多个时需以“；”分隔
+	user节点为用户特征  
+	user下 type为用户特征数据类型   1：不需要做截取处理，剩余类型通过split配置的截取字符和position配置的截取位置进行截取
+	value为用户特征字段取值位置  格式为  关键字：特征属性    eg:COOKIE:adid    存在多个时需以“；”分隔
+	 -->
+	<application name="应用宝" host="pingfore.qq.com,in2.qq.com;hccttp,//m5.qq.com/app/new/" mac="COOKIE:hnsear_pcid,URI:mac" imei="" version="URI:version,URI:ver" os="URI:os">
+		<user type="1" value="COOKIE:adid" describe="type为1时，表示数据格式不需要截取"></user>
+		<user type="2" value="COOKIE:uin" split="o" position="0" describe="type为2时，表示数据格式不需要通过指定split：要截取的字符，和position：位置来截取"></user>
+		<user type="3" value="COOKIE:P_INFO" split="|" position="0" describe="type为3时，表示数据格式不需要通过指定split：要截取的字符，和position：位置来截取"></user>
+	</application>
+</configuration>

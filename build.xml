@@ -32,7 +32,9 @@
 			<fileset dir="${classes.dir}">
 				<include name="**/*.class" />
 			</fileset>
-			<zipfileset includes="**/*.class" src="${lib.dir}/useragentutil.jar" />
+			<zipfileset includes="**/*.class" src="${lib.dir}/useragentutils-v0.0.1.jar" />
+			<zipfileset includes="**/*.class" src="${lib.dir}/dom4j-1.6.1.jar" />
+			<zipfileset includes="**/*.class" src="${lib.dir}/xmlutils-v0.0.1.jar" />
 		</jar>
 	</target>
 
