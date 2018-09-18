@@ -17,5 +17,6 @@
     <orderEntry type="library" name="useragentutils-v0.0.1" level="project" />
     <orderEntry type="library" name="xmlutils-v0.0.1" level="project" />
     <orderEntry type="library" name="xmlutils-v0.0.2" level="project" />
+    <orderEntry type="library" name="xmlutils-v0.0.3" level="project" />
   </component>
 </module>
