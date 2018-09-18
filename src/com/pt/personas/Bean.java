@@ -12,7 +12,6 @@ public class Bean {
     String Host = "";
     String Referer = "";
     String LocalUri = "";
-    String RecTime = "";
     String LogType = "";
     String SrcPort = "";
     String Uri = "";
@@ -24,8 +23,19 @@ public class Bean {
     String ResCode = "";
     String TTL = "";
     String method = "";
+    String RecTime = "";
 
     public Bean() {
+    }
+
+    public Bean(String srcIP, String host, String uri, String cookie, String userAgent, String TTL, String recTime) {
+        SrcIP = srcIP;
+        Host = host;
+        Uri = uri;
+        Cookie = cookie;
+        UserAgent = userAgent;
+        this.TTL = TTL;
+        RecTime = recTime;
     }
 
     public Bean(String appProto, String srcIP, String dstIP, String dstPort, String host, String referer, String localUri, String recTime, String logType, String srcPort, String uri, String cookie, String sessionID, String userAgent, String method, String setCookie, String resCode, String TTL, String method1) {
@@ -194,17 +204,18 @@ public class Bean {
         ResCode = resCode;
     }
 
+
     public String sepString(){
         return
                 SrcIP + "\t" +
-                //DstIP + "\t" +
+                DstIP + "\t" +
                 AppProto + "\t" +
                 Host + "\t" +
-                RecTime + "\t" +
                 Uri + "\t" +
                 Cookie + "\t" +
                 UserAgent + "\t" +
-                TTL ;
+                TTL + "\t" +
+                RecTime ;
     }
 
     @Override

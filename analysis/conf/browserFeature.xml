@@ -6,13 +6,168 @@
 	mac: mac地址，格式（提取字段：特征key），存在多个时以逗号","分隔，可缺失
 	user： 用户特征 ，可缺失
 	user.type: 用户特征解析方式。
-		type="1"，特征key的值即为用户值。
-		type="2"，特征key的值中存在用户值，需要根据split分隔符和position位置截取用户值。
+		type="1"，特征key的值即为用户值，可存在多个值。
+		type="2"，特征key的值中存在用户值，需要根据split分隔符和position位置截取用户值,position从0开始。
+		type="3"，特征key的值为json，格式（提取字段：特征key：json中的key），可存在多个值。
+		type="4"，特征key的值中的key存在，格式（提取字段：特征key：值中key），需要根据split分隔符取出不同的key。
 	user.value： 用户特征的key，格式（提取字段：特征key），存在多个时以逗号","分隔
 	 -->
-	<browser host="qq.com" product="腾讯网">
-		<user type="1" value="Uri:qq,Uri:uin"></user>
-		<user type="2" value="Cookie:uin,Cookie:pt2
-		guin" split="o" position="1"></user>
+	<browser host="taobao.com" product="淘宝网">
+		<user type="1" value="Cookie:lgc,Cookie:tracknick"></user>
 	</browser>
+	
+	<browser host="youku.com" product="优酷"></browser>
+	
+	<browser host="wx.qq.com" product="微信"></browser>
+	
+	<browser host="qq.com" product="腾讯网">
+		<user type="1" value="Cookie:o_cookie,Cookie:ptui_loginuin"></user>
+		<user type="2" value="Cookie:uin,Cookie:pt2gguin" split="o" position="1"></user>
+		<user type="2" value="Cookie:pac_uid" split="_" position="1"></user>
+	</browser>
+	
+	<browser host="baidu.com" product="百度"></browser>
+	
+	<browser host="iqiyi.com" product="爱奇艺">
+		<user type="1" value="Cookie:P000email"></user>
+		<user type="3" value="Cookie:P00002:user_name,Cookie:P00002:nickname,Cookie:P00002:pnickname,Cookie:P00002:email,Cookie:QC160:u"></user>
+	</browser>
+	
+	<browser host="jd.com" product="京东">
+		<user type="1" value="Cookie:_pst,Cookie:pin,Cookie:unick,Uri:pin,Uri:p"></user>
+	</browser>
+	
+	<browser host="163.com" product="网易">
+		<user type="1" value="Cookie:login_urs"></user>
+		<user type="2" value="Cookie:P_INFO" split="|" position="0"></user>
+		<user type="4" value="Cookie:cm_newmsg:user" split="&amp;"></user>
+	</browser>
+	
+	<browser host="sina.com.cn" product="新浪网"></browser>
+	<browser host="weibo.com" product="新浪微博"></browser>
+	<browser host="sohu.com" product="搜狐"></browser>
+	<browser host="sogou.com" product="搜狗"></browser>
+	<browser host="changyou.com" product="畅游"></browser>
+	
+	<browser host="meituan.com" product="美团">
+		<user type="1" value="Cookie:n,Cookie:unc"></user>
+	</browser>
+	
+	<browser host="dianping.com" product="大众点评">
+		<user type="1" value="Cookie:ua"></user>
+	</browser>
+	
+	<browser host="360.cn" product="三六零">
+		<user type="4" value="Cookie:Q:u,Cookie:Q:n" split="&amp;"></user>
+	</browser>
+	
+	<browser host="mi.com" product="小米"></browser>
+	<browser host="toutiao.com" product="今日头条"></browser>
+	
+	<browser host="58.com" product="58同城">
+		<user type="4" value="Cookie:58cooper:username,Cookie:PPU:UN,Cookie:www58com:UserName,Cookie:www58com:Email" split="&amp;"></user>
+	</browser>
+	
+	<browser host="ganji.com" product="赶集网">
+		<user type="1" value="Cookie:GanjiUserName"></user>
+		<user type="3" value="Cookie:GanjiUserInfo:email,Cookie:GanjiUserInfo:username,Cookie:GanjiUserInfo:user_name,Cookie:GanjiUserInfo:nickname"></user>
+	</browser>
+	
+	<browser host="anjuke.com" product="安居客">
+		<user type="1" value="Cookie:ajk_member_name"></user>
+	</browser>
+	
+	<browser host="ksyun.com" product="金山云"></browser>
+	<browser host="wps.cn" product="金山办公"></browser>
+	
+	<browser host="ctrip.com" product="携程">
+		<user type="4" value="Cookie:AHeadUserInfo:UserName" split="&amp;"></user>
+	</browser>
+	
+	<browser host="2345.com" product="2345导航">
+		<user type="4" value="Cookie:I:n" split="&amp;"></user>
+	</browser>
+	
+	<browser host="meipai.com" product="美拍"></browser>
+	<browser host="xinhuanet.com" product="新华网"></browser>
+	
+	<browser host="suning.c" product="苏宁">
+		<user type="1" value="Cookie:nick,Cookie:nick2"></user>
+	</browser>
+	
+	<browser host="autohome.com.cn" product="汽车之家">
+		<user type="2" value="Cookie:clubUserShow" split="|" position="3"></user>
+	</browser>
+	
+	<browser host="che168.com" product="二手车之家">
+		<user type="2" value="Cookie:clubUserShow" split="|" position="3"></user>
+	</browser>
+	
+	<browser host="ifeng.com" product="凤凰网">
+		<user type="1" value="Cookie:IF_USER"></user>
+	</browser>
+	
+	<browser host="duowan.com" product="多玩游戏网">
+		<user type="1" value="Cookie:nick,Cookie:username,Cookie:yyuid"></user>
+	</browser>
+	
+	<browser host="yy.com" product="YY">
+		<user type="1" value="Cookie:nick,Cookie:username,Cookie:yyuid"></user>
+	</browser>
+	
+	<browser host="huya.com" product="虎牙直播">
+		<user type="1" value="Cookie:nick,Cookie:username,Cookie:yyuid"></user>
+	</browser>
+	
+	<browser host="yiche.com" product="易车网">
+		<user type="1" value="Cookie:username"></user>
+	</browser>
+	
+	<browser host="vip.com" product="唯品会">
+		<user type="1" value="Cookie:login_username,Cookie:VipRNAME"></user>
+	</browser>
+	
+	<browser host="cctv.com" product="央视网"></browser>
+	
+	<browser host="iqianjin.com" product="爱钱进">
+		<user type="1" value="Cookie:lg,Cookie:login_name"></user>
+	</browser>
+	
+	<browser host="iqianzhan.com" product="钱站">
+		<user type="1" value="Cookie:lg,Cookie:login_name"></user>
+	</browser>
+	
+	<browser host="renyimai.com" product="任买">
+		<user type="1" value="Cookie:lg,Cookie:login_name"></user>
+	</browser>
+	
+	<browser host="finup-credit.com" product="凡普信">
+		<user type="1" value="Cookie:lg,Cookie:login_name"></user>
+	</browser>
+	
+	<browser host=".ly.com" product="同程旅游">
+		<user type="4" value="Cookie:us:nickName" split="&amp;"></user>
+	</browser>
+	
+	<browser host="eastmoney.com" product="东方财富网">
+		<user type="2" value="Cookie:pi" split=";" position="2"></user>
+	</browser>
+	
+	<browser host="douyu.com" product="斗鱼直播">
+		<user type="1" value="Cookie:acf_nickname"></user>
+	</browser>
+	
+	<browser host="xunlei.com" product="迅雷">
+		<user type="1" value="Cookie:usrname,Cookie:usernick"></user>
+	</browser>
+	
+	<browser host="51job.com" product="前程无忧网站">
+		<user type="4" value="Cookie:51job:cusername,Cookie:51job:cname,Cookie:51job:cemail,Cookie:51job:cnickname" split="&amp;|&amp;"></user>
+	</browser>
+	
+	<browser host="lvmama.com" product="驴妈妈旅游网">
+		<user type="1" value="Cookie:unUserName"></user>
+	</browser>
+	
+	
 </configuration>

@@ -5,7 +5,7 @@
 	<property>
 		<name>jobname</name>
 		<value>personas</value>
-		<description>需要分析的job名称:同家庭,一般情况下无需修改，请不要胡乱设置</description>
+		<description></description>
 	</property>
 	<property>
 		<name>inputdir</name>
@@ -43,6 +43,12 @@
 		<value>analysis/conf/browserVersion.xml</value>
 		<description>需要在集群加载的XML文件</description>
 	</property>
+	<property>
+		<name>dataRelation</name>
+		<value>analysis/conf/dataRelation.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+
 	<property>
 		<name>browserApp</name>
 		<value>analysis/conf/browserApp.xml</value>
@@ -128,11 +134,6 @@
 		<description>伪装成浏览器的应用,","分隔</description>
 	</property>
 
-
-	<property name="Windows10" aliases="Windows NT 6.4,Windows NT 10" exclude="" versionRegex="">
-		<value>starttime</value>
-	</property>
-
 	<property>
 		<name>starttime</name>
 		<value></value>
@@ -145,22 +146,6 @@
 		<description>结束时间，分析这之前的数据，分析这之前的数据,eg:20151010,一般情况无需填值，若需修改请严格遵守样例格式
 		</description>
 	</property>
-	<property>
-		<name>data.keepdays</name>
-		<value>7</value>
-		<description>hdfs上结果数据保存天数(>0)，不填则表示永久保存，填几天保留几天</description>
-	</property>
-	<property>
-		<name>delay.days</name>
-		<value>0</value>
-		<description>延时天数,0表示没有延迟,eg:1,一般情况无需填值，若需修改请严格遵守样例格式</description>
-	</property>
-	<property>
-		<name>idtype</name>
-		<value>02C0005</value>
-		<description>证件类型默认值,勿动</description>
-	</property>
-
 
 	<property>
 		<name>output.file.line.max</name>
@@ -181,20 +166,7 @@
 		<value>67108864</value>
 		<description>map分片大小,勿动</description>
 	</property>
-
-
 	<!-- ****************************业务私有配置项******************************** -->
-
-	<property>
-		<name>detailmr.filter</name>
-		<!-- <value>17:取消</value> -->
-		<value></value>
-		<description>过滤数据使用，格式为 列顺序1:过滤值1,过滤值2;列顺序2:过滤值1,过滤值2
-			列下标从0开始，多组直接分号分隔，单组值可为多个，逗号分隔
-		</description>
-	</property>
-
-
 
 
 </configuration>

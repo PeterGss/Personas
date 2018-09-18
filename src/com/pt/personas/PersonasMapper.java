@@ -3,6 +3,7 @@ package com.pt.personas;
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+import com.pt.util.Utils;
 import com.useragentutils.UserAgent;
 import com.useragentutils.UserAgentManager;
 import com.xmlutils.Application;
@@ -69,9 +70,6 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
     String appNames[];
     private UserAgentManager userAgentManager;
 
-
-
-
     protected void setup(Context context) throws IOException, InterruptedException {
         Loaddata(context);
         mos = new MultipleOutputs<Text,Text>(context);
@@ -121,15 +119,14 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
 
     protected void map(LongWritable key, Text value, Context context)
             throws IOException, InterruptedException {
-        /// TODO: 2018/9/10  需要转码 url useragent test中有样例
         if (value == null) {
             log.error("record is null!");
             return;
         }
         StringBuilder valuesb = new StringBuilder();
         Gson gson = new Gson();
-
-        Bean bean = gson.fromJson(value.toString(),Bean.class);
+        //uri转码
+        Bean bean = gson.fromJson(Utils.getURLDecoderString(value.toString()),Bean.class);
         String mac = "";
         String imei = "";
         String useragent = "";
@@ -148,20 +145,28 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         String appName = userAgent.getAppName();
         //如果是 工具
         if (StringUtils.isNotEmpty(toolname)){
-            outputKey.set(toolname + "\t" + bean.getSrcIP());
+            context.write(new Text(PerConstants.FREQUENCYTOOL + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP),new Text(bean.sepString()));
+            outputKey.set(toolname + PerConstants.SEPARATOR + bean.getSrcIP());
         }
         //如果是浏览器 行为  输出 ip + 设备类型+操作系统 + 浏览器+浏览器版本 + TTL 作为一个终端的 key
-        else if (StringUtils.isNotEmpty(browserName)){
+        else if (StringUtils.isNotEmpty(browserName)) {
+            //计算频率
+            context.write(new Text(PerConstants.FREQUENCY + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
+            //reduce 识别是不是 伪装成 浏览器的应用
+            context.write(new Text(PerConstants.USERAGENT + PerConstants.SEPARATOR + bean.UserAgent
+                            + PerConstants.SEPARATOR + browserVersion.get(browserName))
+                    , new Text(bean.sepString()));
+        }
             //判断是否是 应用伪装为浏览器
-           String appFakerName = isAppFaker(browserVersion.get(browserName),bean,userAgent);
-            if (StringUtils.isNotEmpty(appFakerName)){
+          /*  String appFakerName = isAppFaker(browserVersion.get(browserName),bean,userAgent);
+           if (StringUtils.isNotEmpty(appFakerName)){
                 //是应用
                 outputKey.set(bean.getSrcIP() + "," + userAgent.getOSName()+ "," + userAgent.getAppName()
                         + "," +  bean.getTTL());
                 // 提取用户信息
                 userinfo += getAppCharacter(appFakerName,bean) ;
-                valuesb.append(bean.getSrcIP() +"\t" + userinfo + "\t" + userAgent.getOSName()
-                        + "\t" + userAgent.getAppName() + "\t" + bean.getHost());
+                valuesb.append(bean.getSrcIP() +PerConstants.SEPARATOR + userinfo + PerConstants.SEPARATOR + userAgent.getOSName()
+                        + PerConstants.SEPARATOR + userAgent.getAppName() + PerConstants.SEPARATOR + bean.getHost() + bean.RecTime);
                 //提取终端信息
             }else {
                 //是浏览器
@@ -177,8 +182,8 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
                 imei +=  parseTerminal(bean,Arrays.asList(terminalfeatures));
                 outputKey.set( bean.getSrcIP() + "," + userAgent.getDeviceType() + "," + userAgent.getOSName() + "," +userAgent.getBrowserName() + "," +userAgent.getBrowserVersion()
                         + ","  + bean.getTTL());
-                valuesb.append(bean.getSrcIP() +"\t" + userinfo + "\t" + userAgent.getOSName()
-                        + "\t" + browserName + "\t" + bean.Host);
+                valuesb.append(bean.getSrcIP() +PerConstants.SEPARATOR + userinfo + PerConstants.SEPARATOR + userAgent.getOSName()
+                        + PerConstants.SEPARATOR + browserName + PerConstants.SEPARATOR + bean.Host + PerConstants.SEPARATOR + bean.RecTime);
             }
 
         }// 应用 提取 用户特征
@@ -189,8 +194,8 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
 
                 Application app = APPMap.get(appName);
                 userinfo += getAppCharacter(appName,bean) ;
-                valuesb.append(bean.getSrcIP() +"\t" + userinfo + "\t" + userAgent.getOSName()
-                        + "\t" + userAgent.getAppName() + "\t" + bean.getHost());
+                valuesb.append(bean.getSrcIP() +PerConstants.SEPARATOR + userinfo + PerConstants.SEPARATOR + userAgent.getOSName()
+                        + PerConstants.SEPARATOR + userAgent.getAppName() + PerConstants.SEPARATOR + bean.getHost() + bean.RecTime);
 
                 //提取 终端 信息
                 List<String> macs = app.getMac();
@@ -202,17 +207,20 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
                     imei = parseTerminal(bean, imeis);
                 }
             }
-        } else{
-            mos.write(new Text(bean.UserAgent + "\t" + bean.getHost()), new Text(),"noUserAgent/noUserAgent.bcp");
+        } */
+          //识别不出的 useragent 输出出来
+        else{
+            mos.write(new Text(bean.UserAgent + PerConstants.SEPARATOR + bean.getHost()), new Text(),"noUserAgent/noUserAgent.bcp");
             moscounter.increment(1);
         }
+        /*
         //2. 识别提取用户特征，这个要根据 xml配置 针对性提取
         //若是浏览器 无mac 等终端信息的  操作系统 + 设备类型设备类型 +浏览器 +浏览器版本+应用+TTL
                 //3终端融合 有mac的以mac为key，没mac 用终端融合,value :srcip 终端 应用（浏览器） 用户  行为 rectime
        if (valuesb.length() !=0){
            outputValue.set(valuesb.toString());
        }else {
-           outputValue.set(bean.SrcIP +"\t" + userinfo + "\t" + bean.Host +"\t" + bean.UserAgent);
+           outputValue.set(bean.SrcIP +PerConstants.SEPARATOR + userinfo + PerConstants.SEPARATOR + bean.Host +PerConstants.SEPARATOR + bean.UserAgent + bean.RecTime);
        }
 
         if (StringUtils.isNotEmpty(userinfo)) {
@@ -231,8 +239,7 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
             if ((imei.contains("imei=")
                     && imeiPattern.matcher(imei.replace("imei=","")).matches())) {
                 context.write(new Text(imei), outputValue);
-            }
-        }
+            }*/
     }
 
     @Override
@@ -386,7 +393,7 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
     //json 数据
     public String type3(Bean bean,User user) {
         List<String> uservalue = user.getValue();
-        String indexSplit = user.getSplit();
+            String indexSplit = user.getSplit();
         String index = user.getPosition();
         String character = "";
         for (String value : uservalue) {
@@ -423,7 +430,7 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
                         }
                     }
                 }
-            }else{
+            }else{//需要解析json
                 String jsonvalue = valuearr[2];
                 character += parseJson(jsonvalue);
             }

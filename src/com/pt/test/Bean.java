@@ -197,14 +197,13 @@ public class Bean {
     public String sepString(){
         return
                 SrcIP + "\t" +
-                //DstIP + "\t" +
+                DstIP + "\t" +
+                AppProto + "\t" +
                 Host + "\t" +
                 RecTime + "\t" +
                 Uri + "\t" +
                 Cookie + "\t" +
                 UserAgent + "\t" +
-                sessionID + "\t" +
-                Method + "\t" +
                 TTL ;
     }
 

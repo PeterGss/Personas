@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- ip画像关系类型-->
+	<!-- ip 终端 -->
+	<relation group="IP-TERMINAL">
+		<key field="SRCIP" type="A1"></key>
+		<value field="MAC" type="B1"></value>
+		<value field="IMEI" type="B2"></value>
+		<value field="TERMINALCOMBINE" type="B3"></value>
+	</relation>
+	<!-- ip+设备类型 终端 -->
+	<relation group="IP_DEVICETYPE-TERMINAL">
+		<key field="SRCIP_DEVICETYPE" type="A1_F2"></key>
+		<value field="MAC" type="B1"></value>
+		<value field="IMEI" type="B2"></value>
+		<value field="TERMINALCOMBINE" type="B3"></value>
+	</relation>
+	<!-- 终端 应用 -->
+	<relation group="TERMINAL-APP">
+		<key field="MAC" type="B1"></key>
+		<key field="IMEI" type="B2"></key>
+		<key field="TERMINALCOMBINE" type="B3"></key>
+		<value field="APPNAME" type="C1"></value>
+	</relation>
+	<!-- IP 应用 -->
+	<relation group="IP-APP">
+		<key field="SRCIP" type="A1"></key>
+		<value field="APPNAME" type="C1"></value>
+	</relation>
+	<!-- 浏览器终端 网站名称+用户 -->
+	<relation group="TERMINALCOMBINE-WEBSITE_USERINFO">
+		<key field="TERMINALCOMBINE" type="B3"></key>
+		<value field="WEBSITE_USERINFO" type="C3_E1"></value>
+	</relation>
+	<!-- 应用+终端 用户 -->
+	<relation group="APPNAME_TERMINAL-USERINFO">
+		<key field="APPNAME_MAC" type="C1_B1"></key>
+		<key field="APPNAME_IMEI" type="C1_B2"></key>
+		<key field="APPNAME_TERMINALCOMBINE" type="C1_B3"></key>
+		<value field="USERINFO" type="E1"></value>
+	</relation>
+	<!-- 应用+IP 用户-->
+	<relation group="APPNAME_IP-USERINFO">
+		<key field="APPNAME_SRCIP" type="C1_A1"></key>
+		<value field="USERINFO" type="E1"></value>
+	</relation>
+	
+	<!-- 终端画像关系类型-->
+	<!-- 终端 IP-->
+	<relation group="TERMINAL-IP">
+		<key field="MAC" type="B1"></key>
+		<key field="IMEI" type="B2"></key>
+		<key field="TERMINALCOMBINE" type="B3"></key>
+		<value field="SRCIP" type="A1"></value>
+	</relation>
+	
+	<!-- 用户画像关系类型-->
+	<!-- 用户 应用+终端-->
+	<relation group="USERINFO-APP_TERMINAL">
+		<key field="USERINFO" type="E1"></key>
+		<value field="APPNAME_MAC" type="C1_B1"></value>
+		<value field="APPNAME_IMEI" type="C1_B2"></value>
+		<value field="APPNAME_TERMINALCOMBINE" type="C1_B3"></value>
+	</relation>
+	<!-- 应用+终端 IP-->
+	<relation group="APP_TERMINAL-IP">
+		<key field="APPNAME_MAC" type="C1_B1"></key>
+		<key field="APPNAME_IMEI" type="C1_B2"></key>
+		<key field="APPNAME_TERMINALCOMBINE" type="C1_B3"></key>
+		<value field="SRCIP" type="A1"></value>
+	</relation>
+	<!-- 用户 应用+IP-->
+	<relation group="USERINFO-APP_IP">
+		<key field="USERINFO" type="E1"></key>
+		<value field="APPNAME_SRCIP" type="C1_A1"></value>
+	</relation>
+	<!-- 用户 网站名称_浏览器终端-->
+	<relation group="USERINFO-WEBSITE_TERMINALCOMBINE">
+		<key field="USERINFO" type="E1"></key>
+		<value field="WEBSITE_TERMINALCOMBINE" type="C3_B3"></value>
+	</relation>
+	<!-- 网站名称_浏览器终端 IP-->
+	<relation group="WEBSITE_TERMINALCOMBINE-IP">
+		<key field="WEBSITE_TERMINALCOMBINE" type="C3_B3"></key>
+		<value field="SRCIP" type="A1"></value>
+	</relation>
+</configuration>
+
+
