@@ -1,16 +1,13 @@
 package com.pt.personas;
 
-import com.google.common.base.Strings;
 import com.google.gson.Gson;
-import com.google.gson.JsonParser;
-import com.google.gson.JsonSyntaxException;
 import com.pt.util.MLogger;
+import com.pt.util.Utils;
 import com.useragentutils.UserAgent;
 import com.useragentutils.UserAgentManager;
 import com.xmlutils.Application;
 import com.xmlutils.Browser;
 import com.xmlutils.ReadXml;
-import com.xmlutils.User;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -32,16 +29,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-
 /**
- * Created by Shaon on 2018/8/24.
+ * Created by Shaon on 2018/9/18.
  */
-public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
-
+public class ToolMapper extends Mapper<LongWritable, Text, Text, Text> {
     private final static Log log = LogFactory.getLog(PersonasMapper.class);
     private MultipleOutputs<Text,Text> mos;
-    //工具 频率阈值判断
-    float toolThreshold = 10000;
     //mac imei 正则
     Pattern macPattern ;
     Pattern imeiPattern ;
@@ -50,10 +43,11 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
     Text outputValue = new Text();
     //APPPROTO 要处理的协议
     String appproto;
+
     Counter moscounter;
+
     String uriSplit = "";
     String cookieSplit = "";
-
     //应用 配置
     Map<String,Application> APPMap = new HashMap<String,Application>();
     //浏览器 配置
@@ -70,8 +64,13 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
     //伪装浏览器的 应用
     String appNames[];
     private UserAgentManager userAgentManager;
+    public ToolMapper() {
+        super();
+    }
 
+    @Override
     protected void setup(Context context) throws IOException, InterruptedException {
+
         Loaddata(context);
         mos = new MultipleOutputs<Text,Text>(context);
         moscounter = context.getCounter(CounterEnum.MOSCOUNTER);
@@ -118,28 +117,27 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         browserVersion = readXml.getBrowserVersionMap();
     }
 
-    protected void map(LongWritable key, Text value, Context context)
-            throws IOException, InterruptedException {
+    @Override
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         if (value == null) {
             log.error("record is null!");
             return;
         }
         StringBuilder valuesb = new StringBuilder();
-        String[] strs = value.toString().split(PerConstants.SEPARATOR,-1);
+        Gson gson = new Gson();
+        Bean bean = new Bean ();
+        //uri转码
+        try {
+             bean = gson.fromJson(Utils.getURLDecoderString(value.toString().replaceAll("\t","")),Bean.class);
 
-        Bean bean = new Bean();
-        float frequency = 0;
-        if (strs.length >10) {
-            bean = new Bean(strs[3], strs[4], strs[5], strs[6], strs[7], strs[8], strs[9]);
-            frequency = Float.parseFloat(strs[10]);
-        }else
-        {
-            MLogger.info("value.toString():" + value.toString());
-            MLogger.info("length:" + strs.length);
+        }catch (Exception e){
+            bean = gson.fromJson(value.toString(),Bean.class);
+            MLogger.warn("bean from json getURLDecoder exception:"+e.getMessage() + e);
         }
-        String useragent = "";
+               String useragent = "";
+        //用户特征
         //过滤掉 不处理的数据
-        if (!appproto.contains(bean.getAppProto()) || StringUtils.isEmpty(bean.getUserAgent())){
+        if (!appproto.equalsIgnoreCase(bean.getAppProto()) || StringUtils.isEmpty(bean.getUserAgent())){
             return;
         }
         //1.识别 浏览器 工具 应用   分别处理
@@ -149,49 +147,22 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         String browserName = userAgent.getBrowserName();
         String toolname = userAgent.getToolName();
         String appName = userAgent.getAppName();
-        String browserversion = userAgent.getBrowserVersion();
-
-        String os = userAgent.getOSName();
-        String devicetype = userAgent.getDeviceType();
-
-        if (frequency < toolThreshold) {
-            //如果是 工具
-            if (StringUtils.isNotEmpty(toolname)) {
-                context.write(new Text(PerConstants.FREQUENCYTOOL + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
-                outputKey.set(toolname + PerConstants.SEPARATOR + bean.getSrcIP());
-            }
-            //如果是浏览器行为 输出 useragent 标识符\tuseragent\t浏览器 valuebean
-            else if (StringUtils.isNotEmpty(browserName)) {
-                context.write(new Text(PerConstants.USERAGENT + PerConstants.SEPARATOR + bean.UserAgent
-                                + PerConstants.SEPARATOR + browserVersion.get(browserName)+ PerConstants.SEPARATOR +
-                        os + PerConstants.COMMA + devicetype + PerConstants.COMMA + browserName + PerConstants.COMMA + browserversion)
-                        , new Text(bean.sepString()));
-            }//应用
-            else if (StringUtils.isNotEmpty(appName)){
-                ResultInfo info = getUserInfo(bean,appName);
-                context.write(new Text(PerConstants.APP + PerConstants.SEPARATOR + info.toAppResultInfo()),new Text());
-            }
-            //识别不出的 useragent 输出出来
-            else{
-                mos.write(new Text(bean.UserAgent + PerConstants.SEPARATOR + bean.getHost()), new Text(),"noUserAgent/noUserAgent.bcp");
-                moscounter.increment(1);
-            }
-        }else {
-            // tool
-            context.write(new Text(PerConstants.FREQUENCYTOOL + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
+        //如果是 工具
+        if (StringUtils.isNotEmpty(toolname)){
+            context.write(new Text(PerConstants.FREQUENCYTOOL + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP),new Text(bean.sepString()));
         }
-    }
+        //如果是浏览器 行为  输出 ip + 设备类型+操作系统 + 浏览器+浏览器版本 + TTL 作为一个终端的 key
+        else{
+            //计算频率
+            context.write(new Text(PerConstants.FREQUENCY + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
+          }
+        }
 
     @Override
     protected void cleanup(Context context) throws IOException, InterruptedException {
-        mos.close();
+        super.cleanup(context);
     }
 
-    //解析json 数据
-    static private String parseJson(String str) throws JsonSyntaxException{
-        JsonParser parse =new JsonParser();
-        return parse.parse(str).getAsString();
-    }
     //读取 配置文件  加载数据
     private void Loaddata(Context context) throws IOException {
         Configuration conf = context.getConfiguration();
@@ -240,70 +211,5 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
                 osUnifySystem);
         return  readXml;
     }
-
-    // 提取应用中的用户信息
-    private ResultInfo getUserInfo(Bean bean,String APPNAME){
-        ResultInfo info = new ResultInfo();
-        // 模拟数据 提取结果数据
-
-        String HOST = "";
-        String WEBSITE = "";
-        String MAC = "";
-        String IMEI = "";
-        String APPVERSION = "";
-        String OS = "";
-        String USERINFO = "";
-
-        HashMap<String, String> cookieMap = Discern.parseCookie(bean.Cookie);
-        HashMap<String, String> uriMap = Discern.parseURI(bean.Uri);
-        info.setSrcip(bean.SrcIP);
-        if (!Strings.isNullOrEmpty(APPNAME)) {
-            Application application = APPMap.get(APPNAME);
-            info.setAppname(APPNAME);
-            if (application != null) {
-                // 获取mac
-                MAC = Discern.hashSetToStringFormat(Discern.getMac(cookieMap, uriMap, application.getMac()));
-                info.setMac(MAC);
-                // 获取imei
-                IMEI = Discern.hashSetToStringFormat(Discern.getImei(cookieMap, uriMap, application.getImei()));
-                info.setImei(IMEI);
-                // 获取应用版本
-                APPVERSION = Discern.hashSetToStringFormat(Discern.getVersion(cookieMap, uriMap, application.getVersion()));
-                info.setAppversion(APPVERSION);
-                // 获取os
-                OS = Discern.hashSetToStringFormat(Discern.getOs(cookieMap, uriMap, application.getOs()));
-                info.setOs(OS);
-                // 获取用户
-                USERINFO = Discern.hashSetToStringFormat(Discern.getUser(cookieMap, uriMap, application.getUser()));
-                info.setUserinfo(USERINFO);
-            }
-        }else{
-            for (Map.Entry<String, Browser> entry : browserMap.entrySet()) {
-                if (bean.getHost().contains(entry.getKey())) {
-                    HOST = entry.getKey();
-                    break;
-                }
-            }
-            Browser browser = browserMap.get(HOST);
-            if (browser != null) {
-                // 访问网址
-                WEBSITE = browser.getProduct();
-                info.setWebsite(WEBSITE);
-                // 获取mac
-                MAC = Discern.hashSetToStringFormat(Discern.getMac(cookieMap, uriMap, browser.getMac()));
-                info.setMac(MAC);
-                // 获取imei
-                IMEI = Discern.hashSetToStringFormat(Discern.getImei(cookieMap, uriMap, browser.getImei()));
-                info.setImei(IMEI);
-                // 获取用户
-                USERINFO = Discern.hashSetToStringFormat(Discern.getUser(cookieMap, uriMap, browser.getUser()));
-                info.setUserinfo(USERINFO);
-                // 获取应用版本
-
-            }
-        }
-        return info;
-    }
-
 
 }

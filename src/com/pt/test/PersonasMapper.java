@@ -24,7 +24,10 @@ import org.apache.hadoop.mapreduce.lib.output.MultipleOutputs;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 
@@ -35,6 +38,8 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
 
     private final static Log log = LogFactory.getLog(PersonasMapper.class);
     private MultipleOutputs<Text,Text> mos;
+    //工具 频率阈值判断
+    float toolThreshold = 100;
     //mac imei 正则
     Pattern macPattern ;
     Pattern imeiPattern ;
@@ -121,8 +126,10 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         }
         StringBuilder valuesb = new StringBuilder();
         Gson gson = new Gson();
-
-        Bean bean = gson.fromJson(value.toString(), Bean.class);
+        String[] strs = value.toString().split(PerConstants.SEPARATOR,-1);
+        //uri转码
+        Bean bean = new Bean(strs[3],strs[4],strs[5],strs[6],strs[7],strs[8],strs[9]);
+        float frequency = Float.parseFloat(strs[9]);
         String mac = "";
         String imei = "";
         String useragent = "";
@@ -139,73 +146,44 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         String browserName = userAgent.getBrowserName();
         String toolname = userAgent.getToolName();
         String appName = userAgent.getAppName();
-        //如果是 工具
-        if (StringUtils.isNotEmpty(toolname)){
-            outputKey.set(toolname + "\t" + bean.getSrcIP());
-        }
-        //如果是浏览器 行为  输出 ip + 设备类型+操作系统 + 浏览器+浏览器版本 + TTL 作为一个终端的 key
-        else if (StringUtils.isNotEmpty(browserName)){
-            //判断是否是 应用伪装为浏览器
-           String appFakerName = isAppFaker(browserVersion.get(browserName),bean,userAgent);
-            if (StringUtils.isNotEmpty(appFakerName)){
-                //是应用
-                outputKey.set(bean.getSrcIP() + "," + userAgent.getOSName()+ "," + userAgent.getAppName()
-                        + "," +  bean.getTTL());
-                // 提取用户信息
-                userinfo += getAppCharacter(appFakerName,bean) ;
-                valuesb.append(bean.getSrcIP() +"\t" + userinfo + "\t" + userAgent.getOSName()
-                        + "\t" + userAgent.getAppName() + "\t" + bean.getHost() + bean.RecTime);
-                //提取终端信息
-            }else {
-                //是浏览器
-                    //提取用户信息  查看  host中 是否包含 browserma 中配的 host
-                    for (String s : browserMap.keySet()) {
-                        if(bean.Host.contains(s)) {
-                            userinfo += browserCharacter(s, bean);
-                            break;
-                        }
-                    }
-                //终端
-                mac +=  parseTerminal(bean,Arrays.asList(terminalfeatures));
-                imei +=  parseTerminal(bean,Arrays.asList(terminalfeatures));
-                outputKey.set( bean.getSrcIP() + "," + userAgent.getDeviceType() + "," + userAgent.getOSName() + "," +userAgent.getBrowserName() + "," +userAgent.getBrowserVersion()
-                        + ","  + bean.getTTL());
-                valuesb.append(bean.getSrcIP() +"\t" + userinfo + "\t" + userAgent.getOSName()
-                        + "\t" + browserName + "\t" + bean.Host + "\t" + bean.RecTime);
+
+        if (frequency < toolThreshold) {
+            //如果是 工具
+            if (StringUtils.isNotEmpty(toolname)) {
+                context.write(new Text(PerConstants.FREQUENCYTOOL + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
+                outputKey.set(toolname + PerConstants.SEPARATOR + bean.getSrcIP());
             }
+            //如果是浏览器 行为  输出 ip + 设备类型+操作系统 + 浏览器+浏览器版本 + TTL 作为一个终端的 key
+            else if (StringUtils.isNotEmpty(browserName)) {
+                //计算频率
+                context.write(new Text(PerConstants.FREQUENCY + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
+                //reduce 识别是不是 伪装成 浏览器的应用
+                context.write(new Text(PerConstants.USERAGENT + PerConstants.SEPARATOR + bean.UserAgent
+                                + PerConstants.SEPARATOR + browserVersion.get(browserName))
+                        , new Text(bean.sepString()));
+            }//应用
+            else if (StringUtils.isNotEmpty(appName)){
 
-        }// 应用 提取 用户特征
-        else if (StringUtils.isNotEmpty(appName)){
-            if (APPMap.containsKey(appName)) {
-                outputKey.set(bean.getSrcIP() + "," + userAgent.getOSName() + "," + userAgent.getAppName()
-                        + "," +  bean.getTTL());
-
-                Application app = APPMap.get(appName);
-                userinfo += getAppCharacter(appName,bean) ;
-                valuesb.append(bean.getSrcIP() +"\t" + userinfo + "\t" + userAgent.getOSName()
-                        + "\t" + userAgent.getAppName() + "\t" + bean.getHost() + bean.RecTime);
-
-                //提取 终端 信息
-                List<String> macs = app.getMac();
-                if (macs.size() > 0){
-                    mac = parseTerminal(bean,macs);
-                }
-                List<String> imeis = app.getImei();
-                if (imeis.size() > 0) {
-                    imei = parseTerminal(bean, imeis);
-                }
             }
-        } else{
-            mos.write(new Text(bean.UserAgent + "\t" + bean.getHost()), new Text(),"noUserAgent/noUserAgent.bcp");
-            moscounter.increment(1);
+            //识别不出的 useragent 输出出来
+            else{
+                mos.write(new Text(bean.UserAgent + PerConstants.SEPARATOR + bean.getHost()), new Text(),"noUserAgent/noUserAgent.bcp");
+                moscounter.increment(1);
+            }
+        }else {
+            // tool
+            context.write(new Text(PerConstants.FREQUENCYTOOL + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
         }
+
+
+        /*
         //2. 识别提取用户特征，这个要根据 xml配置 针对性提取
         //若是浏览器 无mac 等终端信息的  操作系统 + 设备类型设备类型 +浏览器 +浏览器版本+应用+TTL
                 //3终端融合 有mac的以mac为key，没mac 用终端融合,value :srcip 终端 应用（浏览器） 用户  行为 rectime
        if (valuesb.length() !=0){
            outputValue.set(valuesb.toString());
        }else {
-           outputValue.set(bean.SrcIP +"\t" + userinfo + "\t" + bean.Host +"\t" + bean.UserAgent + bean.RecTime);
+           outputValue.set(bean.SrcIP +PerConstants.SEPARATOR + userinfo + PerConstants.SEPARATOR + bean.Host +PerConstants.SEPARATOR + bean.UserAgent + bean.RecTime);
        }
 
         if (StringUtils.isNotEmpty(userinfo)) {
@@ -224,8 +202,7 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
             if ((imei.contains("imei=")
                     && imeiPattern.matcher(imei.replace("imei=","")).matches())) {
                 context.write(new Text(imei), outputValue);
-            }
-        }
+            }*/
     }
 
     @Override
@@ -268,41 +245,47 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         Path  browserApp = new Path(conf.get("browserApp"));
         Path appFeature = new Path(conf.get("appFeature"));
         Path browserFeature = new Path(conf.get("browserFeature"));
-        FileSystem tooFlileSystem = FileSystem.get(conf);
-        InputStream browserVersionStream = tooFlileSystem.open(browserVersion);
-        InputStream browserAppSystem = tooFlileSystem.open(browserApp);
-        InputStream appFeatureSystem = tooFlileSystem.open(appFeature);
-        InputStream browserFeatureSystem = tooFlileSystem.open(browserFeature);
+        Path dataRelation = new Path(conf.get("dataRelation"));
+        Path osUnify = new Path(conf.get("osUnify"));
+        FileSystem toolFileSystem = FileSystem.get(conf);
+        InputStream browserVersionStream = toolFileSystem.open(browserVersion);
+        InputStream browserAppSystem = toolFileSystem.open(browserApp);
+        InputStream appFeatureSystem = toolFileSystem.open(appFeature);
+        InputStream browserFeatureSystem = toolFileSystem.open(browserFeature);
+        InputStream osUnifySystem = toolFileSystem.open(osUnify);
+        InputStream dataRelationSystem = toolFileSystem.open(dataRelation);
 
         ReadXml readXml = new ReadXml(browserVersionStream,
                 browserAppSystem,
                 appFeatureSystem,
-                browserFeatureSystem);
+                browserFeatureSystem,
+                dataRelationSystem,
+                osUnifySystem);
         return  readXml;
     }
 
     //获取 浏览器的用户特征
-    public String browserCharacter(String host, Bean bean){
+    public String browserCharacter(String host,Bean bean){
         String userinfo ="";
         Browser browser = browserMap.get(host);
         List<User> userlist = browser.getUser();
         for (User user : userlist) {
             List<String> uservalue = user.getValue();
             String split = user.getSplit();
-            String position = user.getPosition();
+            int position = user.getPosition();
             userinfo += returnUserCharacter(bean,user);
         }
         return userinfo;
     }
     //获取应用 的用户特征
-    public  String getAppCharacter(String appName, Bean bean){
+    public  String getAppCharacter(String appName,Bean bean){
         String userinfo ="";
         Application app = APPMap.get(appName);
         List<User> userlist = app.getUser();
         for (User user : userlist) {
             List<String> uservlue = user.getValue();
             String split = user.getSplit();
-            String position = user.getPosition();
+            int position = user.getPosition();
             userinfo += returnUserCharacter(bean,user);
         }
         return userinfo;
@@ -314,19 +297,19 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
      * @param user
      * @return
      */
-    public String returnUserCharacter(Bean bean, User user) {
-        String type = user.getType();
-            if ( StringUtils.isEmpty(type) ) {
+    public String returnUserCharacter(Bean bean,User user) {
+        int type = user.getType();
+            if ( type ==-1 ) {
                 return "";
             }
             switch (type){
-                case "1":
+                case 1:
                     return type1( bean, user);
-                case "2":
+                case 2:
                     return type1( bean, user);
-                case "3":
+                case 3:
                     return type3( bean, user);
-                case "4":
+                case 4:
                     break;
                 default:
                     return "";
@@ -334,10 +317,10 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         return "";
     }
 
-    public String type1(Bean bean, User user){
+    public String type1(Bean bean,User user){
         List<String> uservalue = user.getValue();
         String indexSplit = user.getSplit();
-        String index = user.getPosition();
+        int index = user.getPosition();
         String character = "";
         for (String value : uservalue) {
             if (StringUtils.isEmpty(value)) {
@@ -367,8 +350,8 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
                     character += characterStr;
                 }else if (StringUtils.isNotEmpty(characterStr) && StringUtils.isEmpty(indexSplit)){
                     String characterStrs[] = characterStr.split(indexSplit,-1);
-                    if (characterStrs.length >= Integer.parseInt(index)) {
-                        character += characterStrs[Integer.parseInt(index)];
+                    if (characterStrs.length >= index) {
+                        character += characterStrs[index];
                     }
                 }
             }
@@ -377,10 +360,10 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
     }
 
     //json 数据
-    public String type3(Bean bean, User user) {
+    public String type3(Bean bean,User user) {
         List<String> uservalue = user.getValue();
             String indexSplit = user.getSplit();
-        String index = user.getPosition();
+        int index = user.getPosition();
         String character = "";
         for (String value : uservalue) {
             if (StringUtils.isEmpty(value)) {
@@ -411,8 +394,8 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
                         character += characterStr;
                     } else if (StringUtils.isNotEmpty(characterStr) && StringUtils.isEmpty(indexSplit)) {
                         String characterStrs[] = characterStr.split(indexSplit, -1);
-                        if (characterStrs.length >= Integer.parseInt(index)) {
-                            character += characterStrs[Integer.parseInt(index)];
+                        if (characterStrs.length >= index) {
+                            character += characterStrs[index];
                         }
                     }
                 }
@@ -425,7 +408,7 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
     }
 
     //判断是否是 应用伪装为浏览器
-    public String isAppFaker(String browserName, Bean bean, UserAgent userAgent){
+    public String isAppFaker(String browserName,Bean bean,UserAgent userAgent){
         boolean isApp =false;
         if (null != appFaker.get(browserName) && appFaker.get(browserName).size() > 0){
             for (String appFaker : appFaker.get(browserName)) {
@@ -463,7 +446,7 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         return  "";
     }
     //解析 提取 终端特征
-    public String parseTerminal(Bean bean, List<String> terminalfeatures) {
+    public String parseTerminal(Bean bean,List<String> terminalfeatures) {
         String terminal = "";
         String split = "";
         for (String ter : terminalfeatures) {

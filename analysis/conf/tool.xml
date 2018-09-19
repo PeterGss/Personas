@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+	<property name="wget" aliases="wget"></property>
 	<property name="tool" aliases="compatib1e,Python-urllib/,python-requests/,java,sqlmap/,Go-http-client/,WinHttpClient,Wget/,HttpClient,Windows-Update-Agent,okhttp/,Apache-HttpClient/,OfficeClickToRun,libtorrent/,Java/,Windows-Update-Agent/,libcurl/,Bittorrent,FileDownloader/,QQ Data Report,AssistantDownloader,curl/,bdtb for,BigFootUI,ClamAV/,libghttp/,libcurl-agent/,WizHttpClient,TodayWidget/,DownloadManager/,Python-xmlrpc/,java_,electron-builder,NeteaseMusic/,LotusLib" ></property>
 	<property name="Mobile Robot/Spider" aliases="Googlebot-Mobile"></property>
 	<property name="Robot/Spider" aliases="Googlebot,Mediapartners-Google,Web Preview,bot,Applebot,spider,crawler,Feedfetcher,Slurp,Twiceler,Nutch,BecomeBot,bingbot,BingPreview,Google Web Preview,WordPress.com mShots,Seznam,facebookexternalhit,YandexMarket,Teoma,ThumbSniper,Phantom,Go-http-client,Java/,python-requests,YandexBot,AdsBot-Google,AhrefsBot"></property>

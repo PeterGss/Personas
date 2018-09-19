@@ -12,68 +12,6 @@
 		type="2"，特征key的值中存在用户值，需要根据split分隔符和position位置截取用户值。
 	user.value： 用户特征的key，格式（提取字段：特征key），存在多个时以逗号","分隔
 	 -->
-	<application name="应用宝" host="qq.com" mac="Cookie:hnsear_pcid,URI:mac">
-		<user type="1" value="URI:clientuin,URI:uin"></user>
-		<user type="2" value="Cookie:uin,Cookie:pt2gguin" split="o" position="1"></user>
-	</application>
-	
-	<application name="暴风影音" host="baofeng.com,baofeng.net" version="URI:ver">
-		<user type="1" value="Cookie:bf_user_name"></user>
-	</application>
-	
-	<application name="搜狐影音" host="sohu.com,sohu.com.cn" version="URI:version" os="URI:os">
-	</application>
-	
-	<application name="爱奇艺" host="iqiyi.com" mac="URI:mac" imei="" version="URI:mv,URI:v,URI:version" os="URI:os">
-	</application>
-	
-	<application name="QQ" host="qq.com" mac="Cookie:hnsear_pcid;URI:mac" version="URI:clientinfo" os="URI:os">
-		<user type="1" value="URI:uin,Cookie:uin_cookie"></user>
-		<user type="2" value="Cookie:uin,Cookie:pt2gguin" split="o" position="1"></user>
-	</application>
-	
-	<application name="微信" host="weixin.qq.com" os="URI：devicetype">
-	</application>
-	
-	<application name="YY语音" host="yy.com" version="URI:ver" os="URI:os">
-	</application>
-	
-	<application name="虎牙直播" host="huya.com" version="URI:iver,URI:uver">
-	</application>
-	
-	<application name="TIM" host="dldir1.qq.com,cgi.qqweb.qq.com">
-		<user type="1" value="Cookie:uin_cookie,URI:clientuin"></user>
-		<user type="2" value="Cookie:pt2gguin" split="o" position="1"></user>
-	</application>
-	
-	<application name="酷狗音乐" host="kugou.com" version="URI:clientver">
-	</application>
-	
-	<application name="QQ音乐" host="music.qq.com" version="Cookie:qqmusic_version,Cookie:qqmusic_miniversion">
-	</application>
-	
-	<application name="全民K歌" host="cgi.kg.qq.com,y.gtimg.cn,wspeed.qq.com" version="Cookie:ver,URI:packet_version">
-		<user type="2" value="Cookie:pt2gguin" split="o" position="1"></user>
-	</application>
-	
-	<application name="网易云音乐" host="music.163,music.126.net" version="Cookie:appver" os="URI:os,Cookie:osver">
-	</application>
-	
-	<application name="酷我音乐" host="www.kuwo.cn" version="URI:ver">
-		<user type="1" value="Cookie:uname3"></user>
-	</application>
-	
-	<application name="电脑管家" host="guanjia.qq.com" version="URI:version">
-		<user type="1" value="URI:clientuin,URI:uin"></user>
-		<user type="2" value="Cookie:uin,Cookie:pt2gguin" split="o" position="1"></user>
-	</application>
-	
-	<application name="91助手" host="soupingguo.com" mac="URI:mac" version="URI:version">
-	</application>
-	
-	<application name="猎豹免费WiFi" host="wifi.liebao">
-	</application>
-	
 	<application name="QQ游戏" version="URI:clienttype,URI:Hallver">
 		<user type="1" value="URI:clientuin,URI:Uin,URI:varInt1,"></user>
 		<user type="2" value="Cookie:uin,Cookie:p_uin,Cookie:pt2gguin" split="o" position="1"></user>
@@ -83,50 +21,89 @@
 		<user type="1" value="Cookie:adid,Cookie:o_cookie"></user>
 	</application>
 	
-	<application name="优酷PC客户端" version="URI:ver" os="URI:os,URI：obit">
+	<application name="优酷" version="URI:ver" os="URI:os,URI：obit"></application>
+	
+	<application name="暴风影音" host="baofeng.com,baofeng.net" version="URI:ver">
+		<user type="1" value="Cookie:bf_user_name"></user>
 	</application>
 	
 	<application name="QQ影音" version="URI:clientinfo" os="URI:os">
 		<user type="2" value="Cookie:pt2gguin" split="o" position="1"></user>
 	</application>
 	
-	<application name="芒果TV" version="URI: ver">
+	<application name="搜狐影音" host="sohu.com,sohu.com.cn" version="URI:version" os="URI:os"></application>
+	
+	<application name="爱奇艺" host="iqiyi.com" mac="URI:mac" version="URI:mv,URI:v,URI:version" os="URI:os"></application>
+	
+	<application name="芒果TV" version="URI: ver"></application>
+	
+	<application name="QQ" host="qq.com" mac="Cookie:hnsear_pcid;URI:mac" version="URI:clientinfo" os="URI:os">
+		<user type="1" value="URI:uin,Cookie:uin_cookie"></user>
+		<user type="2" value="Cookie:uin,Cookie:pt2gguin" split="o" position="1"></user>
 	</application>
 	
-	<application name="斗鱼直播" version="URI:ver">
+	<application name="微信" host="weixin.qq.com" os="URI:devicetype"></application>
+	
+	<application name="YY语音" host="yy.com" version="URI:ver" os="URI:os"></application>
+	
+	<application name="虎牙直播" host="huya.com" version="URI:iver,URI:uver"></application>
+	
+	<application name="斗鱼直播" version="URI:ver"></application>
+	
+	<application name="TIM" host="dldir1.qq.com,cgi.qqweb.qq.com">
+		<user type="1" value="Cookie:uin_cookie,URI:clientuin"></user>
+		<user type="2" value="Cookie:pt2gguin" split="o" position="1"></user>
 	</application>
 	
 	<application name="哔哩哔哩" version="URI:version">
 		<user type="1" value="URI:room_id"></user>
 	</application>
 	
-	<application name="米聊PC版" version="URI:v" os="URI:os">
+	<application name="米聊" version="URI:v" os="URI:os">
 		<user type="1" value="URI:uuid"></user>
 	</application>
 	
-	<application name="虾米音乐" version="URI:v">
+	<application name="酷狗音乐" host="kugou.com" version="URI:clientver"></application>
+	<application name="QQ音乐" host="music.qq.com" version="Cookie:qqmusic_version,Cookie:qqmusic_miniversion"></application>
+	
+	<application name="全民K歌" host="cgi.kg.qq.com,y.gtimg.cn,wspeed.qq.com" version="Cookie:ver,URI:packet_version">
+		<user type="2" value="Cookie:pt2gguin" split="o" position="1"></user>
 	</application>
 	
-	<application name="迅雷" version="URI:productversion" os="URI:os,URI:OSversion">
+	<application name="虾米音乐" version="URI:v"></application>
+	
+	<application name="网易云音乐" host="music.163,music.126.net" version="Cookie:appver" os="URI:os,Cookie:osver">
 	</application>
 	
-	<application name="美图秀秀" version="URI:clientinfo" os="URI:os">
+	<application name="酷我音乐" host="www.kuwo.cn" version="URI:ver">
+		<user type="1" value="Cookie:uname3"></user>
 	</application>
 	
-	<application name="美图看看" version="URI:channel,URI:ver,URI:version">
-	</application>
+	<application name="迅雷" version="URI:productversion" os="URI:os,URI:OSversion"></application>
+	
+	<application name="美图秀秀" version="URI:clientinfo" os="URI:os"></application>
+	<application name="美图看看" version="URI:channel,URI:ver,URI:version"></application>
 	
 	<application name="QQ影像">
 		<user type="1" value="URI:UIN"></user>
 	</application>
 	
-	<application name="驱动精灵" version="URI:VER">
+	<application name="驱动精灵" version="URI:VER"></application>
+	
+	<application name="电脑管家" host="guanjia.qq.com" version="URI:version">
+		<user type="1" value="URI:clientuin,URI:uin"></user>
+		<user type="2" value="Cookie:uin,Cookie:pt2gguin" split="o" position="1"></user>
 	</application>
 	
-	<application name="百度网盘" version="URI:version">
+	<application name="百度网盘" version="URI:version"></application>
+	
+	<application name="应用宝" host="qq.com" mac="Cookie:hnsear_pcid,URI:mac">
+		<user type="1" value="URI:clientuin,URI:uin"></user>
+		<user type="2" value="Cookie:uin,Cookie:pt2gguin" split="o" position="1"></user>
 	</application>
 	
-	<application name="WiFi共享大师" version="URI:version">
-	</application>
-
+	<application name="91助手" host="soupingguo.com" mac="URI:mac" version="URI:version"></application>
+	<application name="WiFi共享大师" version="URI:version"></application>
+	<application name="猎豹免费WiFi" host="wifi.liebao"></application>
+	
 </configuration>

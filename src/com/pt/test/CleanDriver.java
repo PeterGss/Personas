@@ -1,6 +1,5 @@
 package com.pt.test;
 
-import com.pt.personas.PersonasMapper;
 import com.pt.personas.PersonasReducer;
 import com.pt.util.MLogger;
 import com.pt.util.TogetherFun;

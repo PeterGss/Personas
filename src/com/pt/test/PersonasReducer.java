@@ -1,4 +1,4 @@
-package com.pt.personas;
+package com.pt.test;
 
 import com.google.common.base.Strings;
 import com.useragentutils.UserAgent;
@@ -8,7 +8,6 @@ import com.xmlutils.Browser;
 import com.xmlutils.ReadXml;
 import com.xmlutils.datarelationvo.FieldVO;
 import com.xmlutils.datarelationvo.RelationVO;
-import org.apache.commons.collections.list.TreeList;
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
@@ -17,7 +16,6 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Counter;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.output.MultipleOutputs;
-import org.codehaus.groovy.ast.GenericsType;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,7 +28,6 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
 
     private UserAgentManager userAgentManager;
     private MultipleOutputs<Text,Text> mos;
-
     Counter moscounter;
     //判断 是否是伪装成浏览器的应用阈值
     float hostThreshold;
@@ -103,22 +100,29 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
         for (Text value : values) {
             String valueStr = value.toString();
             String[] valueStrs = valueStr.split(PerConstants.SEPARATOR,-1);
-            if (valueStrs.length > 6) {
-                if (!Strings.isNullOrEmpty(valueStrs[1])) {
-                    hostList.add(valueStrs[1]);
-                }
-                if (!Strings.isNullOrEmpty(valueStrs[6])) {
-                    rectimeList.add(valueStrs[6]);
-                }
-                if (!Strings.isNullOrEmpty(valueStr)) {
-                    valueList.add(valueStr);
-                }
+            if (!Strings.isNullOrEmpty(valueStrs[3])){
+                hostList.add(valueStrs[3]);
+            }
+            if (!Strings.isNullOrEmpty(valueStrs[8])){
+                rectimeList.add(valueStrs[8]);
+            }
+            if (!Strings.isNullOrEmpty(valueStr)){
+                valueList.add(valueStr);
             }
 
         }
         Collections.sort(rectimeList);
         String appFaker ="";
         switch (keys[0]){
+            // 工具类计算频率
+            case PerConstants.FREQUENCY:
+               if (!Strings.isNullOrEmpty(keys[1]) && !Strings.isNullOrEmpty(keys[2]) ) {
+                    frequency = calcuFrequrncy(rectimeList);
+                   for (String s : valueList) {
+                       context.write(new Text(key.toString() + s), new Text(Float.toString(frequency)));
+                   }
+                }
+                break;
             // 工具类计算频率
             case PerConstants.FREQUENCYTOOL:
                 frequency = calcuFrequrncy(rectimeList);
@@ -132,44 +136,34 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                 UserAgent userAgent = userAgentManager.parseUserAgent(keys[1]);
                  appFaker = appFaker(keys[2],valueList);
                  //如果appFaker为空 说明是浏览器
-               /* String cookie = "o_cookie=1984582830; pac_uid=1_1984582830; pt2gguin=o1984582830; ptui_loginuin=1984582830; uin=o1984582830; mac=28d244ffab90; hw_mac=28:d2:44:ff:ab:90";
+                String cookie = "o_cookie=1984582830; pac_uid=1_1984582830; pt2gguin=o1984582830; ptui_loginuin=1984582830; uin=o1984582830; mac=28d244ffab90; hw_mac=28:d2:44:ff:ab:90";
                 String uri = "weixin.qq.com?uin=190002135&imei=123456789963258&clientinfo=qq2014&devicetype=Windows+10";
                 String host = "www.qq.com";
                 // 模拟数据 提取结果数据
                 String APPNAME = "微信";
-                String BROWSER = "QQ Browser";*/
-                for (String value : valueList) {
-                    String[] valuestrs = value.split(PerConstants.SEPARATOR,-1);
-                    Bean bean = new Bean(valuestrs[0],valuestrs[1],valuestrs[2],valuestrs[3],
-                            valuestrs[4],valuestrs[5],valuestrs[6]);
-                /*bean.setCookie(cookie);
+                String BROWSER = "QQ Browser";
+
+                Bean bean = new Bean();
+                bean.setCookie(cookie);
                 bean.setUri(uri);
-                bean.setHost(host);*/
-                    info = getUserInfo(bean,appFaker);
-                    if (Strings.isNullOrEmpty(appFaker)) {
-                        info.setCombine(bean.SrcIP + PerConstants.COMMA + keys[3] + PerConstants.COMMA + bean.TTL);
+                bean.setHost(host);
+                if (Strings.isNullOrEmpty(appFaker)){
+                    info = getBrowserUserInfo(bean);
+                }else {
+                    for (String s : valueList) {
+                        context.write(new Text(s), new Text(appFaker));
                     }
                 }
-//                info.setSrcip("1.1.1.1");
-//                info.setAppname("app");
-                break;
-            case PerConstants.APP:
-                info = new ResultInfo(keys[1],keys[2],keys[3],keys[4],keys[5],keys[6],keys[7],keys[8]);
                 break;
             default:
                 break;
         }
         //为空 说明未找到其伪装的应用，暂时可以当做 浏览器 处理
         Set<String> set = new HashSet<String>();
-        ResultInfo userinfo = new ResultInfo(info);
-        for (String s : info.getUserinfo().split(",",-1)) {
-            userinfo.setUserinfo(s);
-            set = dataRelationExtract(userinfo);
-            for (String outstr : set) {
-                outputSet.add(outstr);
-            }
+        set = dataRelationExtract(info);
+        for (String s : set) {
+            outputSet.add(s);
         }
-
     }
 
     @Override
@@ -242,13 +236,13 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                     String[] strs = str.split(PerConstants.SEPARATOR, -1);
                     //统计 host 个数
                     for (String appHost : fakerApp.getHost()) {
-                        String host = strs[1];
+                        String host = strs[3];
                         if (host.contains(appHost)) {
                             count++;
                         //有应用特征的 提取应用特征，无应用特征的 只需要判断阈值就可以
                         if (null != fakerApp.getVersion() && fakerApp.getVersion().size()>0) {
-                            String uri = strs[2];
-                            String cookie = strs[3];
+                            String uri = strs[4];
+                            String cookie = strs[5];
                             for (String appVersion : fakerApp.getVersion()) {
                                 if (StringUtils.isNotEmpty(appVersion)) {
                                     String[] version = appVersion.split(":", -1);
@@ -293,8 +287,8 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
         String OS = "";
         String USERINFO = "";
         // 1 解析cookie和uri
-        HashMap<String, String> cookieMap = Discern.parseCookie(bean.Cookie);
-        HashMap<String, String> uriMap = Discern.parseURI(bean.Uri);
+        HashMap<String, String> cookieMap = com.pt.personas.Discern.parseCookie(bean.Cookie);
+        HashMap<String, String> uriMap = com.pt.personas.Discern.parseURI(bean.Uri);
                 // 通过一级域名，判断访问的是什么网址
                 for (Map.Entry<String, Browser> entry : browserMap.entrySet()) {
                     if (bean.getHost().contains(entry.getKey())) {
@@ -308,82 +302,18 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                     WEBSITE = browser.getProduct();
                     info.setWebsite(WEBSITE);
                     // 获取mac
-                    MAC = Discern.hashSetToStringFormat(Discern.getMac(cookieMap, uriMap, browser.getMac()));
+                    MAC = com.pt.personas.Discern.hashSetToStringFormat(com.pt.personas.Discern.getMac(cookieMap, uriMap, browser.getMac()));
                     info.setMac(MAC);
                     // 获取imei
-                    IMEI = Discern.hashSetToStringFormat(Discern.getImei(cookieMap, uriMap, browser.getImei()));
+                    IMEI = com.pt.personas.Discern.hashSetToStringFormat(com.pt.personas.Discern.getImei(cookieMap, uriMap, browser.getImei()));
                     info.setImei(IMEI);
                     // 获取用户
-                    USERINFO = Discern.hashSetToStringFormat(Discern.getUser(cookieMap, uriMap, browser.getUser()));
+                    USERINFO = com.pt.personas.Discern.hashSetToStringFormat(com.pt.personas.Discern.getUser(cookieMap, uriMap, browser.getUser()));
                     info.setUserinfo(USERINFO);
                     // 获取应用版本
 
                 }
                 return info;
-    }
-
-    // 提取应用中的用户信息
-    private ResultInfo getUserInfo(Bean bean,String APPNAME){
-        ResultInfo info = new ResultInfo();
-        // 模拟数据 提取结果数据
-
-        String HOST = "";
-        String WEBSITE = "";
-        String MAC = "";
-        String IMEI = "";
-        String APPVERSION = "";
-        String OS = "";
-        String USERINFO = "";
-
-        HashMap<String, String> cookieMap = Discern.parseCookie(bean.Cookie);
-        HashMap<String, String> uriMap = Discern.parseURI(bean.Uri);
-        info.setSrcip(bean.SrcIP);
-        if (!Strings.isNullOrEmpty(APPNAME)) {
-            Application application = APPMap.get(APPNAME);
-            info.setAppname(APPNAME);
-            if (application != null) {
-                // 获取mac
-                MAC = Discern.hashSetToStringFormat(Discern.getMac(cookieMap, uriMap, application.getMac()));
-                info.setMac(MAC);
-                // 获取imei
-                IMEI = Discern.hashSetToStringFormat(Discern.getImei(cookieMap, uriMap, application.getImei()));
-                info.setImei(IMEI);
-                // 获取应用版本
-                APPVERSION = Discern.hashSetToStringFormat(Discern.getVersion(cookieMap, uriMap, application.getVersion()));
-                info.setAppversion(APPVERSION);
-                // 获取os
-                OS = Discern.hashSetToStringFormat(Discern.getOs(cookieMap, uriMap, application.getOs()));
-                info.setOs(OS);
-                // 获取用户
-                USERINFO = Discern.hashSetToStringFormat(Discern.getUser(cookieMap, uriMap, application.getUser()));
-                info.setUserinfo(USERINFO);
-            }
-        }else{
-            for (Map.Entry<String, Browser> entry : browserMap.entrySet()) {
-                if (bean.getHost().contains(entry.getKey())) {
-                    HOST = entry.getKey();
-                    break;
-                }
-            }
-            Browser browser = browserMap.get(HOST);
-            if (browser != null) {
-                // 访问网址
-                WEBSITE = browser.getProduct();
-                info.setWebsite(WEBSITE);
-                // 获取mac
-                MAC = Discern.hashSetToStringFormat(Discern.getMac(cookieMap, uriMap, browser.getMac()));
-                info.setMac(MAC);
-                // 获取imei
-                IMEI = Discern.hashSetToStringFormat(Discern.getImei(cookieMap, uriMap, browser.getImei()));
-                info.setImei(IMEI);
-                // 获取用户
-                USERINFO = Discern.hashSetToStringFormat(Discern.getUser(cookieMap, uriMap, browser.getUser()));
-                info.setUserinfo(USERINFO);
-                // 获取应用版本
-
-            }
-        }
-        return info;
     }
     //读取 配置文件  加载数据
     private void Loaddata(Context context) throws IOException {
@@ -436,7 +366,6 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
 
     //关系提取 数据关联
     private Set<String>  dataRelationExtract (ResultInfo info){
-        boolean hasTerminalApp = false;
         Set<String> set = new HashSet<String>();
         //三层循环
         for (RelationVO relationVO : dataRelationList) {
@@ -465,7 +394,6 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                     sb.setLength(0);
                     String valueStr = valueFieldVO.getField();
                     String valueInfo = "";
-
                     if (!Strings.isNullOrEmpty(valueStr) && valueStr.contains("_")){
                         for (String str : valueStr.split("_")) {
                             if (!Strings.isNullOrEmpty(getField(str,info))) {
@@ -482,14 +410,6 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                         valueInfo = getField(valueStr,info);
                     }
                     if (!Strings.isNullOrEmpty(keyInfo) && !Strings.isNullOrEmpty(valueInfo)) {
-                        if (keyFieldVO.getType().contains("B") && valueFieldVO.getType().equals("C1") ){
-                            hasTerminalApp = true;
-                        }
-                        if (hasTerminalApp
-                                && (keyFieldVO.getType().equals("A1") && valueFieldVO.getType().equals("C1")
-                                || (keyFieldVO.getType().equals("C1_A1") && valueFieldVO.getType().equals("E1")))){
-                            break;
-                        }
                         sb.append(keyInfo).append(PerConstants.SEPARATOR)
                                 .append(keyFieldVO.getType()).append(PerConstants.SEPARATOR)
                                 .append(valueInfo).append(PerConstants.SEPARATOR)
@@ -529,5 +449,7 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
         }
     }
 
+    public static void main(String[] args) {
 
+    }
 }

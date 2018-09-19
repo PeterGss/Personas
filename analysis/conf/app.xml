@@ -5,6 +5,7 @@
 	<property name="百度云管家" aliases="WindowsBaiduYunGuanJia"></property>
 	<property name="百度地图" aliases="百度地图"></property>
 	<property name="百度" aliases="百度"></property>
+	<property name="百度网盘" aliases="netdisk;p2sp,LogStatistic"></property>
 	<property name="爱奇艺" aliases="Qiyi,QIYIVideo/,QiYiPadVideo/"></property>
 	<!-- 阿里 -->
 	<property name="飞猪" aliases="飞猪"></property>
@@ -14,22 +15,25 @@
 	<property name="天猫" aliases="天猫"></property>
 	<property name="钉钉" aliases="钉钉"></property>
 	<property name="闲鱼" aliases="咸鱼,闲鱼"></property>
+	<property name="虾米音乐" aliases="XIAMI-MUSIC/"></property>
 	<!-- 腾讯 -->
+	<property name="腾讯视频" aliases="Mozilla&amp;QQLive"></property>
 	<property name="QQ直播" aliases="QQLive/,qqlive4iphone,qqlive,qqlive4Android/"></property>
 	<property name="QQ空间" aliases="qzone"></property>
 	<property name="QQ新闻" aliases="QQNews/"></property>
 	<property name="QQ运动" aliases="QQSports"></property>
 	<property name="QQ音乐" aliases="QQ音乐,QQMusic,QQMusic/"></property>
-	<property name="QQ游戏" aliases="QQGame"></property>
+	<property name="QQ游戏" aliases="QQGame,QGXF/"></property>
 	<property name="QQ邮箱" aliases="QQ邮箱,QQMail/"></property>
 	<property name="QQ客户端" aliases="QQClient"></property>
 	<property name="QQ浏览器" aliases="QQ浏览器"></property>
 	<property name="QQ" aliases="QQ/,IPadQQ/"></property>
-	<property name="微信" aliases="WeChat/,MicroMessenger/WeChat/,微信,/WeChat/"></property>
-	<property name="微信客户端浏览器" aliases="MicroMessenger Client"></property>
+	<property name="微信" aliases="WeChat/,MicroMessenger,微信"></property>
 	<property name="微信读书" aliases="WeRead/"></property>
 	<property name="腾讯新闻" aliases="腾讯新闻"></property>
 	<property name="绝地求生" aliases="ShadowTrackerExtra,game=ShadowTrackerExtra"></property>
+	<property name="QQ影音" aliases="QQPlayer"></property>
+	<property name="全民K歌" aliases="V1_WIN_KG "></property>
 	<!-- 网易 -->
 	<property name="有道桌面词典" aliases="Youdao Desktop Dict"></property>
 	<property name="有道云" aliases="YNote"></property>
@@ -39,7 +43,7 @@
 	<!-- 新浪 -->
 	<property name="微博" aliases="WeiboFun/,weibo_,Weibo/,_weibo_,Weibo"></property>
 	<!-- 优酷 -->
-	<property name="优酷" aliases="youku,优酷,Youku;"></property>
+	<property name="优酷" aliases="youku,优酷,IKU/"></property>
 	<!-- 搜狐 -->
 	<property name="搜狐新闻" aliases="SohuNews/"></property>
 	<!-- 京东 -->
@@ -50,16 +54,18 @@
 	<property name="360免费wifi" aliases="360freewifi"></property>
 	<property name="安全卫士" aliases="AnQuanWeiShi/"></property>
 	<property name="360手机卫士" aliases="360手机卫士"></property>
+	<!-- 小米 -->
+	<property name="米聊" aliases="MiTalk "></property>
 	<!-- 美团 -->
 	<property name="美团" aliases="美团"></property>
 	<property name="爱美团" aliases="AiMeiTuan,AiMeiTuan /"></property>
 	<!-- 陌陌 -->
-	<property name="陌陌" aliases="MomoChat/"></property>
+	<property name="陌陌" aliases="MomoChat/,momoclient,momo/"></property>
 	<!-- 搜狗 -->
 	<property name="搜狗百科" aliases="SogouPSI"></property>
-	<property name="搜狗输入法" aliases="SogouInput/,SogouServices"></property>
+	<property name="搜狗拼音输入法" aliases="SogouInput/,SogouServices,SOGOU_UPDATER"></property>
 	<!-- 迅雷 -->
-	<property name="迅雷" aliases="Xunlei,迅雷"></property>
+	<property name="迅雷" aliases="Xunlei,迅雷XLWFP,Thunder/"></property>
 	<!-- 酷狗 -->
 	<property name="酷狗音乐" aliases="KUGOU,酷狗音乐,KugouMusic/,kugou/"></property>
 	<!-- 银行 -->
@@ -72,12 +78,15 @@
 	<property name="高德地图" aliases="AMAP_Location_SDK,高德地图"></property>
 	<!-- 小公司 -->
 	<property name="美拍" aliases="meipai-"></property>
+	<property name="美图看看" aliases="meitukankan"></property>
 	<property name="美图秀秀" aliases="XiuXiu,美图秀秀"></property>
 	<property name="快手" aliases="kwai-"></property>
 	<property name="聚美优品" aliases="JuMei/"></property>
 	<property name="墨迹天气" aliases="墨迹天气"></property>
-	<property name="哔哩哔哩" aliases="Bilibili,bili-universal/"></property>
+	<property name="哔哩哔哩" aliases="Bilibili,bili-universal/,Bililive/"></property>
 	<property name="拼多多" aliases="pinduoduo/"></property>
+	<property name="芒果TV" aliases="HunanTV/,mango"></property>
+	<property name="驱动精灵" aliases="http generic"></property>
 	<!-- 其他 -->
 	<property name="全球最大的网络电视服务商" aliases="PPStream-heartStat"></property>
 	<property name="安智" aliases="AnZhi"></property>	
@@ -94,13 +103,12 @@
 	<property name="理财记账" aliases="MyMoney/"></property>
 	<property name="花椒客户端" aliases="Huajiao PC Client/"></property>
 	<property name="首旅如家" aliases="首旅如家"></property>
-	<property name="爱酷" aliases="IKU/"></property>
-	<property name="芒果TV" aliases="HunanTV/"></property>
 	<property name="风行视频" aliases="Funshion/"></property>
 	<property name="学而思" aliases="学而思"></property>
 	<property name="软件更新" aliases="软件更新"></property>
 	<property name="咕咚健身" aliases="CodoonSport/"></property>
 	<property name="WiFi万能钥匙" aliases="WiFi万能钥匙"></property>
+	<property name="WiFi共享大师" aliases="wifi"></property>
 	<property name="嘀嗒出行" aliases="嘀嗒出行"></property>
 	<property name="车主无忧" aliases="车主无忧"></property>
 	<property name="eclipse" aliases="eclipse/"></property>

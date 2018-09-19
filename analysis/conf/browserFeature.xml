@@ -123,11 +123,20 @@
 		<user type="1" value="Cookie:username"></user>
 	</browser>
 	
+	<browser host="bj96007.com" product="宽带通">
+		<user type="1" value="Cookie:code_mobile"></user>
+	</browser>
+	
 	<browser host="vip.com" product="唯品会">
 		<user type="1" value="Cookie:login_username,Cookie:VipRNAME"></user>
 	</browser>
 	
 	<browser host="cctv.com" product="央视网"></browser>
+	
+	<browser host="4399.com" product="4399小游戏平台">
+		<user type="1" value="Cookie:Qnick"></user>
+		<user type="2" value="Cookie:Uauth" split="|" position="1"></user>
+	</browser>
 	
 	<browser host="iqianjin.com" product="爱钱进">
 		<user type="1" value="Cookie:lg,Cookie:login_name"></user>
@@ -149,12 +158,28 @@
 		<user type="4" value="Cookie:us:nickName" split="&amp;"></user>
 	</browser>
 	
+	<browser host=".189.cn" product="189邮箱">
+		<user type="1" value="Cookie:189ACCOUNT"></user>
+	</browser>
+	
+	<browser host="5599.com" product="5599游戏平台">
+		<user type="1" value="Cookie:user_id"></user>
+	</browser>
+	
 	<browser host="eastmoney.com" product="东方财富网">
 		<user type="2" value="Cookie:pi" split=";" position="2"></user>
 	</browser>
 	
+	<browser host="youzu.com" product="游族网络">
+		<user type="1" value="Cookie:uuzu_UNICKNAME"></user>
+	</browser>
+	
 	<browser host="douyu.com" product="斗鱼直播">
 		<user type="1" value="Cookie:acf_nickname"></user>
+	</browser>
+	
+	<browser host="zgw.com" product="中钢网">
+		<user type="3" value="Cookie:2018zgw:Mobile,Cookie:2018zgw:Email"></user>
 	</browser>
 	
 	<browser host="xunlei.com" product="迅雷">
@@ -165,9 +190,18 @@
 		<user type="4" value="Cookie:51job:cusername,Cookie:51job:cname,Cookie:51job:cemail,Cookie:51job:cnickname" split="&amp;|&amp;"></user>
 	</browser>
 	
+	<browser host=".6.cn" product="六间房秀场">
+		<user type="2" value="Cookie:_coin6" split=":" position="4"></user>
+	</browser>
+	
+	<browser host="zbj.com" product="猪八戒网"></browser>
+	
 	<browser host="lvmama.com" product="驴妈妈旅游网">
 		<user type="1" value="Cookie:unUserName"></user>
 	</browser>
 	
+	<browser host="dangdang.com" product="当当网">
+		<user type="4" value="Cookie:ddoy:uname"></user>
+	</browser>
 	
 </configuration>

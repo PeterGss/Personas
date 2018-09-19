@@ -65,6 +65,12 @@
 		<description>需要在集群加载的XML文件</description>
 	</property>
 	<property>
+		<name>osUnify</name>
+		<value>analysis/conf/osUnify.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+
+	<property>
 		<name>appproto</name>
 		<value>HTTP</value>
 		<description>要处理的协议，以逗号分隔</description>

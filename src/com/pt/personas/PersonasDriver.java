@@ -36,6 +36,8 @@ public class PersonasDriver {
     protected String outRootDir;
     //增量数据生成目录
     public String IncDetailOutDir = "";
+    //增量数据生成目录
+    public String IncFrequencyOutDir = "";
     //全量数据生成目录
     public String hisDetailOutDir = "";
     //今天日期
@@ -92,6 +94,7 @@ public class PersonasDriver {
         outRootDir = outRootDir + jobName + "/";
         today = dateFormat.format(new Date());
         IncDetailOutDir = outRootDir + today + "/incdetail/" ;
+        IncFrequencyOutDir = outRootDir + today + "/frequency/" ;
         hisDetailOutDir = outRootDir + "history/;";
 
         startTime = conf.get("starttime", "0").trim();
@@ -118,14 +121,62 @@ public class PersonasDriver {
             MLogger.error("init failed, return");
             return;
         }
-        if (analysisJob()) {
-            MLogger.info("job[{}] detail job success", jobName);
+        if (frequencyJob()) {
+            if (analysisJob()){
+                MLogger.info("job[{}] detail job success", jobName);
+            }else {
+                MLogger.error("job[{}] detail job failed, exit", jobName);
+            }
             //dataMove();
             //deleteTimeoutData(outRootDir);
         }
         else {
-            MLogger.error("job[{}] detail job failed, exit", jobName);
+            MLogger.error("job[{}] frequency job failed, exit", jobName);
         }
+    }
+
+    /**
+     * 计算 频率
+     */
+    public boolean frequencyJob() throws Exception {
+        List<Path> pathList = new ArrayList<Path>();
+        lastAnalysisTime = TogetherFun.loadInputPath(jobName, inputDir,
+                outRootDir, startTime, endTime, delayDays, pathList);
+        MLogger.info("analysisJob() " + pathList.size());
+        //pathList.add(new Path("F:\\BDB\\mr\\cpcenter\\Personas\\input\\CSMDP_REPORT_3_299.json"));
+        if (pathList.size() == 0) {
+            MLogger.warn(jobName + "  job no input path");
+            return false;
+        }
+        Job job = Job.getInstance(conf, jobName  + today);
+        job.setMapperClass(ToolMapper.class);
+        job.setJarByClass(PersonasDriver.class);
+        job.setReducerClass(ToolReducer.class);
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(Text.class);
+        LazyOutputFormat.setOutputFormatClass(job,TextOutputFormat.class);
+        job.setNumReduceTasks(getReducerNum(pathList, reduceHandleSize));
+        //job.setNumReduceTasks(0);
+        for (Path path : pathList) {
+            FileInputFormat.addInputPath(job, path);
+        }
+        job.setOutputFormatClass(TextOutputFormat.class);
+
+        Path outputDir = new Path(IncFrequencyOutDir);
+        if (fs.exists(outputDir)) {
+            fs.delete(outputDir, true);
+            MLogger.info("delete success :" + outputDir.toString());
+        }
+        FileOutputFormat.setOutputPath(job, outputDir);
+        job.waitForCompletion(true);
+        if (job.isSuccessful()) {
+            MLogger.info(jobName + "detail job tool success!");
+            return true;
+        } else {
+            MLogger.error(jobName + "tool job failed!");
+            return false;
+        }
+
     }
 
     /**
@@ -133,8 +184,13 @@ public class PersonasDriver {
      */
     public boolean analysisJob() throws Exception {
         List<Path> pathList = new ArrayList<Path>();
-        lastAnalysisTime = TogetherFun.loadInputPath(jobName, inputDir,
-                outRootDir, startTime, endTime, delayDays, pathList);
+        FileStatus[] inputFileStatusArray = fs.listStatus(new Path(IncFrequencyOutDir));
+        for (FileStatus fileStatus : inputFileStatusArray) {
+            String fileName = fileStatus.getPath().getName();
+            if (!"_SUCCESS".equals(fileName)) {
+                pathList.add(fileStatus.getPath());
+            }
+        }
         MLogger.info("analysisJob() " + pathList.size());
         //pathList.add(new Path("F:\\BDB\\mr\\cpcenter\\Personas\\input\\CSMDP_REPORT_3_299.json"));
         if (pathList.size() == 0) {
@@ -167,8 +223,9 @@ public class PersonasDriver {
                        return true;
         } else {
             MLogger.error(jobName + "analyse job failed!");
+            return false;
         }
-        return false;
+
     }
 
 

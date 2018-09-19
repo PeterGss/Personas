@@ -207,13 +207,11 @@ public class Bean {
 
     public String sepString(){
         return
-                SrcIP + "\t" +
-                DstIP + "\t" +
-                AppProto + "\t" +
-                Host + "\t" +
-                Uri + "\t" +
-                Cookie + "\t" +
-                UserAgent + "\t" +
+                SrcIP.replace("\t","") + "\t" +
+                Host.replace("\t","") + "\t" +
+                Uri.replace("\t","") + "\t" +
+                Cookie.replace("\t","")+ "\t" +
+                UserAgent.replace("\t","") + "\t" +
                 TTL + "\t" +
                 RecTime ;
     }
