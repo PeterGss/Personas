@@ -149,6 +149,16 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                     if (Strings.isNullOrEmpty(appFaker)) {
                         info.setCombine(bean.SrcIP + PerConstants.COMMA + keys[3] + PerConstants.COMMA + bean.TTL);
                     }
+                    //为空 说明未找到其伪装的应用，暂时可以当做 浏览器 处理
+                    Set<String> set = new HashSet<String>();
+                    ResultInfo userinfo = new ResultInfo(info);
+                    for (String s : info.getUserinfo().split(",",-1)) {
+                        userinfo.setUserinfo(s);
+                        set = dataRelationExtract(userinfo);
+                        for (String outstr : set) {
+                            outputSet.add(outstr);
+                        }
+                    }
                 }
 //                info.setSrcip("1.1.1.1");
 //                info.setAppname("app");
