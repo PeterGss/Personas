@@ -520,8 +520,9 @@ public class Discern {
 	public static HashSet<String> type3(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 								 List<String> userValueList) {
 		HashSet<String> userInfoSet = new HashSet<String>();
-		try {
-			for (String user : userValueList) {
+
+		for (String user : userValueList) {
+			try {
 				String[] userSub = user.split(":");
 				// userSub的长度必须为3
 				if (userSub.length == 3) {
@@ -550,10 +551,11 @@ public class Discern {
 							break;
 					}
 				}
+			} catch (JsonSyntaxException e) {
+				MLogger.warn(e.getLocalizedMessage() + e + e.getMessage());
 			}
-		} catch (JsonSyntaxException e) {
-			MLogger.warn(e.getLocalizedMessage()+","+e+e.getMessage());
 		}
+
 		return userInfoSet;
 	}
 
