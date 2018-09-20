@@ -93,27 +93,9 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         imeiPattern = Pattern.compile(imeiRegex);
         //浏览器
         browserMap = readXml.getBrowserFeatureMap();
-//        List<User> browuserlist = new ArrayList<User>();
-//        List<String> browhostList = Arrays.asList("btrace.qq.com");
-//        List<String> browmacList = Arrays.asList("");
-//        List<String> browimeiList = Arrays.asList("");
-//        List<String> browvalueList = Arrays.asList("Uri:qq");
-//        browuserlist.add(new User("2",browvalueList,"",""));
-// browserMap.put("qq.com",new Browser("qq.com","扣扣",browmacList,browimeiList,browuserlist));
         //伪装成 浏览器的应用
         appFaker = readXml.getBrowserAppMap();
-        //appFaker.put("Internet Explorer 6",Arrays.asList("暴风影音，爱奇艺，QQ，YY语音"));
         APPMap = readXml.getAppFeatureMap();
-//        List<User> userlist = new ArrayList<User>();
-//        List<String> hostList = Arrays.asList("pan.baidu.com");
-//        List<String> macList = Arrays.asList("Cookie:mac");
-//        List<String> imeiList = Arrays.asList("");
-//        List<String> versionList = Arrays.asList("URI:version");
-//        List<String> osList = Arrays.asList("URI:os");
-//        List<String> valueList = Arrays.asList("Cookie:BAIDUID");
-//        userlist.add(new User("2",valueList,"",""));
-//        APPMap.put("百度云管家",new Application("百度云管家",hostList,macList,versionList,osList,imeiList,userlist));
-
         //浏览器的版本
         browserVersion = readXml.getBrowserVersionMap();
     }

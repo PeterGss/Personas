@@ -1,6 +1,7 @@
 package com.pt.personas;
 
 import com.google.common.base.Strings;
+import com.pt.util.MLogger;
 import com.useragentutils.UserAgent;
 import com.useragentutils.UserAgentManager;
 import com.xmlutils.Application;
@@ -184,7 +185,7 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
 
     @Override
     protected void cleanup(Context context) throws IOException, InterruptedException {
-        String filename = "NDEXLEVEL_1_1_RELATION_" + captime+"_1.bcp";
+        String filename = "INDEXLEVEL_1_1_RELATION_" + captime+"_1.bcp";
         int count = 1;
         for (String s : outputSet) {
             mos.write(new Text(s),new Text(outputValue),"datarelation/"+filename);
@@ -503,7 +504,7 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                         sb.append(keyInfo).append(PerConstants.SEPARATOR)
                                 .append(keyFieldVO.getType()).append(PerConstants.SEPARATOR)
                                 .append(valueInfo).append(PerConstants.SEPARATOR)
-                                .append(valueFieldVO.getType()).append(PerConstants.SEPARATOR);
+                                .append(valueFieldVO.getType());
                         set.add(sb.toString());
                     }
                 }

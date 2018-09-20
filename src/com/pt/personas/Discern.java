@@ -2,6 +2,8 @@ package com.pt.personas;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
+import com.pt.util.MLogger;
 import com.xmlutils.Application;
 import com.xmlutils.Browser;
 import com.xmlutils.ReadXml;
@@ -516,37 +518,41 @@ public class Discern {
 	 * @return
 	 */
 	public static HashSet<String> type3(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
-			List<String> userValueList) {
+								 List<String> userValueList) {
 		HashSet<String> userInfoSet = new HashSet<String>();
-		for (String user : userValueList) {
-			String[] userSub = user.split(":");
-			// userSub的长度必须为3
-			if (userSub.length == 3) {
-				switch (userSub[0]) {
-				case "Cookie":
-					if (cookieMap.get(userSub[1]) != null) {
-						String cookieValueJson = cookieMap.get(userSub[1]);
-						JsonParser jsonParser = new JsonParser();
-						JsonObject jsonObject = (JsonObject) jsonParser.parse(cookieValueJson);
-						if (jsonObject.get(userSub[2]) != null) {
-							userInfoSet.add(jsonObject.get(userSub[2]).toString().replaceAll("\"", ""));
-						}
+		try {
+			for (String user : userValueList) {
+				String[] userSub = user.split(":");
+				// userSub的长度必须为3
+				if (userSub.length == 3) {
+					switch (userSub[0]) {
+						case "Cookie":
+							if (cookieMap.get(userSub[1]) != null) {
+								String cookieValueJson = cookieMap.get(userSub[1]);
+								JsonParser jsonParser = new JsonParser();
+								JsonObject jsonObject = (JsonObject) jsonParser.parse(cookieValueJson);
+								if (jsonObject.get(userSub[2]) != null) {
+									userInfoSet.add(jsonObject.get(userSub[2]).toString().replaceAll("\"", ""));
+								}
+							}
+							break;
+						case "URI":
+							if (uriMap.get(userSub[1]) != null) {
+								String uriValueJson = uriMap.get(userSub[1]);
+								JsonParser jsonParser = new JsonParser();
+								JsonObject jsonObject = (JsonObject) jsonParser.parse(uriValueJson);
+								if (jsonObject.get(userSub[2]) != null) {
+									userInfoSet.add(jsonObject.get(userSub[2]).toString().replaceAll("\"", ""));
+								}
+							}
+							break;
+						default:
+							break;
 					}
-					break;
-				case "URI":
-					if (uriMap.get(userSub[1]) != null) {
-						String uriValueJson = uriMap.get(userSub[1]);
-						JsonParser jsonParser = new JsonParser();
-						JsonObject jsonObject = (JsonObject) jsonParser.parse(uriValueJson);
-						if (jsonObject.get(userSub[2]) != null) {
-							userInfoSet.add(jsonObject.get(userSub[2]).toString().replaceAll("\"", ""));
-						}
-					}
-					break;
-				default:
-					break;
 				}
 			}
+		} catch (JsonSyntaxException e) {
+			MLogger.warn(e.getLocalizedMessage()+","+e+e.getMessage());
 		}
 		return userInfoSet;
 	}

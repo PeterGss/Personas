@@ -95,6 +95,7 @@ public class PersonasDriver {
         today = dateFormat.format(new Date());
         IncDetailOutDir = outRootDir + today + "/incdetail/" ;
         IncFrequencyOutDir = outRootDir + today + "/frequency/" ;
+        IncFrequencyOutDir = outRootDir + "20180919" + "/frequency/" ;
         hisDetailOutDir = outRootDir + "history/;";
 
         startTime = conf.get("starttime", "0").trim();
@@ -121,7 +122,8 @@ public class PersonasDriver {
             MLogger.error("init failed, return");
             return;
         }
-        if (frequencyJob()) {
+        //frequencyJob()
+        if (true) {
             if (analysisJob()){
                 MLogger.info("job[{}] detail job success", jobName);
             }else {

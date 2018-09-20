@@ -1,5 +1,6 @@
 package com.pt.test;
 
+import com.google.gson.Gson;
 import com.xmlutils.ReadXml;
 
 import java.io.FileInputStream;
@@ -9,6 +10,7 @@ public class Test {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("1\t2\t3\t4".replace("\t",""));
+		Gson gson = new Gson();
 	}
 	
 	public static void test1() throws FileNotFoundException {
