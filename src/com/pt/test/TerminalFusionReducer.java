@@ -1,6 +1,7 @@
 package com.pt.test;
 
 import com.google.common.base.Strings;
+import com.pt.personas.Discern;
 import com.useragentutils.UserAgent;
 import com.useragentutils.UserAgentManager;
 import com.xmlutils.Application;
@@ -24,7 +25,7 @@ import java.util.*;
 /**
  * Created by Shaon on 2018/8/24.
  */
-public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
+public class TerminalFusionReducer extends Reducer<Text, Text, Text, Text> {
 
     private UserAgentManager userAgentManager;
     private MultipleOutputs<Text,Text> mos;
@@ -91,79 +92,109 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
     protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         //合并数据
         String keys[] = key.toString().split(PerConstants.SEPARATOR,-1);
-        List<String> valueList = new ArrayList<String>();
-        List<String> hostList = new ArrayList<String>();
-        List<String> rectimeList = new ArrayList<String>();
+        HashMap<String,String> map = new HashMap<String,String>();
+        List<Bean> valueList = new ArrayList<Bean>();
+        Map<String,String> uriMap = new HashMap<String,String>();
+        Map<String,String> cookieMap = new HashMap<String,String>();
+
+        Map<String,Set<Bean>> beanMap = new HashMap<String,Set<Bean>>();
+        Set<String> keySet = new HashSet<String>();
 
         ResultInfo info = new ResultInfo();
         float frequency;
         for (Text value : values) {
             String valueStr = value.toString();
+            //app or browser + \t +SrcIP  + "\t" +Host + "\t" +Uri + "\t" +Cookie + "\t" +UserAgent + "\t" +TTL + "\t" +RecTime ;
             String[] valueStrs = valueStr.split(PerConstants.SEPARATOR,-1);
-            if (!Strings.isNullOrEmpty(valueStrs[3])){
-                hostList.add(valueStrs[3]);
-            }
-            if (!Strings.isNullOrEmpty(valueStrs[8])){
-                rectimeList.add(valueStrs[8]);
-            }
+
             if (!Strings.isNullOrEmpty(valueStr)){
-                valueList.add(valueStr);
+                Bean bean=new Bean(valueStrs[1],valueStrs[2],valueStrs[3],valueStrs[4],valueStrs[5],valueStrs[6],valueStrs[7],valueStrs[0],valueStrs[8]);
+                uriMap = Discern.parseURI(valueStrs[3]);
+                if (uriMap.size() >0){
+                    bean.uriMap = uriMap;
+                    keySet.addAll(uriMap.keySet());
+                }
+                cookieMap = Discern.parseCookie(valueStrs[4]);
+                if (cookieMap.size() >0){
+                    bean.cookieMap = cookieMap;
+                    keySet.addAll(cookieMap.keySet());
+                }
+                valueList.add(bean);
             }
-
         }
-        Collections.sort(rectimeList);
-        String appFaker ="";
-        switch (keys[0]){
-            // 工具类计算频率
-            case PerConstants.FREQUENCY:
-               if (!Strings.isNullOrEmpty(keys[1]) && !Strings.isNullOrEmpty(keys[2]) ) {
-                    frequency = calcuFrequrncy(rectimeList);
-                   for (String s : valueList) {
-                       context.write(new Text(key.toString() + s), new Text(Float.toString(frequency)));
-                   }
-                }
-                break;
-            // 工具类计算频率
-            case PerConstants.FREQUENCYTOOL:
-                frequency = calcuFrequrncy(rectimeList);
-                for (String s : valueList) {
-                    context.write(new Text(key.toString() + s), new Text(Float.toString(frequency)));
-                }
-                break;
-            // 识别伪装成浏览器的应用
-            case PerConstants.USERAGENT:
-                //解析 userAgent
-                UserAgent userAgent = userAgentManager.parseUserAgent(keys[1]);
-                 appFaker = appFaker(keys[2],valueList);
-                 //如果appFaker为空 说明是浏览器
-                String cookie = "o_cookie=1984582830; pac_uid=1_1984582830; pt2gguin=o1984582830; ptui_loginuin=1984582830; uin=o1984582830; mac=28d244ffab90; hw_mac=28:d2:44:ff:ab:90";
-                String uri = "weixin.qq.com?uin=190002135&imei=123456789963258&clientinfo=qq2014&devicetype=Windows+10";
-                String host = "www.qq.com";
-                // 模拟数据 提取结果数据
-                String APPNAME = "微信";
-                String BROWSER = "QQ Browser";
-
-                Bean bean = new Bean();
-                bean.setCookie(cookie);
-                bean.setUri(uri);
-                bean.setHost(host);
-                if (Strings.isNullOrEmpty(appFaker)){
-                    info = getBrowserUserInfo(bean);
-                }else {
-                    for (String s : valueList) {
-                        context.write(new Text(s), new Text(appFaker));
+        //遍历 key 找出存在相同key的 数据
+        for (String setkey : keySet) {
+            Set<String> valueSet = new HashSet<String>();
+            for (Bean bean1 : valueList) {
+                if( bean1.uriMap.containsKey(setkey)){
+                    if (valueSet.contains(bean1.uriMap.get(setkey))){
+                        if(beanMap.containsKey(setkey + PerConstants.SEPARATOR + bean1.uriMap.get(setkey))){
+                            beanMap.get(setkey + PerConstants.SEPARATOR + bean1.uriMap.get(setkey)).add(bean1);
+                        }else{
+                            Set<Bean> set = new HashSet<Bean>();
+                            set.add(bean1);
+                            beanMap.put(setkey + PerConstants.SEPARATOR + bean1.uriMap.get(setkey),set);
+                        }
+                    }else {
+                        if (bean1.uriMap.get(setkey).length() >5) {
+                            valueSet.add(bean1.uriMap.get(setkey));
+                            Set<Bean> set = new HashSet<Bean>();
+                            set.add(bean1);
+                            beanMap.put(setkey + PerConstants.SEPARATOR + bean1.uriMap.get(setkey),set);
+                        }
                     }
                 }
-                break;
-            default:
-                break;
+                if( bean1.cookieMap.containsKey(setkey)){
+                    if (valueSet.contains(bean1.cookieMap.get(setkey))){
+                        if(beanMap.containsKey(setkey + PerConstants.SEPARATOR + bean1.cookieMap.get(setkey))){
+                            beanMap.get(setkey + PerConstants.SEPARATOR + bean1.cookieMap.get(setkey)).add(bean1);
+                        }else{
+                            Set<Bean> set = new HashSet<Bean>();
+                            set.add(bean1);
+                            beanMap.put(setkey + PerConstants.SEPARATOR + bean1.cookieMap.get(setkey),set);
+                        }
+                    }else {
+                        if (bean1.cookieMap.get(setkey).length() >5) {
+                            valueSet.add(bean1.cookieMap.get(setkey));
+                            Set<Bean> set = new HashSet<Bean>();
+                            set.add(bean1);
+                            beanMap.put(setkey + PerConstants.SEPARATOR + bean1.cookieMap.get(setkey),set);
+                        }
+                    }
+                }
+            }
         }
-        //为空 说明未找到其伪装的应用，暂时可以当做 浏览器 处理
-        Set<String> set = new HashSet<String>();
-        set = dataRelationExtract(info);
-        for (String s : set) {
-            outputSet.add(s);
+        for (String s : beanMap.keySet()) {
+            //只有存在两个 相等值的 beanmap 才输出
+            if (beanMap.get(s).size() >= 2) {
+               String hasAppBrowser = "";
+                String appAndBrowserName = "";
+                for (Bean bean : beanMap.get(s)) {
+                    if (Strings.isNullOrEmpty(appAndBrowserName)){
+                        appAndBrowserName += bean.Method;
+                    }else{
+                        String strs[] = appAndBrowserName.split(",",-1);
+                        List<String> list = Arrays.asList(strs);
+                        if(!list.contains(bean.Method)) {
+                            appAndBrowserName += "," + bean.Method;
+                        }
+                    }
+                    if (Strings.isNullOrEmpty(hasAppBrowser)){
+                        hasAppBrowser += bean.method;
+                    }else{
+                        String strs[] = hasAppBrowser.split(",",-1);
+                        List<String> list = Arrays.asList(strs);
+                        if(!list.contains(bean.method)) {
+                            hasAppBrowser += "," + bean.method;
+                        }
+                    }
+                }
+                context.write(new Text(keys[1] + PerConstants.SEPARATOR + s + PerConstants.SEPARATOR + appAndBrowserName + PerConstants.SEPARATOR + hasAppBrowser ), new Text());
+            }
         }
+
+
+
     }
 
     @Override
@@ -347,6 +378,7 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
         Path browserFeature = new Path(conf.get("browserFeature"));
         Path dataRelation = new Path(conf.get("dataRelation"));
         Path osUnify = new Path(conf.get("osUnify"));
+        Path terminalAnalysis = new Path(conf.get("terminalAnalysis"));
         FileSystem toolFileSystem = FileSystem.get(conf);
         InputStream browserVersionMapStream = toolFileSystem.open(browserVersionMap);
         InputStream browserAppSystem = toolFileSystem.open(browserApp);
@@ -354,13 +386,15 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
         InputStream browserFeatureSystem = toolFileSystem.open(browserFeature);
         InputStream dataRelationSystem = toolFileSystem.open(dataRelation);
         InputStream osUnifySystem = toolFileSystem.open(osUnify);
+        InputStream terminalAnalysisSystem = toolFileSystem.open(terminalAnalysis);
 
         ReadXml readXml = new ReadXml(browserVersionMapStream,
                 browserAppSystem,
                 appFeatureSystem,
                 browserFeatureSystem,
                 dataRelationSystem,
-                osUnifySystem);
+                osUnifySystem,
+                terminalAnalysisSystem);
         return  readXml;
     }
 

@@ -5,9 +5,12 @@ package com.pt.test;
  */
 public class PerConstants {
     static final String FREQUENCY = "frequency";
-    static final String FREQUENCYTOOL = "frequencytool";
+    static final String  FREQUENCYTOOL = "frequencytool";
     static final String USERAGENT = "useragent";
     static final String SEPARATOR = "\t";
+    static final String COMMA = ",";
+    static final String BROWSER = "browser";
+    static final String APP = "app";
     static final String HOSTTHRESHOLD = "hostThreshold";
 
     static final int INDEX_SRCIP = 0;

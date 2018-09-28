@@ -1,5 +1,8 @@
 package com.pt.personas;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Shaon on 2018/8/24.
  * 转json 数据
@@ -22,10 +25,24 @@ public class Bean {
     String SetCookie = "";
     String ResCode = "";
     String TTL = "";
+    //字段说明是app或者浏览器
     String method = "";
     String RecTime = "";
 
+    Map<String,String> uriMap = new HashMap<String,String>();
+    Map<String,String> cookieMap = new HashMap<String,String>();
+
     public Bean() {
+    }
+    public Bean(String srcIP, String host, String uri, String cookie, String userAgent, String TTL, String recTime, String method) {
+        SrcIP = srcIP;
+        Host = host;
+        Uri = uri;
+        Cookie = cookie;
+        UserAgent = userAgent;
+        this.TTL = TTL;
+        RecTime = recTime;
+        this.method = method;
     }
 
     public Bean(String srcIP, String host, String uri, String cookie, String userAgent, String TTL, String recTime) {

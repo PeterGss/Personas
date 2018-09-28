@@ -105,7 +105,7 @@ public class CleanDriver {
             delayDays = 0;
         }
 
-        maxLine = conf.getInt("maxline", 10000);//输出文件最大的行数
+        maxLine = conf.getInt("maxline", 100000);//输出文件最大的行数
         reduceHandleSize = conf.getInt("reduceHandleSize", 128);//reduce任务处理的数据大小
 
         //统计输出结果需要分析开始的时间

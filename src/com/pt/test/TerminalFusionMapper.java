@@ -1,14 +1,18 @@
 package com.pt.test;
 
+import com.google.common.base.Strings;
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+import com.pt.util.MLogger;
+import com.pt.util.Utils;
 import com.useragentutils.UserAgent;
 import com.useragentutils.UserAgentManager;
 import com.xmlutils.Application;
 import com.xmlutils.Browser;
 import com.xmlutils.ReadXml;
 import com.xmlutils.User;
+import org.apache.commons.collections.map.HashedMap;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -19,6 +23,7 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Counter;
 import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.MultipleOutputs;
 
@@ -34,9 +39,9 @@ import java.util.regex.Pattern;
 /**
  * Created by Shaon on 2018/8/24.
  */
-public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
+public class TerminalFusionMapper extends Mapper<LongWritable, Text, Text, Text> {
 
-    private final static Log log = LogFactory.getLog(PersonasMapper.class);
+    private final static Log log = LogFactory.getLog(TerminalFusionMapper.class);
     private MultipleOutputs<Text,Text> mos;
     //工具 频率阈值判断
     float toolThreshold = 100;
@@ -63,6 +68,9 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
     //浏览器版本信息
     Map<String,String> browserVersion = new HashMap<String,String>();
     //浏览器 特征
+
+    private HashMap<String, String> terminalAnalysisHostMap = new HashMap();
+    private HashMap<String, String> terminalAnalysisAppMap = new HashMap();
     String browserUserSignField;
     //浏览器 提取用户特征
     String browserField;
@@ -116,6 +124,9 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
 
         //浏览器的版本
         browserVersion = readXml.getBrowserVersionMap();
+
+        terminalAnalysisHostMap = readXml.getTerminalAnalysisHostMap();
+        terminalAnalysisAppMap = readXml.getTerminalAnalysisAppMap();
     }
 
     protected void map(LongWritable key, Text value, Context context)
@@ -126,10 +137,29 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         }
         StringBuilder valuesb = new StringBuilder();
         Gson gson = new Gson();
-        String[] strs = value.toString().split(PerConstants.SEPARATOR,-1);
+        String str = value.toString();
+        try {
+            str = Utils.getURLDecoderString(str);
+        }catch (IllegalArgumentException e){
+            if (str.contains("%u")){
+                if (str.contains("%u")){
+                    String unicode =  decodeUnicode(str.replace("%u","\\u"));
+                    if (!Strings.isNullOrEmpty(unicode)){
+                        str = unicode;
+                    }
+                }
+            }
+        }
+        String[] strs = str.split(PerConstants.SEPARATOR,-1);
         //uri转码
-        Bean bean = new Bean(strs[3],strs[4],strs[5],strs[6],strs[7],strs[8],strs[9]);
-        float frequency = Float.parseFloat(strs[9]);
+        Bean bean = new Bean();
+        if (strs.length >10) {
+            bean = new Bean(strs[3], strs[4], strs[5], decode(strs[6]), decode(strs[7]), strs[8], strs[9]);
+        }else
+        {
+            MLogger.info("value.toString():" + value.toString());
+            MLogger.info("length:" + strs.length);
+        }
         String mac = "";
         String imei = "";
         String useragent = "";
@@ -142,67 +172,37 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         //1.识别 浏览器 工具 应用   分别处理
         useragent = bean.getUserAgent();
         //解析 userAgent
-        UserAgent userAgent = userAgentManager.parseUserAgent(useragent);
+        useragent = bean.getUserAgent();
+        //解析 userAgent
+        UserAgent userAgent = new UserAgent("");
+        try {
+            userAgent = userAgentManager.parseUserAgent(useragent);
+        }catch (IllegalArgumentException e){
+            MLogger.warn(e + e.getMessage());
+        }
+
         String browserName = userAgent.getBrowserName();
         String toolname = userAgent.getToolName();
         String appName = userAgent.getAppName();
 
-        if (frequency < toolThreshold) {
+        Map<String,String> map = new HashMap<String,String>();
+
             //如果是 工具
             if (StringUtils.isNotEmpty(toolname)) {
-                context.write(new Text(PerConstants.FREQUENCYTOOL + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
                 outputKey.set(toolname + PerConstants.SEPARATOR + bean.getSrcIP());
             }
-            //如果是浏览器 行为  输出 ip + 设备类型+操作系统 + 浏览器+浏览器版本 + TTL 作为一个终端的 key
             else if (StringUtils.isNotEmpty(browserName)) {
-                //计算频率
-                context.write(new Text(PerConstants.FREQUENCY + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
-                //reduce 识别是不是 伪装成 浏览器的应用
-                context.write(new Text(PerConstants.USERAGENT + PerConstants.SEPARATOR + bean.UserAgent
-                                + PerConstants.SEPARATOR + browserVersion.get(browserName))
-                        , new Text(bean.sepString()));
+                if (terminalAnalysisHostMap.containsKey(bean.Host)) {
+                    context.write(new Text(bean.SrcIP + PerConstants.SEPARATOR  + terminalAnalysisHostMap.get(bean.Host))
+                            , new Text(PerConstants.BROWSER + PerConstants.SEPARATOR + bean.sepString() + PerConstants.SEPARATOR + browserVersion.get(browserName)));
+                }
             }//应用
             else if (StringUtils.isNotEmpty(appName)){
-
+                if (terminalAnalysisAppMap.containsKey(appName)) {
+                    context.write(new Text(bean.SrcIP + PerConstants.SEPARATOR  +terminalAnalysisAppMap.get(appName))
+                            , new Text(PerConstants.APP +  PerConstants.SEPARATOR + bean.sepString()+  PerConstants.SEPARATOR + appName));
+                }
             }
-            //识别不出的 useragent 输出出来
-            else{
-                mos.write(new Text(bean.UserAgent + PerConstants.SEPARATOR + bean.getHost()), new Text(),"noUserAgent/noUserAgent.bcp");
-                moscounter.increment(1);
-            }
-        }else {
-            // tool
-            context.write(new Text(PerConstants.FREQUENCYTOOL + PerConstants.SEPARATOR + bean.SrcIP + PerConstants.SEPARATOR + bean.DstIP), new Text(bean.sepString()));
-        }
-
-
-        /*
-        //2. 识别提取用户特征，这个要根据 xml配置 针对性提取
-        //若是浏览器 无mac 等终端信息的  操作系统 + 设备类型设备类型 +浏览器 +浏览器版本+应用+TTL
-                //3终端融合 有mac的以mac为key，没mac 用终端融合,value :srcip 终端 应用（浏览器） 用户  行为 rectime
-       if (valuesb.length() !=0){
-           outputValue.set(valuesb.toString());
-       }else {
-           outputValue.set(bean.SrcIP +PerConstants.SEPARATOR + userinfo + PerConstants.SEPARATOR + bean.Host +PerConstants.SEPARATOR + bean.UserAgent + bean.RecTime);
-       }
-
-        if (StringUtils.isNotEmpty(userinfo)) {
-            context.write(outputKey, outputValue);
-        }
-        // 若存在 mac、imei等 终端信息 mac 也输出
-        if(StringUtils.isNotEmpty(mac)){
-            mac = mac.replace("&","");
-            if ((mac.contains("mac=")
-                    && macPattern.matcher(mac.replace("mac=","")).matches())) {
-                context.write(new Text(mac), outputValue);
-            }
-        }
-        if(StringUtils.isNotEmpty(imei)){
-            imei = imei.replace("&","");
-            if ((imei.contains("imei=")
-                    && imeiPattern.matcher(imei.replace("imei=","")).matches())) {
-                context.write(new Text(imei), outputValue);
-            }*/
     }
 
     @Override
@@ -210,6 +210,45 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         mos.close();
     }
 
+    public static String decode(String str){
+        String str2 = str ;
+        try {
+            str2 = Utils.getURLDecoderString(str);
+        }catch (IllegalArgumentException e){
+            if (str2.contains("%u")){
+                String unicode =  decodeUnicode(str.replace("%u","\\u"));
+                if (!Strings.isNullOrEmpty(unicode)){
+                    str2 = unicode;
+                }
+            }
+        }
+        return str2;
+    }
+    //unicode 转码
+    public static String decodeUnicode(final String dataStr) {
+        int start = 0;
+        int end = 0;
+        final StringBuffer buffer = new StringBuffer();
+        while (start > -1) {
+            end = dataStr.indexOf("\\u", start + 2);
+            String charStr = "";
+            if (end == -1) {
+                charStr = dataStr.substring(start + 2, dataStr.length());
+            } else {
+                charStr = dataStr.substring(start + 2, end);
+            }
+            char letter = 0;
+            try {
+                letter = (char) Integer.parseInt(charStr, 16); // 16进制parse整形字符串。
+            }catch (Exception e){
+                return "";
+            }
+            buffer.append(new Character(letter).toString());
+            start = end;
+        }
+        return buffer.toString(); //                buffer.append(new Character(letter).toString());                start = end;            }            return buffer.toString();
+
+    }
     //解析json 数据
     static private String parseJson(String str) throws JsonSyntaxException{
         JsonParser parse =new JsonParser();
@@ -241,26 +280,29 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
     //
     private ReadXml getReadXml(Context context)throws IOException{
         Configuration conf = context.getConfiguration();
-        Path browserVersion = new Path(conf.get("browserVersion"));
+        Path browserVersionMap = new Path(conf.get("browserVersion"));
         Path  browserApp = new Path(conf.get("browserApp"));
         Path appFeature = new Path(conf.get("appFeature"));
         Path browserFeature = new Path(conf.get("browserFeature"));
         Path dataRelation = new Path(conf.get("dataRelation"));
         Path osUnify = new Path(conf.get("osUnify"));
+        Path terminalAnalysis = new Path(conf.get("terminalAnalysis"));
         FileSystem toolFileSystem = FileSystem.get(conf);
-        InputStream browserVersionStream = toolFileSystem.open(browserVersion);
+        InputStream browserVersionMapStream = toolFileSystem.open(browserVersionMap);
         InputStream browserAppSystem = toolFileSystem.open(browserApp);
         InputStream appFeatureSystem = toolFileSystem.open(appFeature);
         InputStream browserFeatureSystem = toolFileSystem.open(browserFeature);
-        InputStream osUnifySystem = toolFileSystem.open(osUnify);
         InputStream dataRelationSystem = toolFileSystem.open(dataRelation);
+        InputStream osUnifySystem = toolFileSystem.open(osUnify);
+        InputStream terminalAnalysisSystem = toolFileSystem.open(terminalAnalysis);
 
-        ReadXml readXml = new ReadXml(browserVersionStream,
+        ReadXml readXml = new ReadXml(browserVersionMapStream,
                 browserAppSystem,
                 appFeatureSystem,
                 browserFeatureSystem,
                 dataRelationSystem,
-                osUnifySystem);
+                osUnifySystem,
+                terminalAnalysisSystem);
         return  readXml;
     }
 

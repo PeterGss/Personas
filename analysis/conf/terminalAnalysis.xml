@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property app="百度输入法,百度云管家,百度地图,百度,百度网盘" host="baidu.com" aliases="百度"></property>
+	
+	<property app="爱奇艺" host="iqiyi.com" aliases="爱奇艺"></property>
+	
+	<property app="飞猪" host="fliggy.com" aliases="飞猪"></property>
+	
+	<property app="手机淘宝,闲鱼" host="taobao.com" aliases="手机淘宝"></property>
+	
+	<property app="支付宝" host="alipay.com" aliases="支付宝"></property>
+	
+	<property app="阿里云" host="aliyun.com" aliases="阿里云"></property>
+	
+	<property app="天猫" host="tmall.com" aliases="天猫"></property>
+	
+	<property app="钉钉" host="dingtalk.com" aliases="钉钉"></property>
+	
+	<property app="虾米音乐" host="xiami.com" aliases="虾米音乐"></property>
+	
+	<property app="腾讯视频,QQ空间,QQ新闻,QQ运动,QQ音乐,QQ游戏,QQ邮箱,QQ客户端,QQ浏览器,QQ,微信,微信读书,腾讯新闻,绝地求生,QQ影音,全民K歌,天天快报" host="qq.com" aliases="腾讯"></property>
+	
+	<property app="QQ直播" host="qqzhibo.net" aliases="QQ直播"></property>
+	
+	<property app="有道桌面词典,有道云,网易有道词典" host="youdao.com" aliases="有道"></property>
+	
+	<property app="网易云音乐,网易邮箱大师" host="163.com" aliases="网易"></property>
+	
+	<property app="微博" host="weibo.com" aliases="微博"></property>
+	
+	<property app="优酷" host="youku.com" aliases="优酷"></property>
+
+	<property app="搜狐新闻" host="sohu.com" aliases="搜狐新闻"></property>
+
+	<property app="京东金融,京东,咸鱼,京麦" host="jd.com" aliases="京东"></property>
+
+	<property app="360安全桌面,360免费wifi,安全卫士,360手机卫士" host="360.cn" aliases="360"></property>
+	
+	<property app="米聊" host="miliao.com" aliases="米聊 "></property>
+
+	<property app="美团,爱美团" host="meituan.com" aliases="美团"></property>
+
+	<property app="陌陌" host="immomo.com" aliases="陌陌"></property>
+
+	<property app="搜狗百科,搜狗拼音输入法" host="sogou.com" aliases="搜狗"></property>
+
+	<property app="迅雷" host="xunlei.com" aliases="迅雷"></property>
+
+	<property app="酷狗音乐" host="kugou.com" aliases="酷狗音乐"></property>
+
+	<property app="北京银行" host="bankofbeijing.com.cn" aliases="北京银行"></property>
+
+	<property app="中国工商银行" host="icbc.com.cn" aliases="中国工商银行"></property>
+
+	<property app="建行手机银行" host="ccb.com" aliases="建行手机银行"></property>
+
+	<property app="招商银行" host="cmbchina.com" aliases="招商银行"></property>
+
+	<property app="移动地图" host="10086.cn" aliases="移动地图"></property>
+
+	<property app="高德地图" host="amap.com" aliases="高德地图"></property>
+
+	<property app="美拍" host="meipai.com" aliases="美拍"></property>
+
+	<property app="美图看看,美图秀秀" host="meitu.com" aliases="美图"></property>
+
+	<property app="快手" host="kuaishou.com" aliases="快手"></property>
+
+	<property app="聚美优品" host="jumei.com" aliases="聚美优品"></property>
+
+	<property app="墨迹天气" host="moji.com" aliases="墨迹天气"></property>
+
+	<property app="哔哩哔哩" host="bilibili.com" aliases="哔哩哔哩"></property>
+
+	<property app="拼多多" host="pinduoduo.com" aliases="拼多多"></property>
+
+	<property app="芒果TV" host="mgtv.com" aliases="芒果TV"></property>
+
+	<property app="驱动精灵" host="drivergenius.com" aliases="驱动精灵"></property>
+
+	<property app="安智" host="anzhi.com" aliases="安智"></property>
+	
+	<property app="探索频道" host="discoverychannel.com.tw" aliases="探索频道"></property>
+	
+	<property app="为知笔记" host="wiz.com" aliases="为知笔记"></property>
+	
+	<property app="异步" host="epubit.com" aliases="异步"></property>
+	
+	<property app="火绒" host="huorong.cn" aliases="火绒"></property>
+	
+	<property app="云集微店" host="yunjiweidian.com" aliases="云集微店"></property>
+	
+	<property app="追书神器" host="zhuishushenqi.com" aliases="追书神器"></property>
+	
+	<property app="下厨房" host="xiachufang.com" aliases="下厨房"></property>
+	
+	<property app="百词斩" host="baicizhan.com" aliases="百词斩"></property>
+	
+	<property app="凤凰新闻" host="ifeng.com" aliases="凤凰新闻"></property>
+	
+	<property app="花椒客户端" host="huajiao.com" aliases="花椒"></property>
+	
+	<property app="首旅如家" host="bthhotels.com" aliases="首旅如家"></property>
+	
+	<property app="风行视频" host="fun.tv" aliases="风行"></property>
+	
+	<property app="学而思" host="xueersi.com" aliases="学而思"></property>
+	
+	<property app="咕咚健身" host="codoon.com" aliases="咕咚"></property>
+	
+	<property app="WiFi万能钥匙" host="wifi.com" aliases="WiFi万能钥匙"></property>
+	
+	<property app="WiFi共享大师" host="ggsafe.com" aliases="WiFi共享大师"></property>
+	
+	<property app="嘀嗒出行" host="didachuxing.com" aliases="嘀嗒出行"></property>
+	
+	<property app="车主无忧" host="xmiles.cn" aliases="车主无忧"></property>
+	
+	<property app="eclipse" host="eclipse.org" aliases="eclipse/"></property>
+	
+	<property app="麦当劳Pro" host="mcdonalds.com.cn" aliases="麦当劳"></property>
+	
+	<property app="大智慧" host="gw.com.cn" aliases="大智慧"></property>
+	
+	<property app="钱盾" host="alibaba.com" aliases="钱盾"></property>
+	
+	<property app="飞常准PRO" host="variflight.com" aliases="飞常准"></property>
+	
+	<property app="万年历" host="wannianrili.51240.com" aliases="万年历"></property>
+	
+	<property app="宜人财富" host="yirendai.com" aliases="宜人贷"></property>
+	
+	<property app="索尼中国" host="sony.com.cn" aliases="索尼中国"></property>
+	
+	<property app="多看阅读" host="duokan.com" aliases="多看阅读"></property>
+	
+	<property app="网络播放器" host="potplayer.daum.net" aliases="网络播放器"></property>
+	
+	<property app="多点" host="dmall.com" aliases="多点"></property>
+	
+	<property app="大象" host="edaxiang.com" aliases="大象"></property>
+	
+	<property app="阿姨帮" host="ayibang.com" aliases="阿姨帮"></property>
+	
+	<property app="Adobe Flash Player" host="adobe.com" aliases="Adobe Flash Player"></property>
+	
+	<property app="虎扑" host="hupu.com" aliases="hupu/"></property>
+	
+	<property app="飞秋" host="feiq18.com" aliases="飞秋"></property>
+	
+	<property app="火猫直播" host="huomao.com" aliases="火猫直播"></property>
+	
+	<property app="新闻" host="sina.com.cn" aliases="新闻中心"></property>
+	
+	<property app="iTunes,App Store" host="apple.com" aliases="iTunes"></property>
+	
+	<property app="Adobe AIR application" host="adobe.com" aliases="AdobeAIR"></property>
+	
+	<property app="Thunderbird email client" host="thunderbird.net" aliases="电子邮件应用程序"></property>
+</configuration>

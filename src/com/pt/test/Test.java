@@ -1,50 +1,19 @@
 package com.pt.test;
 
-import com.google.gson.Gson;
-import com.xmlutils.ReadXml;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-
+/**
+ * Created by Shaon on 2018/9/27.
+ */
 public class Test {
-
-	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println("1\t2\t3\t4".replace("\t",""));
-		Gson gson = new Gson();
-	}
-	
-	public static void test1() throws FileNotFoundException {
-		ReadXml readXml = new ReadXml(new FileInputStream("conf/browserVersion.xml"),
-				new FileInputStream("conf/browserApp.xml"),
-				new FileInputStream("conf/appFeature.xml"),
-				new FileInputStream("conf/browserFeature.xml"),
-				new FileInputStream("conf/dataRelation.xml"),
-				new FileInputStream("conf/osUnify.xml")
-				);
-		System.out.println(readXml.getBrowserVersionMap().size());
-		System.out.println(readXml.getBrowserVersionMap());
-		System.out.println(readXml.getBrowserAppMap());
-		System.out.println(readXml.getAppFeatureMap());
-		System.out.println(readXml.getBrowserFeatureMap());
-		System.out.println(readXml.getDataRelationList());
-		System.out.println(readXml.getOsUnifyMap());
-	}
-	
-	public static void test2() throws FileNotFoundException {
-		ReadXml readXml = new ReadXml();
-		readXml.setBrowserVersionXmlIn(new FileInputStream("conf/browserVersion.xml"));
-		readXml.setBrowserAppXmlIn(new FileInputStream("conf/browserApp.xml"));
-		readXml.setAppFeatureXmlIn(new FileInputStream("conf/appFeature.xml"));
-		readXml.setBrowserFeatureXmlIn(new FileInputStream("conf/browserFeature.xml"));
-		readXml.setDataRelationXmlIn(new FileInputStream("conf/dataRelation.xml"));
-		readXml.setOsUnifyXmlIn(new FileInputStream("conf/osUnify.xml"));
-		readXml.initReadXML();
-		System.out.println(readXml.getBrowserVersionMap().size());
-		System.out.println(readXml.getBrowserVersionMap());
-		System.out.println(readXml.getBrowserAppMap());
-		System.out.println(readXml.getAppFeatureMap());
-		System.out.println(readXml.getBrowserFeatureMap());
-		System.out.println(readXml.getDataRelationList());
-		System.out.println(readXml.getOsUnifyMap());
-	}
+    public static void main(String[] args) {
+        Set<Bean> set = new HashSet<Bean>();
+        Bean bean1 = new Bean("1","1","1","1","1","1","1");
+        Bean bean2 = new Bean("1","1","1","1","1","1","2");
+        set.add(bean1);
+        set.add(bean2);
+        System.out.println((new ArrayList<String>()).size());
+    }
 }

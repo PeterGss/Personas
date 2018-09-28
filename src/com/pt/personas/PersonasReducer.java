@@ -86,8 +86,6 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
         APPMap = readXml.getAppFeatureMap();
         //关系提取
         dataRelationList = readXml.getDataRelationList();
-
-
         moscounter = context.getCounter(CounterEnum.MOSCOUNTER);
     }
 
@@ -101,9 +99,11 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
 
         ResultInfo info = new ResultInfo();
         float frequency;
+        String valueStr;
+        String[] valueStrs;
         for (Text value : values) {
-            String valueStr = value.toString();
-            String[] valueStrs = valueStr.split(PerConstants.SEPARATOR,-1);
+            valueStr = value.toString();
+            valueStrs = valueStr.split(PerConstants.SEPARATOR,-1);
             if (valueStrs.length > 6) {
                 if (!Strings.isNullOrEmpty(valueStrs[1])) {
                     hostList.add(valueStrs[1]);
@@ -115,7 +115,6 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                     valueList.add(valueStr);
                 }
             }
-
         }
         Collections.sort(rectimeList);
         String appFaker ="";
@@ -128,41 +127,9 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                 }
                 break;
             // 识别伪装成浏览器的应用
-            case PerConstants.USERAGENT:
-                //解析 userAgent
-                UserAgent userAgent = userAgentManager.parseUserAgent(keys[1]);
-                 appFaker = appFaker(keys[2],valueList);
-                 //如果appFaker为空 说明是浏览器
-               /* String cookie = "o_cookie=1984582830; pac_uid=1_1984582830; pt2gguin=o1984582830; ptui_loginuin=1984582830; uin=o1984582830; mac=28d244ffab90; hw_mac=28:d2:44:ff:ab:90";
-                String uri = "weixin.qq.com?uin=190002135&imei=123456789963258&clientinfo=qq2014&devicetype=Windows+10";
-                String host = "www.qq.com";
-                // 模拟数据 提取结果数据
-                String APPNAME = "微信";
-                String BROWSER = "QQ Browser";*/
-                for (String value : valueList) {
-                    String[] valuestrs = value.split(PerConstants.SEPARATOR,-1);
-                    Bean bean = new Bean(valuestrs[0],valuestrs[1],valuestrs[2],valuestrs[3],
-                            valuestrs[4],valuestrs[5],valuestrs[6]);
-                /*bean.setCookie(cookie);
-                bean.setUri(uri);
-                bean.setHost(host);*/
-                    info = getUserInfo(bean,appFaker);
-                    if (Strings.isNullOrEmpty(appFaker)) {
-                        info.setCombine(bean.SrcIP + PerConstants.COMMA + keys[3] + PerConstants.COMMA + bean.TTL);
-                    }
-                    //为空 说明未找到其伪装的应用，暂时可以当做 浏览器 处理
-                    Set<String> set = new HashSet<String>();
-                    ResultInfo userinfo = new ResultInfo(info);
-                    for (String s : info.getUserinfo().split(",",-1)) {
-                        userinfo.setUserinfo(s);
-                        set = dataRelationExtract(userinfo);
-                        for (String outstr : set) {
-                            outputSet.add(outstr);
-                        }
-                    }
-                }
-//                info.setSrcip("1.1.1.1");
-//                info.setAppname("app");
+            case PerConstants.BROWSER:
+                info = new ResultInfo(keys[1],keys[2],keys[3],keys[4],keys[5],keys[6],keys[7],keys[8]);
+                info.setCombine(keys[9]);
                 break;
             case PerConstants.APP:
                 info = new ResultInfo(keys[1],keys[2],keys[3],keys[4],keys[5],keys[6],keys[7],keys[8]);
@@ -428,6 +395,7 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
         Path browserFeature = new Path(conf.get("browserFeature"));
         Path dataRelation = new Path(conf.get("dataRelation"));
         Path osUnify = new Path(conf.get("osUnify"));
+        Path terminalAnalysis = new Path(conf.get("terminalAnalysis"));
         FileSystem toolFileSystem = FileSystem.get(conf);
         InputStream browserVersionMapStream = toolFileSystem.open(browserVersionMap);
         InputStream browserAppSystem = toolFileSystem.open(browserApp);
@@ -435,13 +403,15 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
         InputStream browserFeatureSystem = toolFileSystem.open(browserFeature);
         InputStream dataRelationSystem = toolFileSystem.open(dataRelation);
         InputStream osUnifySystem = toolFileSystem.open(osUnify);
+        InputStream terminalAnalysisSystem = toolFileSystem.open(terminalAnalysis);
 
         ReadXml readXml = new ReadXml(browserVersionMapStream,
                 browserAppSystem,
                 appFeatureSystem,
                 browserFeatureSystem,
                 dataRelationSystem,
-                osUnifySystem);
+                osUnifySystem,
+                terminalAnalysisSystem);
         return  readXml;
     }
 
@@ -493,12 +463,12 @@ public class PersonasReducer extends Reducer<Text, Text, Text, Text> {
                         valueInfo = getField(valueStr,info);
                     }
                     if (!Strings.isNullOrEmpty(keyInfo) && !Strings.isNullOrEmpty(valueInfo)) {
-                        if (keyFieldVO.getType().contains("B") && valueFieldVO.getType().equals("C1") ){
+                        if (keyFieldVO.getType().contains("ZD") && valueFieldVO.getType().equals("YY1") ){
                             hasTerminalApp = true;
                         }
                         if (hasTerminalApp
-                                && (keyFieldVO.getType().equals("A1") && valueFieldVO.getType().equals("C1")
-                                || (keyFieldVO.getType().equals("C1_A1") && valueFieldVO.getType().equals("E1")))){
+                                && (keyFieldVO.getType().equals("IP1") && valueFieldVO.getType().equals("YY1")
+                                || (keyFieldVO.getType().equals("YY1_IP1") && valueFieldVO.getType().equals("YH1")))){
                             break;
                         }
                         sb.append(keyInfo).append(PerConstants.SEPARATOR)

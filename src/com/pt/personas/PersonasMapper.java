@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import com.pt.util.MLogger;
+import com.pt.util.Utils;
 import com.useragentutils.UserAgent;
 import com.useragentutils.UserAgentManager;
 import com.xmlutils.Application;
@@ -107,12 +108,14 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
             return;
         }
         StringBuilder valuesb = new StringBuilder();
-        String[] strs = value.toString().split(PerConstants.SEPARATOR,-1);
+        String str = value.toString();
+
+        String[] strs = str.split(PerConstants.SEPARATOR,-1);
 
         Bean bean = new Bean();
         float frequency = 0;
         if (strs.length >10) {
-            bean = new Bean(strs[3], strs[4], strs[5], strs[6], strs[7], strs[8], strs[9]);
+            bean = new Bean(strs[3], strs[4], strs[5], decode(strs[6]), decode(strs[7]), strs[8], strs[9]);
             frequency = Float.parseFloat(strs[10]);
         }else
         {
@@ -127,11 +130,20 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         //1.识别 浏览器 工具 应用   分别处理
         useragent = bean.getUserAgent();
         //解析 userAgent
-        UserAgent userAgent = userAgentManager.parseUserAgent(useragent);
+        UserAgent userAgent = new UserAgent("");
+        try {
+            userAgent = userAgentManager.parseUserAgent(useragent);
+        }catch (IllegalArgumentException e){
+            MLogger.warn(e + e.getMessage());
+        }
+
         String browserName = userAgent.getBrowserName();
         String toolname = userAgent.getToolName();
         String appName = userAgent.getAppName();
         String browserversion = userAgent.getBrowserVersion();
+        if (Strings.isNullOrEmpty(browserversion)){
+            browserversion = "";
+        }
 
         String os = userAgent.getOSName();
         String devicetype = userAgent.getDeviceType();
@@ -144,10 +156,19 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
             }
             //如果是浏览器行为 输出 useragent 标识符\tuseragent\t浏览器 valuebean
             else if (StringUtils.isNotEmpty(browserName)) {
-                context.write(new Text(PerConstants.USERAGENT + PerConstants.SEPARATOR + bean.UserAgent
-                                + PerConstants.SEPARATOR + browserVersion.get(browserName)+ PerConstants.SEPARATOR +
-                        os + PerConstants.COMMA + devicetype + PerConstants.COMMA + browserName + PerConstants.COMMA + browserversion)
-                        , new Text(bean.sepString()));
+                String appFaker = isAppFaker(browserVersion.get(browserName),bean);
+                ResultInfo info = getUserInfo(bean,appFaker);
+                //是浏览器
+                if (StringUtils.isEmpty(appFaker)){
+                    info.setCombine(bean.SrcIP +  PerConstants.COMMA + devicetype+PerConstants.COMMA +
+                                    os +  PerConstants.COMMA +browserName+  PerConstants.COMMA +
+                                    browserversion+  PerConstants.COMMA +bean.TTL);
+                    context.write(new Text(PerConstants.BROWSER + PerConstants.SEPARATOR + info.toAppResultInfo()+ PerConstants.SEPARATOR + info.getCombine()),new Text());
+
+                }else{
+                    //是应用
+                    context.write(new Text(PerConstants.APP + PerConstants.SEPARATOR + info.toAppResultInfo()),new Text());
+                }
             }//应用
             else if (StringUtils.isNotEmpty(appName)){
                 ResultInfo info = getUserInfo(bean,appName);
@@ -206,6 +227,7 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         Path browserFeature = new Path(conf.get("browserFeature"));
         Path dataRelation = new Path(conf.get("dataRelation"));
         Path osUnify = new Path(conf.get("osUnify"));
+        Path terminalAnalysis = new Path(conf.get("terminalAnalysis"));
         FileSystem toolFileSystem = FileSystem.get(conf);
         InputStream browserVersionStream = toolFileSystem.open(browserVersion);
         InputStream browserAppSystem = toolFileSystem.open(browserApp);
@@ -213,13 +235,15 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         InputStream browserFeatureSystem = toolFileSystem.open(browserFeature);
         InputStream osUnifySystem = toolFileSystem.open(osUnify);
         InputStream dataRelationSystem = toolFileSystem.open(dataRelation);
+        InputStream terminalAnalysisSystem = toolFileSystem.open(terminalAnalysis);
 
         ReadXml readXml = new ReadXml(browserVersionStream,
                 browserAppSystem,
                 appFeatureSystem,
                 browserFeatureSystem,
                 dataRelationSystem,
-                osUnifySystem);
+                osUnifySystem,
+                terminalAnalysisSystem);
         return  readXml;
     }
 
@@ -287,5 +311,85 @@ public class PersonasMapper extends Mapper<LongWritable, Text, Text, Text> {
         return info;
     }
 
+    //判断是否是 应用伪装为浏览器
+    public String isAppFaker(String browserName,Bean bean){
+        boolean isApp =false;
+        if (null != appFaker.get(browserName) && appFaker.get(browserName).size() > 0){
+            for (String appFaker : appFaker.get(browserName)) {
+                Application appfaker = APPMap.get(appFaker);
+                if (null == appfaker){
+                    return "";
+                }
+                if (appfaker.getVersion().size() >0 ) {
+                    for (String appVersion : appfaker.getVersion()) {
+                        if (StringUtils.isNotEmpty(appVersion)) {
+                            String[] version = appVersion.split(":", -1);
+                            if (version[0].equalsIgnoreCase("Uri")) {
+                                if (bean.getUri().contains(version[1])) {
+                                    isApp = true;
+                                    break;
+                                }
+                            } else if (version[0].equalsIgnoreCase("Cookie")) {
+                                if (bean.getCookie().contains(version[1])) {
+                                    isApp = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }else
+                {
+                    isApp = true;
+                }
+                if (isApp) {
+                    for (String hosts : appfaker.getHost()) {
+                        if (bean.Host.contains(hosts)) {
+                            return appfaker.getName();
+                        }
+                    }
+                }
+            }
+        }
+        return  "";
+    }
+    //unicode 转码
+    public static String decodeUnicode(final String dataStr) {
+        int start = 0;
+        int end = 0;
+        final StringBuffer buffer = new StringBuffer();
+        while (start > -1) {
+            end = dataStr.indexOf("\\u", start + 2);
+            String charStr = "";
+            if (end == -1) {
+                charStr = dataStr.substring(start + 2, dataStr.length());
+            } else {
+                charStr = dataStr.substring(start + 2, end);
+            }
+            char letter = 0;
+            try {
+                letter = (char) Integer.parseInt(charStr, 16); // 16进制parse整形字符串。
+            }catch (Exception e){
+                return "";
+            }
+            buffer.append(new Character(letter).toString());
+            start = end;
+        }
+        return buffer.toString(); //                buffer.append(new Character(letter).toString());                start = end;            }            return buffer.toString();
 
+    }
+
+    public static String decode(String str){
+        String str2 = str ;
+        try {
+            str2 = Utils.getURLDecoderString(str);
+        }catch (IllegalArgumentException e){
+            if (str2.contains("%u")){
+                String unicode =  decodeUnicode(str.replace("%u","\\u"));
+                if (!Strings.isNullOrEmpty(unicode)){
+                    str2 = unicode;
+                }
+            }
+        }
+        return str2;
+    }
 }

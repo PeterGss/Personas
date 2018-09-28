@@ -10,6 +10,7 @@ public class PerConstants {
     static final String SEPARATOR = "\t";
     static final String COMMA = ",";
     static final String APP = "app";
+    static final String BROWSER = "browser";
     static final String HOSTTHRESHOLD = "hostThreshold";
 
     static final int INDEX_SRCIP = 0;

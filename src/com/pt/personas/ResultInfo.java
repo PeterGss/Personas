@@ -58,7 +58,6 @@ public class ResultInfo {
                 appversion + PerConstants.SEPARATOR +
                 userinfo;
     }
-
     public ResultInfo(String srcip, String mac, String imei, String combine, String os, String devicetype, String browser, String browserv, String appname, String appversion, String tool, String userinfo, String website) {
         this.srcip = srcip;
         this.mac = mac;

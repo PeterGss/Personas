@@ -1,5 +1,8 @@
 package com.pt.test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Shaon on 2018/8/24.
  * 转json 数据
@@ -18,14 +21,30 @@ public class Bean {
     String Cookie = "";
     String sessionID = "";
     String UserAgent = "";
+    //具体产品和host
     String Method = "";
     String SetCookie = "";
     String ResCode = "";
     String TTL = "";
+    //字段说明是app或者浏览器
     String method = "";
     String RecTime = "";
 
+    Map<String,String> uriMap = new HashMap<String,String>();
+    Map<String,String> cookieMap = new HashMap<String,String>();
+
     public Bean() {
+    }
+    public Bean(String srcIP, String host, String uri, String cookie, String userAgent, String TTL, String recTime,String method,String Method) {
+        SrcIP = srcIP;
+        Host = host;
+        Uri = uri;
+        Cookie = cookie;
+        UserAgent = userAgent;
+        this.TTL = TTL;
+        RecTime = recTime;
+        this.method = method;
+        this.Method = Method;
     }
 
     public Bean(String srcIP, String host, String uri, String cookie, String userAgent, String TTL, String recTime) {
@@ -207,14 +226,24 @@ public class Bean {
 
     public String sepString(){
         return
-                SrcIP + "\t" +
-                AppProto + "\t" +
-                Host + "\t" +
-                Uri + "\t" +
-                Cookie + "\t" +
-                UserAgent + "\t" +
+                SrcIP.replace("\t","") + "\t" +
+                Host.replace("\t","") + "\t" +
+                Uri.replace("\t","") + "\t" +
+                Cookie.replace("\t","")+ "\t" +
+                UserAgent.replace("\t","") + "\t" +
                 TTL + "\t" +
                 RecTime ;
+    }
+    //多输出 app
+    public String sepAppString(){
+        return  method +"\t" +
+                SrcIP.replace("\t","") + "\t" +
+                        Host.replace("\t","") + "\t" +
+                        Uri.replace("\t","") + "\t" +
+                        Cookie.replace("\t","")+ "\t" +
+                        UserAgent.replace("\t","") + "\t" +
+                        TTL + "\t" +
+                        RecTime ;
     }
 
     @Override
@@ -235,5 +264,20 @@ public class Bean {
                 ", SetCookie='" + SetCookie + '\'' +
                 ", ResCode='" + ResCode + '\'' +
                 '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return (SrcIP + Host +Uri + Cookie + UserAgent + TTL) .hashCode();
+    }
+
+    @Override
+    public boolean equals(Object bean) {
+        return SrcIP.equals(((Bean)bean).SrcIP)
+                && Host.equals(((Bean)bean).Host)
+                && Uri.equals(((Bean)bean).Uri)
+                && Cookie.equals(((Bean)bean).Cookie)
+                && UserAgent.equals(((Bean)bean).UserAgent)
+                && TTL.equals(((Bean)bean).TTL);
     }
 }

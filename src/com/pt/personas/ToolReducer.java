@@ -208,6 +208,7 @@ public class ToolReducer extends Reducer<Text, Text, Text, Text> {
         Path browserFeature = new Path(conf.get("browserFeature"));
         Path dataRelation = new Path(conf.get("dataRelation"));
         Path osUnify = new Path(conf.get("osUnify"));
+        Path terminalAnalysis = new Path(conf.get("terminalAnalysis"));
         FileSystem toolFileSystem = FileSystem.get(conf);
         InputStream browserVersionMapStream = toolFileSystem.open(browserVersionMap);
         InputStream browserAppSystem = toolFileSystem.open(browserApp);
@@ -215,13 +216,15 @@ public class ToolReducer extends Reducer<Text, Text, Text, Text> {
         InputStream browserFeatureSystem = toolFileSystem.open(browserFeature);
         InputStream dataRelationSystem = toolFileSystem.open(dataRelation);
         InputStream osUnifySystem = toolFileSystem.open(osUnify);
+        InputStream terminalAnalysisSystem = toolFileSystem.open(terminalAnalysis);
 
         ReadXml readXml = new ReadXml(browserVersionMapStream,
                 browserAppSystem,
                 appFeatureSystem,
                 browserFeatureSystem,
                 dataRelationSystem,
-                osUnifySystem);
+                osUnifySystem,
+                terminalAnalysisSystem);
         return  readXml;
     }
 

@@ -34,7 +34,7 @@
 			</fileset>
 			<zipfileset includes="**/*.class" src="${lib.dir}/useragentutils-v0.0.1.jar" />
 			<zipfileset includes="**/*.class" src="${lib.dir}/dom4j-1.6.1.jar" />
-			<zipfileset includes="**/*.class" src="${lib.dir}/xmlutils-v0.0.3.jar" />
+			<zipfileset includes="**/*.class" src="${lib.dir}/xmlutils-0.0.4.jar" />
 		</jar>
 	</target>
 

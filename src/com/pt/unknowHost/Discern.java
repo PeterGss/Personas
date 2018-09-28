@@ -1,14 +1,4 @@
-package com.pt.test;
-
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.regex.Pattern;
+package com.pt.unknowHost;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -17,29 +7,40 @@ import com.xmlutils.Browser;
 import com.xmlutils.ReadXml;
 import com.xmlutils.User;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.*;
+import java.util.Map.Entry;
+import java.util.regex.Pattern;
+
 public class Discern {
-	
+	static Pattern macRegex = Pattern.compile("([0-9a-fA-F]{2})(([/\\s:|-]?+[0-9a-fA-F]{2}){5})");
+	static Pattern imeiRegex = Pattern.compile("^(\\d{15}|\\d{17})$");
+	static Pattern isNumRegex = Pattern.compile("^[-\\+]?[\\d]*$");
+
 	public static void main(String[] args) {
 		Discern discern = new Discern();
 		discern.setup();
 		discern.map();
 	}
 
-	private Map<String, Application> appFeatureMap;
-	private Map<String, Browser> browserFeatureMap;
-	private Map<String, String> osUnifyMap;
-	
-	public void setup() {
+	static private Map<String, Application> appFeatureMap;
+	static private Map<String, Browser> browserFeatureMap;
+	static private Map<String, String> osUnifyMap;
+
+	public static void setup() {
 		ReadXml readXml = null;
 		try {
 			readXml = new ReadXml(new FileInputStream("analysis/conf/browserVersion.xml"),
-					new FileInputStream("analysis/conf/browserApp.xml"), new FileInputStream("analysis/conf/appFeature.xml"),
-					new FileInputStream("analysis/conf/browserFeature.xml"), new FileInputStream("analysis/conf/dataRelation.xml"),
-					new FileInputStream("analysis/conf/osUnify.xml"));
+					new FileInputStream("analysis/conf/browserApp.xml"),
+					new FileInputStream("analysis/conf/appFeature.xml"),
+					new FileInputStream("analysis/conf/browserFeature.xml"),
+					new FileInputStream("analysis/conf/dataRelation.xml"),
+					new FileInputStream("analysis/conf/osUnify.xml"), new FileInputStream("analysis/conf/osUnify.xml"));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		appFeatureMap = readXml.getAppFeatureMap();
 		browserFeatureMap = readXml.getBrowserFeatureMap();
 		osUnifyMap = readXml.getOsUnifyMap();
@@ -47,7 +48,7 @@ public class Discern {
 
 	public void map() {
 		// 模拟数据 源数据
-		String cookie = "o_cookie=1984582830; pac_uid=1_1984582830; pt2gguin=o1984582830; ptui_loginuin=1984582830; uin=o1984582830; mac=28d244ffab90; hw_mac=28:d2:44:ff:ab:90";
+		String cookie = "o_cookie=01984582830; pac_uid=1_001984582830; pt2gguin=o01984582830; ptui_loginuin=001984582830; uin=o0001984582830; mac=28d244ffab90; hw_mac=28:d2:44:ff:ab:90";
 		String uri = "weixin.qq.com?uin=190002135&imei=123456789963258&clientinfo=qq2014&devicetype=Windows+10";
 		String host = "www.qq.com";
 		// 模拟数据 提取结果数据
@@ -112,7 +113,7 @@ public class Discern {
 			System.out.println("IMEI : " + IMEI);
 			System.out.println("USERINFO : " + USERINFO);
 		}
-	
+
 	}
 
 	/**
@@ -121,7 +122,7 @@ public class Discern {
 	 * @param cookie
 	 * @return
 	 */
-	public HashMap<String, String> parseCookie(String cookie) {
+	public static HashMap<String, String> parseCookie(String cookie) {
 		HashMap<String, String> cookieMap = new HashMap<String, String>();
 		if (cookie != null) {
 			String[] cookieSubs = cookie.split(";");
@@ -147,7 +148,7 @@ public class Discern {
 	 * @param uri
 	 * @return
 	 */
-	public HashMap<String, String> parseURI(String uri) {
+	public static HashMap<String, String> parseURI(String uri) {
 		HashMap<String, String> uriMap = new HashMap<String, String>();
 		if (uri != null) {
 			int firstQuestionMark = uri.indexOf("?");
@@ -181,8 +182,9 @@ public class Discern {
 	 * @param macList
 	 * @return
 	 */
-	public HashSet<String> getMac(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> getMac(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<String> macList) {
+		String placeRegex = "(.{2})";
 		HashSet<String> macSet = new HashSet<String>();
 		ArrayList<String> macMiddleList = new ArrayList<String>();
 		// 合并默认mac和配置文件中能提取mac的key
@@ -222,12 +224,15 @@ public class Discern {
 			}
 		}
 		// 验证mac地址有效性,并归一化mac值
-		String macRegex = "([0-9a-fA-F]{2})(([/\\s:|-]?+[0-9a-fA-F]{2}){5})";
 		for (String macStr : macMiddleList) {
-			if (Pattern.matches(macRegex, macStr)) {
-				macStr = macStr.toLowerCase();
-				if (macStr.contains("-") || macStr.contains(":")) {
-					macStr = macStr.replace("-", "").replace(":", "");
+			if (macRegex.matcher(macStr).matches()) {
+				macStr = macStr.toUpperCase();
+				if (!macStr.contains("-") && !macStr.contains(":")) {
+					macStr = macStr.replaceAll(placeRegex, "$1-");
+					macStr = macStr.substring(0, macStr.length() - 1);
+				}
+				if (macStr.contains(":")) {
+					macStr = macStr.replace(":", "-");
 				}
 				macSet.add(macStr);
 			}
@@ -243,7 +248,7 @@ public class Discern {
 	 * @param imeiList
 	 * @return
 	 */
-	public HashSet<String> getImei(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> getImei(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<String> imeiList) {
 		HashSet<String> imeiSet = new HashSet<String>();
 		ArrayList<String> imeiMiddleList = new ArrayList<String>();
@@ -282,9 +287,8 @@ public class Discern {
 				imeiMiddleList.add(uriMap.get(uriMac));
 			}
 		}
-		String imeiRegex = "^(\\d{15}|\\d{17})$";
 		for (String imeiStr : imeiMiddleList) {
-			if (Pattern.matches(imeiRegex, imeiStr)) {
+			if (imeiRegex.matcher(imeiStr).matches()) {
 				imeiSet.add(imeiStr);
 			}
 		}
@@ -299,7 +303,7 @@ public class Discern {
 	 * @param list
 	 * @return
 	 */
-	public HashSet<String> getVersion(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> getVersion(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<String> versionList) {
 		HashSet<String> appVersionSet = new HashSet<String>();
 		for (String version : versionList) {
@@ -332,7 +336,7 @@ public class Discern {
 	 * @param osList
 	 * @return
 	 */
-	public HashSet<String> getOs(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> getOs(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<String> osList) {
 		HashSet<String> osSet = new HashSet<String>();
 		for (String os : osList) {
@@ -363,7 +367,10 @@ public class Discern {
 	 * @param os
 	 * @return
 	 */
-	public String osUnify(String os) {
+	public static String osUnify(String os) {
+		if (null == osUnifyMap){
+			return "";
+		}
 		for (Entry<String, String> entry : osUnifyMap.entrySet()) {
 			if (os.contains(entry.getKey())) {
 				os = entry.getKey();
@@ -385,7 +392,7 @@ public class Discern {
 	 * @param userList
 	 * @return
 	 */
-	public HashSet<String> getUser(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> getUser(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<User> userList) {
 		HashSet<String> userInfoSet = new HashSet<String>();
 		for (User user : userList) {
@@ -406,7 +413,7 @@ public class Discern {
 	 * @param position
 	 * @return
 	 */
-	public HashSet<String> getUser(HashMap<String, String> cookieMap, HashMap<String, String> uriMap, int type,
+	public static HashSet<String> getUser(HashMap<String, String> cookieMap, HashMap<String, String> uriMap, int type,
 			List<String> userValueList, String split, int position) {
 		HashSet<String> userInfoSet = new HashSet<String>();
 		switch (type) {
@@ -436,7 +443,7 @@ public class Discern {
 	 * @param userValue
 	 * @return
 	 */
-	public HashSet<String> type1(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> type1(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<String> userValueList) {
 		HashSet<String> userInfoSet = new HashSet<String>();
 		for (String user : userValueList) {
@@ -446,12 +453,32 @@ public class Discern {
 				switch (userSub[0]) {
 				case "Cookie":
 					if (cookieMap.get(userSub[1]) != null) {
-						userInfoSet.add(cookieMap.get(userSub[1]));
+						String userInfo = cookieMap.get(userSub[1]);
+						if (isNumRegex.matcher(userInfo).matches()) {
+							for (int i = 0; i < userInfo.length(); i++) {
+								if (0 == Integer.parseInt(userInfo.substring(0, 1))) {
+									userInfo = userInfo.substring(1);
+								} else {
+									break;
+								}
+							}
+						}
+						userInfoSet.add(userInfo);
 					}
 					break;
 				case "URI":
 					if (uriMap.get(userSub[1]) != null) {
-						userInfoSet.add(uriMap.get(userSub[1]));
+						String userInfo = uriMap.get(userSub[1]);
+						if (isNumRegex.matcher(userInfo).matches()) {
+							for (int i = 0; i < userInfo.length(); i++) {
+								if (0 == Integer.parseInt(userInfo.substring(0, 1))) {
+									userInfo = userInfo.substring(1);
+								} else {
+									break;
+								}
+							}
+						}
+						userInfoSet.add(userInfo);
 					}
 					break;
 				default:
@@ -472,7 +499,7 @@ public class Discern {
 	 * @param position
 	 * @return
 	 */
-	public HashSet<String> type2(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> type2(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<String> userValueList, String split, int position) {
 		HashSet<String> userInfoSet = new HashSet<String>();
 		for (String user : userValueList) {
@@ -486,7 +513,17 @@ public class Discern {
 							String cookieValue = cookieMap.get(userSub[1]);
 							String[] cookieValues = cookieValue.split(split);
 							if (cookieValues.length > position) {
-								userInfoSet.add(cookieValues[position]);
+								String userInfo = cookieValues[position];
+								if (isNumRegex.matcher(userInfo).matches()) {
+									for (int i = 0; i < userInfo.length(); i++) {
+										if (0 == Integer.parseInt(userInfo.substring(0, 1))) {
+											userInfo = userInfo.substring(1);
+										} else {
+											break;
+										}
+									}
+								}
+								userInfoSet.add(userInfo);
 							}
 						}
 					}
@@ -497,7 +534,17 @@ public class Discern {
 							String uriValue = uriMap.get(userSub[1]);
 							String[] uriValues = uriValue.split(split);
 							if (uriValues.length > position) {
-								userInfoSet.add(uriValues[position]);
+								String userInfo = uriValues[position];
+								if (isNumRegex.matcher(userInfo).matches()) {
+									for (int i = 0; i < userInfo.length(); i++) {
+										if (0 == Integer.parseInt(userInfo.substring(0, 1))) {
+											userInfo = userInfo.substring(1);
+										} else {
+											break;
+										}
+									}
+								}
+								userInfoSet.add(userInfo);
 							}
 						}
 					}
@@ -518,7 +565,7 @@ public class Discern {
 	 * @param userValue
 	 * @return
 	 */
-	public HashSet<String> type3(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> type3(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<String> userValueList) {
 		HashSet<String> userInfoSet = new HashSet<String>();
 		for (String user : userValueList) {
@@ -532,7 +579,17 @@ public class Discern {
 						JsonParser jsonParser = new JsonParser();
 						JsonObject jsonObject = (JsonObject) jsonParser.parse(cookieValueJson);
 						if (jsonObject.get(userSub[2]) != null) {
-							userInfoSet.add(jsonObject.get(userSub[2]).toString().replaceAll("\"", ""));
+							String userInfo = jsonObject.get(userSub[2]).toString().replaceAll("\"", "");
+							if (isNumRegex.matcher(userInfo).matches()) {
+								for (int i = 0; i < userInfo.length(); i++) {
+									if (0 == Integer.parseInt(userInfo.substring(0, 1))) {
+										userInfo = userInfo.substring(1);
+									} else {
+										break;
+									}
+								}
+							}
+							userInfoSet.add(userInfo);
 						}
 					}
 					break;
@@ -542,7 +599,17 @@ public class Discern {
 						JsonParser jsonParser = new JsonParser();
 						JsonObject jsonObject = (JsonObject) jsonParser.parse(uriValueJson);
 						if (jsonObject.get(userSub[2]) != null) {
-							userInfoSet.add(jsonObject.get(userSub[2]).toString().replaceAll("\"", ""));
+							String userInfo = jsonObject.get(userSub[2]).toString().replaceAll("\"", "");
+							if (isNumRegex.matcher(userInfo).matches()) {
+								for (int i = 0; i < userInfo.length(); i++) {
+									if (0 == Integer.parseInt(userInfo.substring(0, 1))) {
+										userInfo = userInfo.substring(1);
+									} else {
+										break;
+									}
+								}
+							}
+							userInfoSet.add(userInfo);
 						}
 					}
 					break;
@@ -563,7 +630,7 @@ public class Discern {
 	 * @param split
 	 * @return
 	 */
-	public HashSet<String> type4(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
+	public static HashSet<String> type4(HashMap<String, String> cookieMap, HashMap<String, String> uriMap,
 			List<String> userValueList, String split) {
 		HashSet<String> userInfoSet = new HashSet<String>();
 		for (String user : userValueList) {
@@ -582,7 +649,17 @@ public class Discern {
 								String cookieValueSubKey = cookieValueSub.substring(0, firstFlag);
 								cookieValueSubKey = cookieValueSubKey.trim();
 								if (cookieValueSubKey.equals(userSub[2])) {
-									userInfoSet.add(cookieValueSub.substring(firstFlag + 1));
+									String userInfo = cookieValueSub.substring(firstFlag + 1);
+									if (isNumRegex.matcher(userInfo).matches()) {
+										for (int i = 0; i < userInfo.length(); i++) {
+											if (0 == Integer.parseInt(userInfo.substring(0, 1))) {
+												userInfo = userInfo.substring(1);
+											} else {
+												break;
+											}
+										}
+									}
+									userInfoSet.add(userInfo);
 								}
 							}
 						}
@@ -599,7 +676,17 @@ public class Discern {
 								String uriValueSubKey = uriValueSub.substring(0, firstFlag);
 								uriValueSubKey = uriValueSubKey.trim();
 								if (uriValueSubKey.equals(userSub[2])) {
-									userInfoSet.add(uriValueSub.substring(firstFlag + 1));
+									String userInfo = uriValueSub.substring(firstFlag + 1);
+									if (isNumRegex.matcher(userInfo).matches()) {
+										for (int i = 0; i < userInfo.length(); i++) {
+											if (0 == Integer.parseInt(userInfo.substring(0, 1))) {
+												userInfo = userInfo.substring(1);
+											} else {
+												break;
+											}
+										}
+									}
+									userInfoSet.add(userInfo);
 								}
 							}
 						}
@@ -615,11 +702,11 @@ public class Discern {
 
 	/**
 	 * 格式化hashSet的输出
-	 * 
+	 *
 	 * @param set
 	 * @return
 	 */
-	public String hashSetToStringFormat(HashSet<String> set) {
+	public static String hashSetToStringFormat(HashSet<String> set) {
 		if (set.size() == 0) {
 			return "";
 		}

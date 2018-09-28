@@ -18,6 +18,7 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Counter;
 import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.MultipleOutputs;
 
@@ -110,8 +111,7 @@ public class ToolMapper extends Mapper<LongWritable, Text, Text, Text> {
         Bean bean = new Bean ();
         //uri转码
         try {
-             bean = gson.fromJson(Utils.getURLDecoderString(value.toString().replaceAll("\t","")),Bean.class);
-
+             bean = gson.fromJson(Utils.getURLDecoderString(value.toString().replace("\t","")),Bean.class);
         }catch (Exception e){
             bean = gson.fromJson(value.toString(),Bean.class);
             MLogger.warn("bean from json getURLDecoder exception:"+e.getMessage() + e);
@@ -171,26 +171,29 @@ public class ToolMapper extends Mapper<LongWritable, Text, Text, Text> {
     //
     private ReadXml getReadXml(Context context)throws IOException{
         Configuration conf = context.getConfiguration();
-        Path browserVersion = new Path(conf.get("browserVersion"));
+        Path browserVersionMap = new Path(conf.get("browserVersion"));
         Path  browserApp = new Path(conf.get("browserApp"));
         Path appFeature = new Path(conf.get("appFeature"));
         Path browserFeature = new Path(conf.get("browserFeature"));
         Path dataRelation = new Path(conf.get("dataRelation"));
         Path osUnify = new Path(conf.get("osUnify"));
+        Path terminalAnalysis = new Path(conf.get("terminalAnalysis"));
         FileSystem toolFileSystem = FileSystem.get(conf);
-        InputStream browserVersionStream = toolFileSystem.open(browserVersion);
+        InputStream browserVersionMapStream = toolFileSystem.open(browserVersionMap);
         InputStream browserAppSystem = toolFileSystem.open(browserApp);
         InputStream appFeatureSystem = toolFileSystem.open(appFeature);
         InputStream browserFeatureSystem = toolFileSystem.open(browserFeature);
-        InputStream osUnifySystem = toolFileSystem.open(osUnify);
         InputStream dataRelationSystem = toolFileSystem.open(dataRelation);
+        InputStream osUnifySystem = toolFileSystem.open(osUnify);
+        InputStream terminalAnalysisSystem = toolFileSystem.open(terminalAnalysis);
 
-        ReadXml readXml = new ReadXml(browserVersionStream,
+        ReadXml readXml = new ReadXml(browserVersionMapStream,
                 browserAppSystem,
                 appFeatureSystem,
                 browserFeatureSystem,
                 dataRelationSystem,
-                osUnifySystem);
+                osUnifySystem,
+                terminalAnalysisSystem);
         return  readXml;
     }
 

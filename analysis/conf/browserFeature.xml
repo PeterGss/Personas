@@ -39,7 +39,7 @@
 	
 	<browser host="163.com" product="网易">
 		<user type="1" value="Cookie:login_urs"></user>
-		<user type="2" value="Cookie:P_INFO" split="|" position="0"></user>
+		<user type="2" value="Cookie:P_INFO" split="\\|" position="0"></user>
 		<user type="4" value="Cookie:cm_newmsg:user" split="&amp;"></user>
 	</browser>
 	
@@ -96,11 +96,11 @@
 	</browser>
 	
 	<browser host="autohome.com.cn" product="汽车之家">
-		<user type="2" value="Cookie:clubUserShow" split="|" position="3"></user>
+		<user type="2" value="Cookie:clubUserShow" split="\\|" position="3"></user>
 	</browser>
 	
 	<browser host="che168.com" product="二手车之家">
-		<user type="2" value="Cookie:clubUserShow" split="|" position="3"></user>
+		<user type="2" value="Cookie:clubUserShow" split="\\|" position="3"></user>
 	</browser>
 	
 	<browser host="ifeng.com" product="凤凰网">
@@ -135,7 +135,7 @@
 	
 	<browser host="4399.com" product="4399小游戏平台">
 		<user type="1" value="Cookie:Qnick"></user>
-		<user type="2" value="Cookie:Uauth" split="|" position="1"></user>
+		<user type="2" value="Cookie:Uauth" split="\\|" position="1"></user>
 	</browser>
 	
 	<browser host="iqianjin.com" product="爱钱进">

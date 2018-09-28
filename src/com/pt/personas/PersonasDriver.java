@@ -203,6 +203,7 @@ public class PersonasDriver {
         job.setMapperClass(PersonasMapper.class);
         job.setJarByClass(PersonasDriver.class);
         job.setReducerClass(PersonasReducer.class);
+        job.setPartitionerClass(PersonasPartition.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         LazyOutputFormat.setOutputFormatClass(job,TextOutputFormat.class);

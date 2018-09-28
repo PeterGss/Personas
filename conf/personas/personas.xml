@@ -69,6 +69,12 @@
 		<value>analysis/conf/osUnify.xml</value>
 		<description>需要在集群加载的XML文件</description>
 	</property>
+	<property>
+		<name>terminalAnalysis</name>
+		<value>analysis/conf/terminalAnalysis.xml</value>
+		<description>需要在集群加载的XML文件</description>
+	</property>
+
 
 	<property>
 		<name>appproto</name>
